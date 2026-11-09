@@ -1,0 +1,15 @@
+[
+  {
+    "id": "co.codeleap.bearable",
+    "app_name": "Bearable - Symptom Tracker",
+    "version": "1.0.615",
+    "min_ios": "15.1",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Login and force close the app if hack wont work",
+    "thumbnail": "/thumbnails/co.codeleap.bearable.jpg",
+    "updated_at": "2026-11-10"
+  }
+]
