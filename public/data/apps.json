@@ -1,5 +1,18 @@
 [
   {
+    "id": "stoope.Grit",
+    "app_name": "Grit: Daily Habit Tracker",
+    "version": "6.2.0",
+    "min_ios": "26.0",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Login and force close the app if hack wont work",
+    "thumbnail": "/thumbnails/stoope.Grit.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.dopedevelopment.Panels",
     "app_name": "SCRL: Photo Collage Maker",
     "version": "9.63",
