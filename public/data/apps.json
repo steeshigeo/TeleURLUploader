@@ -1,5 +1,19 @@
 [
   {
+    "id": "jp.co.bandainamcoent.BNEI0334",
+    "app_name": "DRAGON BALL LEGENDS",
+    "version": "6.30.0",
+    "min_ios": "10.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "iOSGods",
+    "note": "Hack Features:\n• One Hit Kill \n• No Ki Cost\n• No Character Swap CoolDown\n• No Vanish CoolDown\n• Auto Complete All Challenges!",
+    "thumbnail": "/thumbnails/jp.co.bandainamcoent.BNEI0334.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "cameronnazemi.Tappy",
     "app_name": "Tappy: Fidget \u0026 Self-Care Pet",
     "version": "6.5.0",
