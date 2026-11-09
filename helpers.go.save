@@ -1,0 +1,236 @@
+package main
+
+import (
+	"bytes"
+	"errors"
+	"mime"
+	"path/filepath"
+
+	"github.com/celestix/gotgproto/ext"
+	"github.com/celestix/gotgproto/types"
+	"github.com/gotd/td/telegram/uploader"
+	"github.com/gotd/td/tg"
+)
+
+func GetFilename(link, disposition, ctype string) string {
+	_, params, _ := mime.ParseMediaType(disposition)
+
+	if filename, ok := params["filename"]; ok {
+		return filename
+	}
+
+	filename := filepath.Base(link)
+	if filename == "" {
+		exts, _ := mime.ExtensionsByType(ctype)
+		if len(exts) != 0 {
+			filename = "file" + exts[0]
+		} else {
+			filename = "file.bin"
+		}
+	}
+
+	return filename
+}
+
+func GetMessageReplyMedia(ctx *ext.Context, msg *types.Message) (tg.InputFileClass, error) {
+	rt, ok := msg.ReplyTo.(*tg.MessageReplyHeader)
+	if !ok {
+		return nil, errors.New("reply_to is not MessageReplyHeader")
+	}
+
+	msgs, err := ctx.GetMessages(msg.PeerID.(*tg.PeerUser).UserID, []tg.InputMessageClass{&tg.InputMessageID{ID: rt.ReplyToMsgID}})
+	if err != nil {
+		return nil, err
+	}
+
+	icon := &bytes.Buffer{}
+	if _, err := ctx.DownloadMedia(msgs[0].(*tg.Message).Media, ext.DownloadOutputStream{Writer: icon}, nil); err != nil {
+		return nil, err
+	}
+
+	// thumbnails can't be reused and must be reuploaded
+	file, err := uploader.NewUploader(ctx.Raw).FromBytes(ctx, "icon.jpg", icon.Bytes())
+	if err != nil {
+		return nil, err
+	}
+
+	return file, nil
+}
+package main
+
+import (
+	"archive/zip"
+	"fmt"
+	"io"
+	"os"
+	"path/filepath"
+	"strings"
+	"time"
+
+	"howett.net/plist"
+)
+
+// Struct data dari Info.plist
+type InfoPlistData struct {
+	BundleName       string `plist:"CFBundleDisplayName"`
+	FallbackName     string `plist:"CFBundleName"`
+	BundleID         string `plist:"CFBundleIdentifier"`
+	Version          string `plist:"CFBundleShortVersionString"`
+	MinimumOSVersion string `plist:"MinimumOSVersion"`
+}
+
+// Struct data akhir untuk caption
+type AppMetadata struct {
+	AppName   string
+	BundleID  string
+	UpdatedTo string
+	MinIOS    string
+	IsPatched bool
+	Modifier  string
+	Tweaker   string
+	Note      string
+}
+
+// Mengekstrak modifier dari tanda [ ] pada nama file
+func extractModifierFromFileName(fileName string) string {
+	start := strings.Index(fileName, "[")
+	end := strings.Index(fileName, "]")
+
+	if start != -1 && end != -1 && end > start {
+		return fileName[start+1 : end]
+	}
+	return "Subscription Unlocked"
+}
+
+// Membaca Info.plist dari dalam file .ipa
+func ExtractIPAMetadata(ipaPath string) (AppMetadata, error) {
+	r, err := zip.OpenReader(ipaPath)
+	if err != nil {
+		return AppMetadata{}, err
+	}
+	defer r.Close()
+
+	var plistFile *zip.File
+	for _, f := range r.File {
+		if strings.HasPrefix(f.Name, "Payload/") && strings.HasSuffix(f.Name, ".app/Info.plist") {
+			plistFile = f
+			break
+		}
+	}
+
+	if plistFile == nil {
+		return AppMetadata{}, fmt.Errorf("Info.plist tidak ditemukan")
+	}
+
+	rc, err := plistFile.Open()
+	if err != nil {
+		return AppMetadata{}, err
+	}
+	defer rc.Close()
+
+	var parsedPlist InfoPlistData
+	decoder := plist.NewDecoder(rc)
+	if err := decoder.Decode(&parsedPlist); err != nil {
+		return AppMetadata{}, err
+	}
+
+	appName := parsedPlist.BundleName
+	if appName == "" {
+		appName = parsedPlist.FallbackName
+	}
+	if appName == "" {
+		appName = strings.TrimSuffix(filepath.Base(ipaPath), filepath.Ext(ipaPath))
+	}
+
+	modifier := extractModifierFromFileName(filepath.Base(ipaPath))
+
+	meta := AppMetadata{
+		AppName:   appName,
+		BundleID:  parsedPlist.BundleID,
+		UpdatedTo: time.Now().Format("2006.01.02"),
+		MinIOS:    parsedPlist.MinimumOSVersion,
+		IsPatched: true,
+		Modifier:  modifier,
+		Tweaker:   "@SteeShigeo",
+		Note:      "Ignore purchase page, Restart app if subscription isn't unlocked.",
+	}
+
+	return meta, nil
+}
+
+// Mengekstrak file PNG icon dari dalam .ipa untuk dijadikan thumbnail
+func ExtractIPAIcon(ipaPath, outputDir string) (string, error) {
+	r, err := zip.OpenReader(ipaPath)
+	if err != nil {
+		return "", err
+	}
+	defer r.Close()
+
+	var iconFile *zip.File
+	for _, f := range r.File {
+		name := strings.ToLower(f.Name)
+		if strings.HasPrefix(f.Name, "Payload/") && strings.HasSuffix(name, ".png") {
+			if strings.Contains(name, "appicon") || strings.Contains(name, "icon60x60") || strings.Contains(name, "icon76x76") {
+				iconFile = f
+				break
+			}
+		}
+	}
+
+	if iconFile == nil {
+		for _, f := range r.File {
+			if strings.HasPrefix(f.Name, "Payload/") && strings.HasSuffix(strings.ToLower(f.Name), ".png") {
+				iconFile = f
+				break
+			}
+		}
+	}
+
+	if iconFile == nil {
+		return "", nil
+	}
+
+	rc, err := iconFile.Open()
+	if err != nil {
+		return "", err
+	}
+	defer rc.Close()
+
+	iconOutputPath := filepath.Join(outputDir, "thumb_"+filepath.Base(iconFile.Name))
+	outFile, err := os.Create(iconOutputPath)
+	if err != nil {
+		return "", err
+	}
+	defer outFile.Close()
+
+	_, err = io.Copy(outFile, rc)
+	if err != nil {
+		return "", err
+	}
+
+	return iconOutputPath, nil
+}
+
+// Menyusun template caption berformat HTML
+func BuildIPACaption(meta AppMetadata) string {
+	patchedText := ""
+	if meta.IsPatched {
+		patchedText = "- Patched\n"
+	}
+
+	return fmt.Sprintf(
+		"<b>%s</b>\n"+
+			"- <b>Bundle ID</b>\n: %s\n"+
+			"- <b>Updated to:</b>\n %s\n"+
+			"- <b>Minimum iOS</b>\n: %s\n"+
+			"%s"+
+			"- <b>Modifier</b>\n: %s\n"+
+			"- <b>Tweaked by</b> \n%s\n"+
+			"- <b>Note</b>\n:\n%s",
+		meta.AppName,
+		meta.BundleID,
+		meta.UpdatedTo,
+		meta.MinIOS,
+		patchedText,
+		meta.Modifier,
+		meta.Tweak

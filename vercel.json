@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "/thumbnails/:path*", "destination": "/public/thumbnails/:path*" },
+    { "source": "/data/:path*", "destination": "/data/:path*" }
+  ]
+}
