@@ -1,5 +1,18 @@
 [
   {
+    "id": "com.joytunes.Draw",
+    "app_name": "Simply Draw: Learn to Draw",
+    "version": "1.22.0",
+    "min_ios": "15.2",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Login and force close the app if hack wont work",
+    "thumbnail": "/thumbnails/com.joytunes.Draw.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.gingerlabs.Notability",
     "app_name": "Notability: AI Notes \u0026 Study",
     "version": "16.13.5",
