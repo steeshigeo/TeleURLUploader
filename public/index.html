@@ -1,100 +1,146 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IPA Mod Library Catalog</title>
+  <title>iOS IPA Mod Library Catalog</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background: radial-gradient(circle at top left, #1e1b4b, #0f172a, #020617);
+      background: radial-gradient(circle at top left, #0f172a, #020617, #000000);
       min-height: 100vh;
       color: #f8fafc;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
     }
     .glass-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    .glass-input {
       background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
   </style>
 </head>
-<body class="px-4 py-8 max-w-6xl mx-auto">
-  <!-- Header -->
+<body class="px-4 py-10 max-w-6xl mx-auto">
+  <!-- Header Section -->
   <header class="text-center mb-10">
-    <h1 class="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-500 mb-2">
-      iOS IPA Mod Catalog
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-4">
+      <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Auto-Sync Live Catalog
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 mb-3">
+      iOS IPA Mod Library
     </h1>
-    <p class="text-slate-400 text-sm max-w-md mx-auto">
-      Katalog lengkap aplikasi iOS modifikasi & tweak terbaru. Bergabunglah dengan grup Telegram eksklusif untuk mendapatkan file `.ipa`.
+    <p class="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed mb-6">
+      Katalog eksklusif aplikasi iOS modifikasi & tweak terbaru. Bergabunglah dengan grup Telegram untuk mendownload langsung file <code>.ipa</code>.
     </p>
     <a href="https://t.me/username_grup_kamu" target="_blank" 
-       class="inline-block mt-4 px-6 py-2.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-lg shadow-blue-500/30">
-      💬 Join Premium Telegram Group
+       class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-sm transition-all duration-200 shadow-lg shadow-blue-500/25 hover:scale-105">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.18-1.82 6.97-3.02 8.36-3.61 3.98-1.68 4.81-1.97 5.35-1.98.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.04.29z"/></svg>
+      Join Premium Group
     </a>
   </header>
 
-  <!-- Search Bar -->
-  <div class="mb-8 max-w-md mx-auto">
-    <input type="text" id="searchInput" onkeyup="filterApps()" placeholder="Cari nama aplikasi atau fitur mod..." 
-           class="w-full px-4 py-3 rounded-xl glass-card text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition text-sm">
+  <!-- Search & Stats Bar -->
+  <div class="mb-8 max-w-xl mx-auto flex flex-col sm:flex-row gap-3 items-center">
+    <div class="relative w-full">
+      <input type="text" id="searchInput" onkeyup="filterApps()" placeholder="Cari nama aplikasi, mod, atau tweaks..." 
+             class="w-full pl-11 pr-4 py-3 rounded-2xl glass-input text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition text-sm">
+      <svg class="w-5 h-5 text-slate-500 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </div>
+    <div id="appCount" class="text-xs text-slate-400 whitespace-nowrap font-medium px-4 py-3 rounded-2xl glass-input">
+      Total: 0 Apps
+    </div>
   </div>
 
-  <!-- App Grid -->
+  <!-- App Grid Container -->
   <div id="catalogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Grid items will be rendered by JS -->
+    <!-- State Loading Default -->
+    <div class="col-span-full text-center py-16">
+      <div class="inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-3"></div>
+      <p class="text-slate-400 text-sm">Memuat katalog aplikasi...</p>
+    </div>
   </div>
 
   <script>
     let allApps = [];
 
     async function loadCatalog() {
+      const grid = document.getElementById('catalogGrid');
       try {
-        const res = await fetch('/data/apps.json');
+        const res = await fetch('/data/apps.json?t=' + new Date().getTime());
+        if (!res.ok) throw new Error("File apps.json tidak ditemukan.");
         allApps = await res.json();
+        
+        if (!Array.isArray(allApps) || allApps.length === 0) {
+          renderEmptyState("Belum ada aplikasi yang dirilis.");
+          return;
+        }
+
+        document.getElementById('appCount').innerText = `Total: ${allApps.length} Apps`;
         renderCatalog(allApps);
       } catch (err) {
         console.error("Gagal memuat catalog:", err);
+        renderEmptyState("Katalog sedang diperbarui atau belum ada data.");
       }
+    }
+
+    function renderEmptyState(msg) {
+      const grid = document.getElementById('catalogGrid');
+      grid.innerHTML = `
+        <div class="col-span-full text-center py-16 glass-card rounded-3xl p-8 max-w-md mx-auto">
+          <div class="text-4xl mb-3">📱</div>
+          <h3 class="text-white font-bold text-lg mb-1">Katalog Kosong</h3>
+          <p class="text-slate-400 text-sm">${msg}</p>
+        </div>
+      `;
     }
 
     function renderCatalog(apps) {
       const grid = document.getElementById('catalogGrid');
       grid.innerHTML = apps.map(app => `
-        <div class="glass-card rounded-2xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition">
+        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300">
           <div>
-            <div class="flex items-center gap-4 mb-4">
-              <img src="${app.thumbnail || 'https://via.placeholder.com/60'}" 
-                   class="w-14 h-14 rounded-2xl object-cover border border-white/10 shadow-md">
-              <div>
-                <h3 class="font-bold text-lg text-white leading-snug">${app.app_name}</h3>
-                <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">v${app.version}</span>
-                <span class="text-xs text-slate-400 ml-1">iOS ${app.min_ios}+</span>
+            <div class="flex items-start gap-4 mb-4">
+              <img src="${app.thumbnail || 'https://via.placeholder.com/60?text=IPA'}" 
+                   class="w-14 h-14 rounded-2xl object-cover border border-white/10 shadow-lg shrink-0">
+              <div class="overflow-hidden">
+                <h3 class="font-bold text-lg text-white truncate leading-tight mb-1">${app.app_name}</h3>
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-semibold border border-blue-500/30">v${app.version}</span>
+                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700">iOS ${app.min_ios}+</span>
+                  ${app.is_patched ? '<span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Patched</span>' : ''}
+                </div>
               </div>
             </div>
 
             ${app.modified ? `
-              <div class="mb-3">
-                <span class="text-xs text-slate-400 font-medium">Modified:</span>
-                <p class="text-sm font-semibold text-emerald-400">${app.modified}</p>
+              <div class="mb-3 p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
+                <span class="text-[11px] text-emerald-400/80 font-bold tracking-wider uppercase block mb-0.5">MOD FEATURES</span>
+                <p class="text-sm font-semibold text-emerald-300 leading-snug">${app.modified}</p>
               </div>
             ` : ''}
 
             ${app.modified_by ? `
-              <p class="text-xs text-slate-400 mb-2">• Modded by: <span class="text-slate-200">${app.modified_by}</span></p>
+              <p class="text-xs text-slate-400 mb-2">👤 Modded by: <span class="text-slate-200 font-medium">${app.modified_by}</span></p>
             ` : ''}
 
             ${app.note ? `
-              <div class="mt-3 p-3 rounded-xl bg-black/20 text-xs text-slate-300 whitespace-pre-wrap max-h-36 overflow-y-auto border border-white/5">
+              <div class="mt-3 p-3.5 rounded-2xl bg-black/40 text-xs text-slate-300 whitespace-pre-wrap max-h-40 overflow-y-auto border border-white/5 font-mono leading-relaxed">
                 ${app.note}
               </div>
             ` : ''}
           </div>
 
-          <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center text-xs text-slate-400">
-            <span>Updated: ${app.updated_at}</span>
-            <a href="https://t.me/username_grup_kamu" class="text-blue-400 hover:underline font-medium">Get IPA ➔</a>
+          <div class="mt-5 pt-3.5 border-t border-white/10 flex justify-between items-center text-xs text-slate-400">
+            <span>📅 ${app.updated_at}</span>
+            <a href="https://t.me/username_grup_kamu" target="_blank" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1 group">
+              Get IPA <span class="group-hover:translate-x-0.5 transition-transform">➔</span>
+            </a>
           </div>
         </div>
       `).join('');
@@ -107,7 +153,11 @@
         (app.modified && app.modified.toLowerCase().includes(query)) ||
         (app.note && app.note.toLowerCase().includes(query))
       );
-      renderCatalog(filtered);
+      if (filtered.length === 0) {
+        renderEmptyState(`Tidak ditemukan aplikasi cocok dengan "${query}"`);
+      } else {
+        renderCatalog(filtered);
+      }
     }
 
     loadCatalog();

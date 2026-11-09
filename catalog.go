@@ -31,12 +31,13 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 	catalogMutex.Lock()
 	defer catalogMutex.Unlock()
 
+	// Pastikan folder public/data dan public/thumbnails ada
 	_ = os.MkdirAll("./public/thumbnails", os.ModePerm)
-	_ = os.MkdirAll("./data", os.ModePerm)
+	_ = os.MkdirAll("./public/data", os.ModePerm)
 
-	jsonFilePath := "./data/apps.json"
+	jsonFilePath := "./public/data/apps.json"
 
-	// 1. Simpan Icon ke folder publik
+	// 1. Simpan Icon ke folder public/thumbnails
 	thumbWebPath := ""
 	if iconPath != "" {
 		fileName := meta.BundleID + ".jpg"
@@ -46,7 +47,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 		}
 	}
 
-	// 2. Baca data JSON yang sudah ada
+	// 2. Baca data JSON yang sudah ada di public/data/apps.json
 	var items []CatalogItem
 	fileData, err := os.ReadFile(jsonFilePath)
 	if err == nil {
@@ -81,7 +82,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 		items = append([]CatalogItem{newItem}, items...)
 	}
 
-	// 3. Tulis ulang file data/apps.json
+	// 3. Tulis ulang file public/data/apps.json
 	output, err := json.MarshalIndent(items, "", "  ")
 	if err != nil {
 		return fmt.Errorf("gagal marshal JSON catalog: %v", err)
@@ -102,12 +103,11 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 func syncToGitHub(appName, version string) {
 	commitMsg := fmt.Sprintf("auto-update: release %s v%s", appName, version)
 
-	_ = exec.Command("git", "add", "data/apps.json", "public/thumbnails/").Run()
+	_ = exec.Command("git", "add", "public/data/apps.json", "public/thumbnails/").Run()
 	_ = exec.Command("git", "commit", "-m", commitMsg).Run()
 
 	cmdPush := exec.Command("git", "push", "origin", "main")
 	if err := cmdPush.Run(); err != nil {
-		// Try fallback branch name 'master' if 'main' fails
 		_ = exec.Command("git", "push", "origin", "master").Run()
 	}
 
