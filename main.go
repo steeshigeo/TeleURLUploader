@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -21,7 +20,7 @@ import (
 var activeCaptions = make(map[int64]string)
 
 func main() {
-	// 1. Muat .env
+	// 1. Muat file .env
 	errEnv := godotenv.Load(".env")
 	if errEnv != nil {
 		log.Printf("⚠️ WARNING: Gagal memuat file .env! Error: %v", errEnv)
@@ -68,7 +67,7 @@ func main() {
 			continue
 		}
 
-		// FILTER: Bot hanya merespons Private Chat (DM)
+		// FILTER: Bot hanya merespons Private Chat (DM) & mengabaikan pesan grup
 		if !update.Message.Chat.IsPrivate() {
 			continue
 		}
@@ -114,10 +113,11 @@ func main() {
 			continue
 		}
 
-		// B. PESAN TEKS
+		// B. PESAN TEKS (DIRECT URL, COMMAND, DELETE, DESKRIPSI)
 		if update.Message.Text != "" {
 			text := update.Message.Text
 
+			// Direct URL IPA
 			if strings.HasPrefix(text, "http://") || strings.HasPrefix(text, "https://") {
 				lines := strings.Split(text, "\n")
 				fileURL := strings.TrimSpace(lines[0])
@@ -152,6 +152,7 @@ func main() {
 				}
 			}
 
+			// Command /start
 			if text == "/start" {
 				welcomeText := fmt.Sprintf(
 					"👋 Halo <b>%s</b>!\n\n"+
@@ -163,7 +164,9 @@ func main() {
 						"• <code>Modified by: NamaKamu</code> ➔ Menampilkan baris Modified by\n"+
 						"• Ketik <code>patched</code> ➔ Menampilkan baris <b>Patched</b>\n"+
 						"• Ketik <code>Tweaked by: @username</code> ➔ Menampilkan <b>Tweaked by</b>\n"+
-						"• Ketik <code>Note: Catatan kamu</code> ➔ Menampilkan blok <b>Note</b>",
+						"• Ketik <code>Note: Catatan kamu</code> ➔ Menampilkan blok <b>Note</b>\n\n"+
+						"🗑️ <b>Hapus App Catalog:</b>\n"+
+						"• <code>/delete Elevate</code> atau <code>/delete com.symptom.tracker</code>",
 					update.Message.From.FirstName,
 				)
 				msg := tgbotapi.NewMessage(chatID, welcomeText)
@@ -172,6 +175,29 @@ func main() {
 				continue
 			}
 
+			// Command /delete atau /hapus
+			if strings.HasPrefix(text, "/delete") || strings.HasPrefix(text, "/hapus") {
+				parts := strings.SplitN(text, " ", 2)
+				if len(parts) > 1 && strings.TrimSpace(parts[1]) != "" {
+					targetApp := strings.TrimSpace(parts[1])
+					deletedName, err := DeleteFromCatalog(targetApp)
+					if err != nil {
+						msg := tgbotapi.NewMessage(chatID, fmt.Sprintf("❌ %v", err))
+						bot.Send(msg)
+					} else {
+						msg := tgbotapi.NewMessage(chatID, fmt.Sprintf("🗑️ <b>%s</b> berhasil dihapus dari Web Catalog & GitHub!", deletedName))
+						msg.ParseMode = "HTML"
+						bot.Send(msg)
+					}
+				} else {
+					msg := tgbotapi.NewMessage(chatID, "⚠️ <b>Format salah.</b>\nGunakan: <code>/delete Nama Aplikasi</code> atau <code>/delete BundleID</code>")
+					msg.ParseMode = "HTML"
+					bot.Send(msg)
+				}
+				continue
+			}
+
+			// Fallback: teks biasa disimpan sebagai deskripsi/caption aktif
 			activeCaptions[chatID] = text
 			msg := tgbotapi.NewMessage(chatID, "📝 <b>Deskripsi diperbarui & aktif!</b>\nSilakan kirim file <code>.ipa</code> kamu.")
 			msg.ParseMode = "HTML"
@@ -245,9 +271,7 @@ func processAndSendIPA(bot *tgbotapi.BotAPI, userChatID int64, localPath string,
 
 	sendErr := sendDocumentDirectly(bot.Token, targetChatID, topicID, finalFilePath, captionText, iconPath)
 	if sendErr == nil {
-		// ============================================================
-		// LANGKAH NO 2: OTOMATIS UPDATE KATALOG WEB & GIT PUSH VERCEL
-		// ============================================================
+		// Otomatis Simpan Metadata ke JSON & Auto-Push ke Vercel Catalog
 		go SaveAndSyncCatalog(meta, iconPath)
 
 		if statusMsgID != 0 {
@@ -270,6 +294,7 @@ func processAndSendIPA(bot *tgbotapi.BotAPI, userChatID int64, localPath string,
 	}
 }
 
+// Pengirim HTTP Multipart Streaming ke Local Telegram API
 func sendDocumentDirectly(botToken string, chatID int64, topicID int, filePath string, caption string, thumbPath string) error {
 	localAPI := strings.TrimRight(os.Getenv("LOCAL_API_URL"), "/")
 	var apiURL string
@@ -283,52 +308,55 @@ func sendDocumentDirectly(botToken string, chatID int64, topicID int, filePath s
 		apiURL = fmt.Sprintf("https://api.telegram.org/bot%s/sendDocument", botToken)
 	}
 
-	body := &bytes.Buffer{}
-	writer := multipart.NewWriter(body)
+	pipeReader, pipeWriter := io.Pipe()
+	writer := multipart.NewWriter(pipeWriter)
 
-	_ = writer.WriteField("chat_id", strconv.FormatInt(chatID, 10))
-	if topicID != 0 {
-		_ = writer.WriteField("message_thread_id", strconv.Itoa(topicID))
-	}
-	_ = writer.WriteField("caption", caption)
-	_ = writer.WriteField("parse_mode", "HTML")
+	go func() {
+		defer pipeWriter.Close()
+		defer writer.Close()
 
-	docFile, err := os.Open(filePath)
-	if err != nil {
-		return fmt.Errorf("gagal membuka file ipa: %v", err)
-	}
-	defer docFile.Close()
-
-	part, err := writer.CreateFormFile("document", filepath.Base(filePath))
-	if err != nil {
-		return err
-	}
-	_, err = io.Copy(part, docFile)
-	if err != nil {
-		return err
-	}
-
-	if thumbPath != "" {
-		if thumbFile, err := os.Open(thumbPath); err == nil {
-			if thumbPart, err := writer.CreateFormFile("thumbnail", filepath.Base(thumbPath)); err == nil {
-				_, _ = io.Copy(thumbPart, thumbFile)
-			}
-			thumbFile.Close()
+		_ = writer.WriteField("chat_id", strconv.FormatInt(chatID, 10))
+		if topicID != 0 {
+			_ = writer.WriteField("message_thread_id", strconv.Itoa(topicID))
 		}
-	}
+		_ = writer.WriteField("caption", caption)
+		_ = writer.WriteField("parse_mode", "HTML")
 
-	err = writer.Close()
-	if err != nil {
-		return err
-	}
+		docFile, err := os.Open(filePath)
+		if err != nil {
+			return
+		}
+		defer docFile.Close()
 
-	req, err := http.NewRequest("POST", apiURL, body)
+		part, err := writer.CreateFormFile("document", filepath.Base(filePath))
+		if err != nil {
+			return
+		}
+		_, _ = io.Copy(part, docFile)
+
+		if thumbPath != "" {
+			if thumbFile, err := os.Open(thumbPath); err == nil {
+				if thumbPart, err := writer.CreateFormFile("thumbnail", filepath.Base(thumbPath)); err == nil {
+					_, _ = io.Copy(thumbPart, thumbFile)
+				}
+				thumbFile.Close()
+			}
+		}
+	}()
+
+	req, err := http.NewRequest("POST", apiURL, pipeReader)
 	if err != nil {
 		return err
 	}
 	req.Header.Set("Content-Type", writer.FormDataContentType())
 
-	client := &http.Client{Timeout: 10 * time.Minute}
+	client := &http.Client{
+		Timeout: 30 * time.Minute,
+		Transport: &http.Transport{
+			DisableKeepAlives: true,
+		},
+	}
+
 	resp, err := client.Do(req)
 	if err != nil {
 		return err

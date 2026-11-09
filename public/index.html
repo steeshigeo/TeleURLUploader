@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
   <title>JingApps Premium Library</title>
+  <script>try{var m=localStorage.getItem("jingapps_theme");if(m==="light"||m==="dark")document.documentElement.setAttribute("data-theme",m)}catch(e){}</script>
   <link rel="icon" id="favicon" href="https://lh3.googleusercontent.com/d/1TozuJeKpQOL1txNf45SSwjSQHcUK2XtZ=s64">
   <style>
     :root {
@@ -22,8 +23,11 @@
               "PingFang SC", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans", "Noto Sans CJK SC",
               "Noto Sans JP", "Noto Sans Thai", "Sukhumvit Set", "Thonburi", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
     }
+    :root { color-scheme: light dark; }
+    :root[data-theme="light"] { color-scheme: light; }
+    :root[data-theme="dark"] { color-scheme: dark; }
     @media (prefers-color-scheme: dark) {
-      :root {
+      :root:not([data-theme="light"]) {
         --bg: #000000;
         --surface: #1C1C1E;
         --fill: #2C2C2E;
@@ -35,6 +39,18 @@
         --green-soft: rgba(48, 209, 88, .18);
         --bar: rgba(22, 22, 24, .82);
       }
+    }
+    :root[data-theme="dark"] {
+        --bg: #000000;
+        --surface: #1C1C1E;
+        --fill: #2C2C2E;
+        --label: #FFFFFF;
+        --label2: #98989F;
+        --sep: rgba(84, 84, 88, .55);
+        --blue: #0A84FF;
+        --green: #30D158;
+        --green-soft: rgba(48, 209, 88, .18);
+        --bar: rgba(22, 22, 24, .82);
     }
 
     * { box-sizing: border-box; margin: 0; -webkit-tap-highlight-color: transparent; }
@@ -192,6 +208,14 @@
     .app-foot a { color: var(--blue); font-weight: 500; }
     .app-foot a:hover { opacity: .7; }
 
+    .groups { display: flex; flex-direction: column; gap: 28px; }
+    .group-head { display: flex; align-items: baseline; gap: 8px; margin: 0 0 10px 4px; }
+    .group-head h3 { font-size: 20px; font-weight: 700; letter-spacing: -.02em; }
+    .group-head span { font-size: 15px; color: var(--label2); }
+    .chip-sep { flex-shrink: 0; width: 1px; height: 20px; align-self: center; margin: 0 4px; background: var(--sep); }
+    .cat-btn .n { margin-left: 6px; font-weight: 500; opacity: .6; }
+    .cat-btn.is-active .n { opacity: .85; }
+    .tab[hidden], .cat-btn[hidden] { display: none !important; }
     .state { grid-column: 1 / -1; background: var(--surface); text-align: center; padding: 64px 24px; }
     .state .emoji { font-size: 36px; margin-bottom: 8px; }
     .state h3 { font-size: 20px; font-weight: 700; }
@@ -205,7 +229,6 @@
     .tabbar { display: none; }
     @media (max-width: 720px) {
       body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
-      .chips { display: none; }
       .wrap { padding: 0 16px; }
       .today { min-height: 380px; }
       .brand span { font-size: 16px; }
@@ -243,6 +266,10 @@
           </button>
           <div class="menu" id="langMenu" role="menu"></div>
         </div>
+        <div class="lang">
+          <button class="pill" id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-label="Appearance"><span id="themeIcon" style="display:inline-flex"></span></button>
+          <div class="menu" id="themeMenu" role="menu"></div>
+        </div>
         <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="pill primary">
           <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.18-1.82 6.97-3.02 8.36-3.61 3.98-1.68 4.81-1.97 5.35-1.98.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.04.29z"/></svg>
           <span class="lbl" data-i18n="joinTelegram">Join Telegram</span>
@@ -262,7 +289,7 @@
       <div class="today-copy">
         <div class="today-label" data-i18n="heroLabel">Premium Library</div>
         <h1 data-i18n="heroTitle">Premium iOS Mods &amp; Tweaked IPAs</h1>
-        <p data-i18n="heroSub">An iOS app catalog that updates in real time. Get the full .ipa files and sideloading certificates in our Telegram group.</p>
+        <p data-i18n="heroSub">iOS apps with all premium features unlocked, updated regularly. Install straight from your device, no jailbreak or computer needed.</p>
         <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="btn-white" data-i18n="heroCta">Get VIP Access</a>
       </div>
       <div class="today-foot" id="todayFoot"></div>
@@ -277,6 +304,12 @@
         <button data-cat="all" onclick="filterCategory('all')" class="cat-btn is-active" data-i18n="all">All</button>
         <button data-cat="patched" onclick="filterCategory('patched')" class="cat-btn" data-i18n="patched">Patched</button>
         <button data-cat="tweaked" onclick="filterCategory('tweaked')" class="cat-btn" data-i18n="tweaked">Tweaked</button>
+        <span class="chip-sep"></span>
+        <button data-cat="utilities" onclick="filterCategory('utilities')" class="cat-btn" hidden><span data-i18n="catUtilities">Utilities</span><span class="n"></span></button>
+        <button data-cat="games" onclick="filterCategory('games')" class="cat-btn" hidden><span data-i18n="catGames">Games</span><span class="n"></span></button>
+        <button data-cat="productivity" onclick="filterCategory('productivity')" class="cat-btn" hidden><span data-i18n="catProductivity">Productivity</span><span class="n"></span></button>
+        <button data-cat="health" onclick="filterCategory('health')" class="cat-btn" hidden><span data-i18n="catHealth">Health &amp; Fitness</span><span class="n"></span></button>
+        <button data-cat="photo" onclick="filterCategory('photo')" class="cat-btn" hidden><span data-i18n="catPhoto">Photo &amp; Video</span><span class="n"></span></button>
       </div>
     </section>
 
@@ -285,8 +318,8 @@
       <div id="appCounter">0 Apps</div>
     </div>
 
-    <section id="catalogGrid" class="shelf">
-      <div class="state"><div class="spinner"></div><p data-i18n="loading">Loading catalog…</p></div>
+    <section id="catalogGrid" class="groups">
+      <div class="shelf"><div class="state"><div class="spinner"></div><p data-i18n="loading">Loading catalog…</p></div></div>
     </section>
 
     <footer class="foot">© JingApps Premium Library</footer>
@@ -296,7 +329,7 @@
   <nav class="tabbar" aria-label="Tabs">
     <button class="tab is-active" data-cat="all" onclick="filterCategory('all')">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 3.6 8.6v.9L12 15.3l8.4-5.8v-.9L12 2.8zM4.5 12.3v1.1L12 18.6l7.5-5.2v-1.1L12 17.5l-7.5-5.2zm0 3.4v1.1L12 22l7.5-5.2v-1.1L12 20.8l-7.5-5.1z"/></svg>
-      <span data-i18n="tabApps">Apps</span>
+      <span data-i18n="all">All</span>
     </button>
     <button class="tab" data-cat="patched" onclick="filterCategory('patched')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.4 3.2 8 7.5 9.5 4.3-1.5 7.5-5.1 7.5-9.5V6L12 3z"/><path d="m8.8 12 2.4 2.4 4-4.4"/></svg>
@@ -316,9 +349,11 @@
     /* ================= i18n ================= */
     const LANGS = {
       en: { name: 'English', locale: 'en-US', t: {
+        catUtilities: 'Utilities', catGames: 'Games', catProductivity: 'Productivity', catHealth: 'Health & Fitness', catPhoto: 'Photo & Video',
+        themeTitle: 'Appearance', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
         joinTelegram: 'Join Telegram', title: 'Apps', heroLabel: 'Premium Library',
         heroTitle: 'Premium iOS Mods & Tweaked IPAs',
-        heroSub: 'An iOS app catalog that updates in real time. Get the full .ipa files and sideloading certificates in our Telegram group.',
+        heroSub: 'iOS apps with all premium features unlocked, updated regularly. Install straight from your device, no jailbreak or computer needed.',
         heroCta: 'Get VIP Access', searchPh: 'Search apps, mods or features',
         all: 'All', patched: 'Patched', tweaked: 'Tweaked', section: 'Latest Apps',
         count: '{n} Apps', loading: 'Loading catalog…',
@@ -327,9 +362,11 @@
         by: 'By', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Mod Features',
         updated: 'Updated', download: 'Download IPA', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
+        catUtilities: 'Utilitas', catGames: 'Game', catProductivity: 'Produktivitas', catHealth: 'Kesehatan & Kebugaran', catPhoto: 'Foto & Video',
+        themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
         joinTelegram: 'Gabung Telegram', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
         heroTitle: 'Mod iOS Premium & IPA Tweaked',
-        heroSub: 'Katalog aplikasi iOS yang diperbarui secara real-time. Dapatkan file .ipa lengkap beserta sertifikat sideloading di grup Telegram kami.',
+        heroSub: 'Aplikasi iOS dengan semua fitur premium terbuka, diperbarui secara berkala. Pasang langsung dari perangkat Anda, tanpa jailbreak dan tanpa komputer.',
         heroCta: 'Dapatkan Akses VIP', searchPh: 'Cari aplikasi, mod, atau fitur',
         all: 'Semua', patched: 'Patched', tweaked: 'Tweaked', section: 'Aplikasi Terbaru',
         count: '{n} Aplikasi', loading: 'Memuat katalog…',
@@ -338,9 +375,11 @@
         by: 'Oleh', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Fitur Mod',
         updated: 'Diperbarui', download: 'Unduh IPA', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
+        catUtilities: '工具', catGames: '游戏', catProductivity: '效率', catHealth: '健康与健身', catPhoto: '摄影与录像',
+        themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
         joinTelegram: '加入 Telegram', title: '应用', heroLabel: '高级资源库',
         heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
-        heroSub: '实时更新的 iOS 应用目录。加入我们的 Telegram 群组，即可获取完整的 .ipa 文件和侧载证书。',
+        heroSub: '解锁全部高级功能的 iOS 应用，定期更新。直接在设备上安装，无需越狱，也无需电脑。',
         heroCta: '获取 VIP 权限', searchPh: '搜索应用、魔改或功能',
         all: '全部', patched: 'Patched', tweaked: 'Tweaked', section: '最新应用',
         count: '{n} 个应用', loading: '正在加载目录…',
@@ -349,9 +388,11 @@
         by: '作者', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: '魔改功能',
         updated: '更新于', download: '下载 IPA', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
+        catUtilities: 'ユーティリティ', catGames: 'ゲーム', catProductivity: '仕事効率化', catHealth: 'ヘルスケア/フィットネス', catPhoto: '写真/ビデオ',
+        themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
         joinTelegram: 'Telegram に参加', title: 'App', heroLabel: 'プレミアムライブラリ',
         heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
-        heroSub: 'リアルタイムで更新される iOS アプリのカタログ。Telegram グループで .ipa ファイルとサイドロード用証明書を入手できます。',
+        heroSub: 'プレミアム機能をすべて解放した iOS アプリを、定期的に更新しています。端末から直接インストールでき、脱獄もパソコンも不要です。',
         heroCta: 'VIP アクセスを取得', searchPh: 'App、Mod、機能を検索',
         all: 'すべて', patched: 'Patched', tweaked: 'Tweaked', section: '最新のApp',
         count: '{n} 件', loading: 'カタログを読み込み中…',
@@ -360,9 +401,11 @@
         by: '提供', iosMin: 'iOS {v}以降', patchedBadge: 'Patched', mod: 'Mod 機能',
         updated: '更新', download: 'IPAをダウンロード', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
+        catUtilities: 'ยูทิลิตี้', catGames: 'เกม', catProductivity: 'ประสิทธิภาพการทำงาน', catHealth: 'สุขภาพและฟิตเนส', catPhoto: 'ภาพถ่ายและวิดีโอ',
+        themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
         joinTelegram: 'เข้าร่วม Telegram', title: 'แอป', heroLabel: 'คลังพรีเมียม',
         heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
-        heroSub: 'แคตตาล็อกแอป iOS ที่อัปเดตแบบเรียลไทม์ รับไฟล์ .ipa ฉบับเต็มพร้อมใบรับรอง sideloading ได้ในกลุ่ม Telegram ของเรา',
+        heroSub: 'แอป iOS ที่ปลดล็อกฟีเจอร์พรีเมียมทั้งหมด อัปเดตอย่างสม่ำเสมอ ติดตั้งได้โดยตรงจากอุปกรณ์ ไม่ต้องเจลเบรกและไม่ต้องใช้คอมพิวเตอร์',
         heroCta: 'รับสิทธิ์ VIP', searchPh: 'ค้นหาแอป, มอด หรือฟีเจอร์',
         all: 'ทั้งหมด', patched: 'Patched', tweaked: 'Tweaked', section: 'แอปล่าสุด',
         count: '{n} แอป', loading: 'กำลังโหลดแคตตาล็อก…',
@@ -392,6 +435,7 @@
       } catch (e) {}
       if (allApps.length) document.getElementById('appCounter').innerText = t('count', { n: allApps.length });
       renderLangMenu();
+      renderThemeMenu();
     }
 
     function setLang(code) {
@@ -400,7 +444,7 @@
       applyStaticText();
       if (allApps.length) { renderToday(allApps); filterApps(); }
       else if (lastEmptyKey) renderEmptyState(lastEmptyKey);
-      closeLangMenu();
+      closeMenus();
     }
 
     function renderLangMenu() {
@@ -411,18 +455,54 @@
           <svg fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
         </button>`).join('');
     }
-    function closeLangMenu() {
-      document.getElementById('langMenu').classList.remove('open');
-      document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
+
+    /* ---- appearance: auto (device) / light / dark ---- */
+    const THEME_ICONS = {
+      auto: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>',
+      light: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>',
+      dark: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>'
+    };
+    let theme = 'auto';
+    try { const s = localStorage.getItem('jingapps_theme'); if (s === 'light' || s === 'dark') theme = s; } catch (e) {}
+
+    function applyTheme(mode, save) {
+      theme = mode;
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      if (save) { try { mode === 'auto' ? localStorage.removeItem('jingapps_theme') : localStorage.setItem('jingapps_theme', mode); } catch (e) {} }
+      document.getElementById('themeIcon').innerHTML = THEME_ICONS[mode];
+      renderThemeMenu();
     }
-    document.getElementById('langBtn').addEventListener('click', e => {
-      e.stopPropagation();
-      const m = document.getElementById('langMenu');
-      const open = m.classList.toggle('open');
-      e.currentTarget.setAttribute('aria-expanded', open);
+    function renderThemeMenu() {
+      const menu = document.getElementById('themeMenu');
+      const label = { auto: t('themeAuto'), light: t('themeLight'), dark: t('themeDark') };
+      document.getElementById('themeBtn').setAttribute('aria-label', t('themeTitle'));
+      menu.innerHTML = `<div class="menu-title">${t('themeTitle')}</div>` + ['auto', 'light', 'dark'].map(m => `
+        <button role="menuitemradio" aria-checked="${m === theme}" onclick="applyTheme('${m}', true); closeMenus()">
+          <span>${label[m]}</span>
+          <svg fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+        </button>`).join('');
+    }
+
+    /* ---- popup menus ---- */
+    const MENUS = [['langBtn', 'langMenu'], ['themeBtn', 'themeMenu']];
+    function closeMenus() {
+      MENUS.forEach(([b, m]) => {
+        document.getElementById(m).classList.remove('open');
+        document.getElementById(b).setAttribute('aria-expanded', 'false');
+      });
+    }
+    MENUS.forEach(([b, m]) => {
+      document.getElementById(b).addEventListener('click', e => {
+        e.stopPropagation();
+        const menu = document.getElementById(m);
+        const willOpen = !menu.classList.contains('open');
+        closeMenus();
+        if (willOpen) { menu.classList.add('open'); e.currentTarget.setAttribute('aria-expanded', 'true'); }
+      });
     });
-    document.addEventListener('click', e => { if (!e.target.closest('.lang')) closeLangMenu(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLangMenu(); });
+    document.addEventListener('click', e => { if (!e.target.closest('.menu')) closeMenus(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenus(); });
 
     /* ============ Brand icon (Google Drive file) ============ */
     const ICON_ID = '1TozuJeKpQOL1txNf45SSwjSQHcUK2XtZ';
@@ -444,8 +524,23 @@
 
     /* ================= Catalog ================= */
     let allApps = [];
-    let currentCategory = 'all';
+    let currentCategory = 'all';   // all | patched | tweaked | utilities | games | productivity | health | photo
     let lastEmptyKey = null;
+
+    /* Genre filters. Matches the "category" field in apps.json (App Store genre names).
+       Apps with another genre (e.g. "Sports") still show under All. */
+    const GENRES = [
+      { key: 'utilities',    re: /utilit/ },
+      { key: 'games',        re: /game/ },
+      { key: 'productivity', re: /productiv/ },
+      { key: 'health',       re: /health|fitness/ },
+      { key: 'photo',        re: /photo|video/ }
+    ];
+    function genreOf(app) {
+      const c = String(app.category || '').toLowerCase();
+      const g = GENRES.find(g => g.re.test(c));
+      return g ? g.key : null;
+    }
 
     async function loadCatalog() {
       try {
@@ -459,14 +554,34 @@
           return;
         }
 
+        allApps.forEach(a => { a._genre = genreOf(a); });
         lastEmptyKey = null;
         document.getElementById('appCounter').innerText = t('count', { n: allApps.length });
+        updateCatUI();
         renderToday(allApps);
         renderCatalog(allApps);
       } catch (err) {
         allApps = [];
         renderEmptyState('emptyErr');
       }
+    }
+
+    /* show only genre chips that have apps, with counts */
+    function updateCatUI() {
+      const counts = {};
+      GENRES.forEach(g => { counts[g.key] = allApps.filter(a => a._genre === g.key).length; });
+      document.querySelectorAll('.cat-btn[data-cat]').forEach(el => {
+        const k = el.dataset.cat;
+        if (k in counts) {
+          el.hidden = counts[k] === 0;
+          const n = el.querySelector('.n');
+          if (n) n.textContent = counts[k];
+        }
+      });
+      if (currentCategory in counts && counts[currentCategory] === 0) currentCategory = 'all';
+      document.querySelectorAll('.cat-btn[data-cat], .tab[data-cat]').forEach(el => {
+        el.classList.toggle('is-active', el.dataset.cat === currentCategory);
+      });
     }
 
     function renderToday(apps) {
@@ -486,17 +601,18 @@
       lastEmptyKey = key;
       const grid = document.getElementById('catalogGrid');
       grid.innerHTML = `
-        <div class="state">
-          <div class="emoji">📲</div>
-          <h3>${t('emptyTitle')}</h3>
-          <p>${t(key)}</p>
+        <div class="shelf">
+          <div class="state">
+            <div class="emoji">📲</div>
+            <h3>${t('emptyTitle')}</h3>
+            <p>${t(key)}</p>
+          </div>
         </div>
       `;
     }
 
-    function renderCatalog(apps) {
-      const grid = document.getElementById('catalogGrid');
-      grid.innerHTML = apps.map(app => `
+    function renderApp(app) {
+      return `
         <article class="app">
           <div class="app-head">
             <img src="${app.thumbnail || FALLBACK_ICON}" alt="" class="ios-icon">
@@ -505,6 +621,7 @@
               <p class="app-by">${app.modified_by ? t('by') + ' ' + app.modified_by : t('iosApp')}</p>
               <div class="meta">
                 <span class="v">v${app.version}</span>
+                ${app.category ? `<span>${app.category}</span>` : ''}
                 <span>${t('iosMin', { v: app.min_ios })}</span>
                 ${app.is_patched ? `<span class="badge">${t('patchedBadge')}</span>` : ''}
               </div>
@@ -525,14 +642,18 @@
             <span>${t('updated')} ${app.updated_at}</span>
             <a href="https://t.me/steeshigeo" target="_blank" rel="noopener">${t('download')}</a>
           </div>
-        </article>
-      `).join('');
+        </article>`;
+    }
+
+    function renderCatalog(apps) {
+      const grid = document.getElementById('catalogGrid');
+      grid.innerHTML = `<div class="shelf">${apps.map(renderApp).join('')}</div>`;
     }
 
     function filterCategory(cat) {
       currentCategory = cat;
-      document.querySelectorAll('.cat-btn, .tab[data-cat]').forEach(btn => {
-        btn.classList.toggle('is-active', btn.dataset.cat === cat);
+      document.querySelectorAll('.cat-btn[data-cat], .tab[data-cat]').forEach(el => {
+        el.classList.toggle('is-active', el.dataset.cat === cat);
       });
       filterApps();
     }
@@ -550,9 +671,9 @@
         const matchesQuery = app.app_name.toLowerCase().includes(query) ||
                              (app.modified && app.modified.toLowerCase().includes(query)) ||
                              (app.note && app.note.toLowerCase().includes(query));
-
         if (currentCategory === 'patched') return matchesQuery && app.is_patched;
         if (currentCategory === 'tweaked') return matchesQuery && app.tweaker;
+        if (currentCategory !== 'all') return matchesQuery && app._genre === currentCategory;
         return matchesQuery;
       });
 
@@ -564,6 +685,7 @@
       }
     }
 
+    applyTheme(theme, false);
     applyStaticText();
     loadCatalog();
   </script>

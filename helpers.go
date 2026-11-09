@@ -48,22 +48,25 @@ type InfoPlistData struct {
 	MinimumOSVersion string `plist:"MinimumOSVersion"`
 }
 
-// Struct penampung respon iTunes API
+// Struct penampung respon iTunes API (Termasuk Genre / Kategori)
 type ITunesResponse struct {
 	Results []struct {
-		TrackName    string `json:"trackName"`
-		TrackViewURL string `json:"trackViewUrl"`
-		ArtworkURL   string `json:"artworkUrl100"`
+		TrackName        string   `json:"trackName"`
+		TrackViewURL     string   `json:"trackViewUrl"`
+		ArtworkURL       string   `json:"artworkUrl100"`
+		PrimaryGenreName string   `json:"primaryGenreName"`
+		Genres           []string `json:"genres"`
 	} `json:"results"`
 }
 
-// Struct data akhir untuk caption & thumbnail
+// Struct data akhir untuk caption, catalog & thumbnail
 type AppMetadata struct {
 	AppName       string
 	BundleID      string
 	Version       string
 	UpdatedTo     string
 	MinIOS        string
+	Category      string
 	IsPatched     bool
 	Modifier      string
 	ModifiedBy    string
@@ -123,10 +126,10 @@ func generateDefaultFileName(appName, version, modifier, customName string) stri
 	return strings.Join(parts, "_") + ".ipa"
 }
 
-// Mencari Link App Store, Icon URL, dan Nama Resmi Aplikasi via iTunes API berdasarkan Bundle ID
-func FetchAppStoreData(bundleID string) (appStoreURL string, artworkURL string, trackName string) {
+// Mencari Link App Store, Icon, Nama Resmi, dan Kategori/Genre via iTunes API
+func FetchAppStoreData(bundleID string) (appStoreURL string, artworkURL string, trackName string, category string) {
 	if strings.TrimSpace(bundleID) == "" {
-		return "", "", ""
+		return "", "", "", ""
 	}
 
 	client := http.Client{Timeout: 5 * time.Second}
@@ -136,15 +139,21 @@ func FetchAppStoreData(bundleID string) (appStoreURL string, artworkURL string, 
 		if json.NewDecoder(resp.Body).Decode(&result) == nil && len(result.Results) > 0 {
 			resp.Body.Close()
 			res := result.Results[0]
-			return res.TrackViewURL, res.ArtworkURL, res.TrackName
+
+			cat := res.PrimaryGenreName
+			if cat == "" && len(res.Genres) > 0 {
+				cat = res.Genres[0]
+			}
+
+			return res.TrackViewURL, res.ArtworkURL, res.TrackName, cat
 		}
 		resp.Body.Close()
 	}
 
-	return "", "", ""
+	return "", "", "", ""
 }
 
-// Membaca deskripsi/caption dari Telegram (Dengan Dukungan Multi-Line Note Uth)
+// Membaca deskripsi/caption dari Telegram (Dengan Dukungan Multi-Line Note)
 func parseCaptionOptions(userCaption string) (modified string, modifiedBy string, isPatched bool, note string, tweaker string, customName string) {
 	if strings.TrimSpace(userCaption) == "" {
 		return "", "", false, "", "", ""
@@ -156,7 +165,6 @@ func parseCaptionOptions(userCaption string) (modified string, modifiedBy string
 	inNote := false
 
 	for _, line := range lines {
-		// Jika flag inNote sudah aktif, semua baris setelah Note: dianggap bagian dari Note (multi-line)
 		if inNote {
 			noteLines = append(noteLines, line)
 			continue
@@ -246,8 +254,8 @@ func ExtractIPAMetadata(ipaPath string, userCaption string) (AppMetadata, error)
 		return AppMetadata{}, err
 	}
 
-	// Fetch data App Store via Bundle ID
-	appStoreURL, artworkURL, storeAppName := FetchAppStoreData(parsedPlist.BundleID)
+	// Fetch data App Store (Termasuk Category)
+	appStoreURL, artworkURL, storeAppName, category := FetchAppStoreData(parsedPlist.BundleID)
 
 	appName := storeAppName
 	if appName == "" {
@@ -260,6 +268,10 @@ func ExtractIPAMetadata(ipaPath string, userCaption string) (AppMetadata, error)
 		appName = strings.TrimSuffix(filepath.Base(ipaPath), filepath.Ext(ipaPath))
 	}
 
+	if category == "" {
+		category = "Utilities" // Fallback default jika aplikasi private/tweak khusus
+	}
+
 	modifiedText, modifiedByText, isPatched, noteText, tweakerText, customName := parseCaptionOptions(userCaption)
 
 	finalFileName := generateDefaultFileName(appName, parsedPlist.Version, modifiedText, customName)
@@ -270,6 +282,7 @@ func ExtractIPAMetadata(ipaPath string, userCaption string) (AppMetadata, error)
 		Version:       parsedPlist.Version,
 		UpdatedTo:     parsedPlist.Version,
 		MinIOS:        parsedPlist.MinimumOSVersion,
+		Category:      category,
 		IsPatched:     isPatched,
 		Modifier:      modifiedText,
 		ModifiedBy:    modifiedByText,
@@ -365,7 +378,7 @@ func GetAppIconThumbnail(meta AppMetadata, ipaPath, outputDir string) string {
 	return ""
 }
 
-// Menyusun caption berformat Telegram Blockquote (Dengan Multi-Line Note)
+// Menyusun caption berformat Telegram Blockquote
 func BuildIPACaption(meta AppMetadata) string {
 	titleText := fmt.Sprintf("<b>%s</b>", meta.AppName)
 	if meta.AppStoreURL != "" {
@@ -374,6 +387,7 @@ func BuildIPACaption(meta AppMetadata) string {
 
 	var blockLines []string
 	blockLines = append(blockLines, fmt.Sprintf("• Bundle ID: %s", meta.BundleID))
+	blockLines = append(blockLines, fmt.Sprintf("• Category: %s", meta.Category))
 	blockLines = append(blockLines, fmt.Sprintf("• Updated to: %s", meta.UpdatedTo))
 	blockLines = append(blockLines, fmt.Sprintf("• Minimum iOS: %s", meta.MinIOS))
 
@@ -401,7 +415,6 @@ func BuildIPACaption(meta AppMetadata) string {
 	)
 
 	if strings.TrimSpace(meta.Note) != "" {
-		// Escape tag HTML agar karakter seperti < atau > tidak merusak format HTML Telegram
 		safeNote := html.EscapeString(meta.Note)
 		caption += fmt.Sprintf("\n\n<blockquote>• Note:\n%s</blockquote>", safeNote)
 	}

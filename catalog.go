@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strings"
 	"sync"
 	"time"
 )
@@ -16,6 +17,7 @@ type CatalogItem struct {
 	AppName    string `json:"app_name"`
 	Version    string `json:"version"`
 	MinIOS     string `json:"min_ios"`
+	Category   string `json:"category"`
 	IsPatched  bool   `json:"is_patched"`
 	Modified   string `json:"modified"`
 	ModifiedBy string `json:"modified_by"`
@@ -27,11 +29,11 @@ type CatalogItem struct {
 
 var catalogMutex sync.Mutex
 
+// Menambahkan atau memperbarui aplikasi di Web Catalog
 func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 	catalogMutex.Lock()
 	defer catalogMutex.Unlock()
 
-	// Pastikan folder public/data dan public/thumbnails ada
 	_ = os.MkdirAll("./public/thumbnails", os.ModePerm)
 	_ = os.MkdirAll("./public/data", os.ModePerm)
 
@@ -47,7 +49,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 		}
 	}
 
-	// 2. Baca data JSON yang sudah ada di public/data/apps.json
+	// 2. Baca data JSON yang sudah ada
 	var items []CatalogItem
 	fileData, err := os.ReadFile(jsonFilePath)
 	if err == nil {
@@ -59,6 +61,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 		AppName:    meta.AppName,
 		Version:    meta.Version,
 		MinIOS:     meta.MinIOS,
+		Category:   meta.Category,
 		IsPatched:  meta.IsPatched,
 		Modified:   meta.Modifier,
 		ModifiedBy: meta.ModifiedBy,
@@ -68,7 +71,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 		UpdatedAt:  time.Now().Format("2006-01-02"),
 	}
 
-	// Update jika app sudah ada, atau tambahkan di paling atas jika baru
+	// Update jika aplikasi sudah ada, atau tambahkan di paling atas jika baru
 	updated := false
 	for i, item := range items {
 		if item.ID == newItem.ID {
@@ -92,7 +95,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 		return fmt.Errorf("gagal menyimpan file JSON: %v", err)
 	}
 
-	log.Printf("📦 Katalog lokal diperbarui: %s (v%s)", meta.AppName, meta.Version)
+	log.Printf("📦 Katalog lokal diperbarui: %s (v%s - %s)", meta.AppName, meta.Version, meta.Category)
 
 	// 4. Trigger Git Push Async ke GitHub ➔ Vercel Auto Deploy
 	go syncToGitHub(meta.AppName, meta.Version)
@@ -100,8 +103,66 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 	return nil
 }
 
-func syncToGitHub(appName, version string) {
-	commitMsg := fmt.Sprintf("auto-update: release %s v%s", appName, version)
+// Menghapus aplikasi dari Web Catalog berdasarkan Nama atau Bundle ID
+func DeleteFromCatalog(target string) (string, error) {
+	catalogMutex.Lock()
+	defer catalogMutex.Unlock()
+
+	jsonFilePath := "./public/data/apps.json"
+	var items []CatalogItem
+	fileData, err := os.ReadFile(jsonFilePath)
+	if err != nil {
+		return "", fmt.Errorf("gagal membaca file catalog: %v", err)
+	}
+
+	_ = json.Unmarshal(fileData, &items)
+
+	newItems := []CatalogItem{}
+	deletedAppName := ""
+	deletedBundleID := ""
+
+	targetLower := strings.ToLower(strings.TrimSpace(target))
+
+	for _, item := range items {
+		if strings.EqualFold(item.ID, targetLower) || strings.Contains(strings.ToLower(item.AppName), targetLower) {
+			deletedAppName = item.AppName
+			deletedBundleID = item.ID
+			continue
+		}
+		newItems = append(newItems, item)
+	}
+
+	if deletedAppName == "" {
+		return "", fmt.Errorf("aplikasi '%s' tidak ditemukan di katalog", target)
+	}
+
+	output, err := json.MarshalIndent(newItems, "", "  ")
+	if err != nil {
+		return "", err
+	}
+	if err := os.WriteFile(jsonFilePath, output, 0644); err != nil {
+		return "", fmt.Errorf("gagal memperbarui file catalog: %v", err)
+	}
+
+	if deletedBundleID != "" {
+		_ = os.Remove(filepath.Join("./public/thumbnails", deletedBundleID+".jpg"))
+	}
+
+	log.Printf("🗑️ Katalog lokal diperbarui: Menghapus %s", deletedAppName)
+
+	go syncToGitHub(deletedAppName, "deleted")
+
+	return deletedAppName, nil
+}
+
+// Mengunggah perubahan catalog secara otomatis ke GitHub
+func syncToGitHub(appName, action string) {
+	var commitMsg string
+	if action == "deleted" {
+		commitMsg = fmt.Sprintf("auto-update: remove %s from catalog", appName)
+	} else {
+		commitMsg = fmt.Sprintf("auto-update: release %s v%s", appName, action)
+	}
 
 	_ = exec.Command("git", "add", "public/data/apps.json", "public/thumbnails/").Run()
 	_ = exec.Command("git", "commit", "-m", commitMsg).Run()
