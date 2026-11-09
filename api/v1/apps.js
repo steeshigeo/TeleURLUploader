@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -12,40 +12,23 @@ module.exports = async (req, res) => {
 
   try {
     let apps = [];
-    const protocol = req.headers['x-forwarded-proto'] || 'https';
-    const host = req.headers.host;
-    const baseUrl = `${protocol}://${host}`;
-
-    // 1. Coba baca file lokal fs
-    const possiblePaths = [
-      path.join(process.cwd(), 'public', 'data', 'apps.json'),
-      path.join(__dirname, '../../public/data/apps.json'),
-      path.join(__dirname, '../public/data/apps.json')
-    ];
-
-    let fileFound = false;
-    for (const p of possiblePaths) {
-      if (fs.existsSync(p)) {
-        const rawData = fs.readFileSync(p, 'utf8');
-        apps = JSON.parse(rawData || '[]');
-        fileFound = true;
-        break;
-      }
-    }
-
-    // 2. Fallback: Jika fs di-isolate Vercel, fetch data via HTTP secara internal
-    if (!fileFound && host) {
+    const filePath = path.join(process.cwd(), 'public', 'data', 'apps.json');
+    
+    if (fs.existsSync(filePath)) {
+      const rawData = fs.readFileSync(filePath, 'utf8');
+      apps = JSON.parse(rawData || '[]');
+    } else {
       try {
-        const fetchRes = await fetch(`${baseUrl}/data/apps.json`);
-        if (fetchRes.ok) {
-          apps = await fetchRes.json();
-        }
+        apps = require('../../public/data/apps.json');
       } catch (e) {
-        // Fallback fetch error ignore
+        apps = [];
       }
     }
 
-    // Format thumbnail_url lengkap
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const host = req.headers.host || '';
+    const baseUrl = host ? `${protocol}://${host}` : '';
+
     apps = apps.map(app => ({
       ...app,
       thumbnail_url: app.thumbnail ? `${baseUrl}${app.thumbnail}` : null

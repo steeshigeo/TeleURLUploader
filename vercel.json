@@ -2,10 +2,7 @@
   "cleanUrls": true,
   "functions": {
     "api/v1/apps.js": {
-      "includeFiles": "public/data/**"
+      "includeFiles": "public/data/apps.json"
     }
-  },
-  "rewrites": [
-    { "source": "/api/v1/apps", "destination": "/api/v1/apps.js" }
-  ]
+  }
 }
