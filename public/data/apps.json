@@ -1,18 +1,5 @@
 [
   {
-    "id": "com.elevateapp.elevate",
-    "app_name": "Elevate - Brain Training Games",
-    "version": "5.265.0",
-    "min_ios": "17.0",
-    "is_patched": false,
-    "modified": "",
-    "modified_by": "",
-    "tweaker": "",
-    "note": "",
-    "thumbnail": "/thumbnails/com.elevateapp.elevate.jpg",
-    "updated_at": "2026-11-10"
-  },
-  {
     "id": "co.codeleap.bearable",
     "app_name": "Bearable - Symptom Tracker",
     "version": "1.0.615",
