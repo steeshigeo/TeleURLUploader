@@ -1,5 +1,18 @@
 [
   {
+    "id": "com.dreamer.Habits",
+    "app_name": "Awesome Habits: Habit Tracker",
+    "version": "8.1.2",
+    "min_ios": "18.0",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Login and force close the app if hack wont work",
+    "thumbnail": "/thumbnails/com.dreamer.Habits.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.gymbros.app",
     "app_name": "Liftoff - Ranked Gym Workouts",
     "version": "2.17.8",
