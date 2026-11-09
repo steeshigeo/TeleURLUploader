@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.chudo",
+    "app_name": "3D Modeling: Blender Shapeyard",
+    "version": "5.34.1",
+    "min_ios": "16.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.chudo.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "ru.routes.peakvisor",
     "app_name": "Hiking and Skiing - PeakVisor",
     "version": "5.121",
