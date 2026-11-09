@@ -1,162 +1,495 @@
 <!DOCTYPE html>
-<html lang="id" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App Store — iOS IPA Mod Catalog</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>JingApps Premium Library</title>
+  <link rel="icon" id="favicon" href="https://lh3.googleusercontent.com/d/1TozuJeKpQOL1txNf45SSwjSQHcUK2XtZ=s64">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-    
+    :root {
+      --bg: #F2F2F7;
+      --surface: #FFFFFF;
+      --fill: #EFEFF4;
+      --label: #000000;
+      --label2: #6C6C70;
+      --sep: rgba(60, 60, 67, .16);
+      --blue: #007AFF;
+      --green: #248A3D;
+      --green-soft: rgba(52, 199, 89, .16);
+      --bar: rgba(249, 249, 249, .82);
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue",
+              "PingFang SC", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans", "Noto Sans CJK SC",
+              "Noto Sans JP", "Noto Sans Thai", "Sukhumvit Set", "Thonburi", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --surface: #1C1C1E;
+        --fill: #2C2C2E;
+        --label: #FFFFFF;
+        --label2: #98989F;
+        --sep: rgba(84, 84, 88, .55);
+        --blue: #0A84FF;
+        --green: #30D158;
+        --green-soft: rgba(48, 209, 88, .18);
+        --bar: rgba(22, 22, 24, .82);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; -webkit-tap-highlight-color: transparent; }
     body {
-      background-color: #000000;
-      color: #f5f5f7;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
-      -webkit-font-smoothing: antialiased;
+      background: var(--bg); color: var(--label);
+      font-family: var(--font); -webkit-font-smoothing: antialiased;
+      line-height: 1.35; min-height: 100vh;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: 48px;
     }
-    
-    /* Shape Squircle iOS untuk Icon */
-    .ios-icon {
-      border-radius: 22%;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-    }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; }
+    :focus-visible { outline: 3px solid color-mix(in srgb, var(--blue) 55%, transparent); outline-offset: 2px; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 
-    /* Glassmorphism khas macOS / iOS */
-    .ios-glass {
-      background: rgba(28, 28, 30, 0.65);
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    /* ---------- Navigation bar ---------- */
+    .navbar {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--bar);
+      backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px);
+      border-bottom: .5px solid var(--sep);
     }
+    .navbar .wrap { height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .app-icon, .brand img {
+      border-radius: 22.37%; object-fit: cover; background: var(--fill);
+      box-shadow: 0 0 0 .5px rgba(0,0,0,.18);
+    }
+    .brand img { width: 32px; height: 32px; flex-shrink: 0; }
+    .brand span { font-size: 17px; font-weight: 600; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      height: 32px; padding: 0 14px; border-radius: 999px; border: 0; cursor: pointer;
+      background: var(--fill); color: var(--blue); font-size: 14px; font-weight: 600;
+      transition: opacity .15s ease, transform .15s ease;
+    }
+    .pill:hover { opacity: .8; }
+    .pill:active { transform: scale(.96); }
+    .pill svg { width: 16px; height: 16px; }
+    .pill.primary { background: var(--blue); color: #fff; }
 
-    .ios-card {
-      background: rgba(28, 28, 30, 0.8);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    /* language menu */
+    .lang { position: relative; }
+    .menu {
+      position: absolute; right: 0; top: 40px; min-width: 190px; padding: 6px;
+      background: var(--bar); border-radius: 14px;
+      backdrop-filter: saturate(180%) blur(30px); -webkit-backdrop-filter: saturate(180%) blur(30px);
+      box-shadow: 0 12px 40px rgba(0,0,0,.28), 0 0 0 .5px var(--sep);
+      display: none;
     }
+    .menu.open { display: block; transform-origin: top right; animation: pop .16s ease-out; }
+    @keyframes pop { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: scale(1); } }
+    .menu button {
+      width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 10px 12px; border: 0; border-radius: 9px; background: transparent;
+      color: var(--label); font-size: 16px; text-align: left; cursor: pointer;
+    }
+    .menu button:hover { background: var(--fill); }
+    .menu button svg { width: 16px; height: 16px; color: var(--blue); visibility: hidden; }
+    .menu button[aria-checked="true"] svg { visibility: visible; }
+    .menu-title { padding: 8px 12px 4px; font-size: 12px; color: var(--label2); font-weight: 600; }
 
-    .ios-input {
-      background: rgba(44, 44, 46, 0.8);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+    /* ---------- Large title ---------- */
+    .head { padding: 22px 0 12px; }
+    .date { font-size: 13px; font-weight: 600; color: var(--label2); text-transform: uppercase; letter-spacing: .01em; }
+    .large-title { font-size: 34px; font-weight: 700; letter-spacing: -.03em; line-height: 1.12; }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
+    /* ---------- Today card ---------- */
+    .today {
+      position: relative; overflow: hidden; isolation: isolate;
+      border-radius: 20px; min-height: 420px; color: #fff;
+      display: flex; flex-direction: column; justify-content: space-between;
+      background: linear-gradient(155deg, #3B5BFF 0%, #7A3CFF 55%, #C13BFF 100%);
+      box-shadow: 0 14px 34px rgba(30, 20, 90, .28);
     }
-    ::-webkit-scrollbar-track {
-      background: transparent;
+    .today-bg { position: absolute; inset: -30px; z-index: -2; background-size: cover; background-position: center; filter: blur(46px) saturate(1.5); opacity: .7; transform: scale(1.2); }
+    .today::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,.05) 25%, rgba(0,0,0,.4)); }
+    .today-copy { padding: 24px 24px 0; max-width: 560px; }
+    .today-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; opacity: .85; }
+    .today h1 { font-size: clamp(30px, 6vw, 46px); font-weight: 800; letter-spacing: -.035em; line-height: 1.08; margin-top: 6px; }
+    .today p { margin-top: 12px; font-size: 16px; line-height: 1.4; opacity: .9; max-width: 46ch; }
+    .btn-white {
+      display: inline-flex; align-items: center; height: 38px; padding: 0 20px; margin-top: 20px;
+      border-radius: 999px; background: #fff; color: #0A5BFF; font-size: 15px; font-weight: 700;
+      transition: transform .15s ease;
     }
-    ::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
+    .btn-white:active { transform: scale(.96); }
+    .today-foot {
+      margin: 0 12px 12px; padding: 12px; border-radius: 16px;
+      background: rgba(30, 30, 34, .5);
+      backdrop-filter: blur(28px) saturate(160%); -webkit-backdrop-filter: blur(28px) saturate(160%);
+      display: none; align-items: center; gap: 12px;
     }
+    .today-foot.show { display: flex; }
+    .today-foot img { width: 52px; height: 52px; border-radius: 22.37%; object-fit: cover; box-shadow: 0 0 0 .5px rgba(255,255,255,.25); flex-shrink: 0; }
+    .today-foot .t { flex: 1; min-width: 0; }
+    .today-foot b { display: block; font-size: 15px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .today-foot small { display: block; font-size: 13px; opacity: .75; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* ---------- Search + filter ---------- */
+    .controls { margin: 24px 0 8px; display: flex; flex-direction: column; gap: 12px; }
+    .search { position: relative; }
+    .search svg { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--label2); }
+    .search input {
+      width: 100%; height: 38px; padding: 0 12px 0 34px; border: 0; border-radius: 10px;
+      background: rgba(118, 118, 128, .12); color: var(--label); font: 400 17px var(--font);
+    }
+    .search input::placeholder { color: var(--label2); }
+    .search input:focus { outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 40%, transparent); }
+    .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+    .chips::-webkit-scrollbar { display: none; }
+    .cat-btn {
+      flex-shrink: 0; height: 32px; padding: 0 16px; border: 0; border-radius: 999px; cursor: pointer;
+      background: rgba(118, 118, 128, .12); color: var(--label); font-size: 14px; font-weight: 600;
+      transition: background .2s ease, color .2s ease;
+    }
+    .cat-btn.is-active { background: var(--blue); color: #fff; }
+
+    /* ---------- List ---------- */
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; margin: 22px 0 10px; }
+    .section-head h2 { font-size: 22px; font-weight: 700; letter-spacing: -.025em; }
+    #appCounter { font-size: 15px; color: var(--label2); }
+
+    .shelf {
+      display: grid; gap: .5px; background: var(--sep);
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr));
+      border-radius: 20px; overflow: hidden;
+    }
+    .app { background: var(--surface); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+    .app-head { display: flex; align-items: center; gap: 14px; }
+    .ios-icon { width: 64px; height: 64px; flex-shrink: 0; border-radius: 22.37%; object-fit: cover; background: var(--fill); box-shadow: 0 0 0 .5px rgba(0,0,0,.2); }
+    .app-id { flex: 1; min-width: 0; }
+    .app-name { font-size: 17px; font-weight: 600; letter-spacing: -.02em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .app-by { font-size: 13px; color: var(--label2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 1px; }
+    .meta { margin-top: 5px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 12px; color: var(--label2); }
+    .meta .v { font-weight: 600; color: var(--label); }
+    .badge { font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 999px; background: var(--green-soft); color: var(--green); }
+    .get {
+      flex-shrink: 0; min-width: 72px; height: 30px; padding: 0 18px; border-radius: 999px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--fill); color: var(--blue); font-size: 15px; font-weight: 700; letter-spacing: .01em;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+    .get:hover { opacity: .8; }
+    .get:active { transform: scale(.94); }
+
+    .mod h4 { font-size: 13px; font-weight: 600; color: var(--label2); margin-bottom: 2px; }
+    .mod p { font-size: 14px; line-height: 1.4; }
+    .note {
+      font-size: 13px; line-height: 1.5; color: var(--label2); white-space: pre-wrap;
+      max-height: 140px; overflow-y: auto; padding: 10px 12px; border-radius: 12px; background: var(--bg);
+    }
+    .app-foot { margin-top: auto; padding-top: 10px; border-top: .5px solid var(--sep); display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px; color: var(--label2); }
+    .app-foot a { color: var(--blue); font-weight: 500; }
+    .app-foot a:hover { opacity: .7; }
+
+    .state { grid-column: 1 / -1; background: var(--surface); text-align: center; padding: 64px 24px; }
+    .state .emoji { font-size: 36px; margin-bottom: 8px; }
+    .state h3 { font-size: 20px; font-weight: 700; }
+    .state p { font-size: 15px; color: var(--label2); margin-top: 4px; }
+    .spinner { width: 24px; height: 24px; margin: 0 auto 12px; border-radius: 50%; border: 2.5px solid var(--fill); border-top-color: var(--label2); animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .foot { margin-top: 28px; text-align: center; font-size: 12px; color: var(--label2); }
+
+    /* ---------- Tab bar (mobile) ---------- */
+    .tabbar { display: none; }
+    @media (max-width: 720px) {
+      body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+      .chips { display: none; }
+      .wrap { padding: 0 16px; }
+      .today { min-height: 380px; }
+      .brand span { font-size: 16px; }
+      .pill .lbl { display: none; }
+      .pill { padding: 0 10px; }
+      .tabbar {
+        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+        padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+        background: var(--bar); border-top: .5px solid var(--sep);
+        backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px);
+      }
+      .tab {
+        flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 0;
+        border: 0; background: transparent; color: var(--label2); font-size: 10px; font-weight: 500; cursor: pointer;
+      }
+      .tab svg { width: 26px; height: 26px; }
+      .tab.is-active { color: var(--blue); }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
 </head>
-<body class="min-h-screen pb-16">
+<body>
 
-  <!-- Navigation Bar Khas App Store -->
-  <nav class="sticky top-0 z-50 ios-glass border-b border-white/10 px-4 py-3.5 mb-6">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 flex items-center justify-center shadow-lg shadow-blue-500/20">
-          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.66-.8 1.11-1.92.99-3.04-.96.04-2.13.64-2.82 1.44-.61.71-1.14 1.86-1 2.97 1.08.08 2.17-.57 2.83-1.37z"/></svg>
-        </div>
-        <div>
-          <span class="text-xs font-semibold uppercase tracking-wider text-blue-400 block -mb-1">App Store</span>
-          <span class="text-base font-extrabold text-white">IPA Mod Library</span>
-        </div>
+  <header class="navbar">
+    <div class="wrap">
+      <div class="brand">
+        <img id="brandIcon" alt="JingApps" width="32" height="32">
+        <span>JingApps Premium Library</span>
       </div>
-
-      <a href="https://t.me/steeshigeo" target="_blank" 
-         class="px-4 py-1.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition duration-200 shadow-md shadow-blue-600/30 flex items-center gap-1.5">
-        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.18-1.82 6.97-3.02 8.36-3.61 3.98-1.68 4.81-1.97 5.35-1.98.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.04.29z"/></svg>
-        Join Telegram
-      </a>
+      <div class="nav-actions">
+        <div class="lang">
+          <button class="pill" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.7 4.2 5.9 4.2 9.5s-1.4 6.8-4.2 9.5c-2.8-2.7-4.2-5.9-4.2-9.5S9.2 5.2 12 2.5z"/></svg>
+            <span class="lbl" id="langLabel">English</span>
+          </button>
+          <div class="menu" id="langMenu" role="menu"></div>
+        </div>
+        <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="pill primary">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.18-1.82 6.97-3.02 8.36-3.61 3.98-1.68 4.81-1.97 5.35-1.98.12 0 .38.03.55.17.14.12.18.28.2.45-.02.07-.02.16-.04.29z"/></svg>
+          <span class="lbl" data-i18n="joinTelegram">Join Telegram</span>
+        </a>
+      </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="px-4 max-w-6xl mx-auto">
-    <!-- Featured Hero Banner (Today Tab Style) -->
-    <section class="mb-8">
-      <div class="relative overflow-hidden rounded-3xl ios-card p-6 md:p-8 border border-white/10 bg-gradient-to-br from-indigo-900/40 via-purple-900/20 to-black">
-        <div class="relative z-10 max-w-2xl">
-          <span class="text-xs font-bold tracking-widest text-blue-400 uppercase">EXCLUSIVE RELEASES</span>
-          <h1 class="text-3xl md:text-5xl font-black text-white mt-1 mb-3 leading-tight tracking-tight">
-            Premium iOS Mods & Tweaked IPAs
-          </h1>
-          <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
-            Katalog aplikasi iOS ter-update otomatis secara real-time. Dapatkan akses file <code>.ipa</code> lengkap beserta sertifikat sideloading di grup Telegram.
-          </p>
-          <a href="https://t.me/steeshigeo" target="_blank" 
-             class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-bold text-sm hover:bg-slate-200 transition shadow-xl">
-            <span>Dapatkan VIP Access</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <main class="wrap">
+    <div class="head">
+      <div class="date" id="todayDate"></div>
+      <h2 class="large-title" data-i18n="title">Apps</h2>
+    </div>
+
+    <section class="today" id="todayCard">
+      <div class="today-bg" id="todayBg"></div>
+      <div class="today-copy">
+        <div class="today-label" data-i18n="heroLabel">Premium Library</div>
+        <h1 data-i18n="heroTitle">Premium iOS Mods &amp; Tweaked IPAs</h1>
+        <p data-i18n="heroSub">An iOS app catalog that updates in real time. Get the full .ipa files and sideloading certificates in our Telegram group.</p>
+        <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="btn-white" data-i18n="heroCta">Get VIP Access</a>
+      </div>
+      <div class="today-foot" id="todayFoot"></div>
+    </section>
+
+    <section class="controls">
+      <div class="search">
+        <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path stroke-linecap="round" d="M20 20l-4.8-4.8"/></svg>
+        <input type="text" id="searchInput" onkeyup="filterApps()" data-i18n-ph="searchPh" placeholder="Search apps, mods or features" aria-label="Search">
+      </div>
+      <div class="chips" role="group">
+        <button data-cat="all" onclick="filterCategory('all')" class="cat-btn is-active" data-i18n="all">All</button>
+        <button data-cat="patched" onclick="filterCategory('patched')" class="cat-btn" data-i18n="patched">Patched</button>
+        <button data-cat="tweaked" onclick="filterCategory('tweaked')" class="cat-btn" data-i18n="tweaked">Tweaked</button>
       </div>
     </section>
 
-    <!-- Search & Filter Controls -->
-    <section class="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
-      <div class="relative w-full md:w-96">
-        <input type="text" id="searchInput" onkeyup="filterApps()" placeholder="Cari aplikasi, mod, atau fitur..." 
-               class="w-full pl-10 pr-4 py-2.5 rounded-xl ios-input text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition">
-        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-      </div>
+    <div class="section-head">
+      <h2 data-i18n="section">Latest Apps</h2>
+      <div id="appCounter">0 Apps</div>
+    </div>
 
-      <div class="flex items-center gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
-        <button onclick="filterCategory('all')" class="cat-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-600 text-white border border-blue-500 shadow-sm whitespace-nowrap">Semua</button>
-        <button onclick="filterCategory('patched')" class="cat-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 whitespace-nowrap">Patched</button>
-        <button onclick="filterCategory('tweaked')" class="cat-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10 whitespace-nowrap">Tweaked</button>
-        <div id="appCounter" class="text-xs text-slate-400 font-medium px-3 py-1.5 rounded-full bg-white/5 border border-white/5 ml-auto whitespace-nowrap">0 Apps</div>
-      </div>
+    <section id="catalogGrid" class="shelf">
+      <div class="state"><div class="spinner"></div><p data-i18n="loading">Loading catalog…</p></div>
     </section>
 
-    <!-- App Grid -->
-    <section id="catalogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="col-span-full text-center py-20">
-        <div class="inline-block w-8 h-8 border-3 border-blue-500 border-t-transparent rounded-full animate-spin mb-3"></div>
-        <p class="text-slate-400 text-xs font-medium">Memuat App Store Catalog...</p>
-      </div>
-    </section>
+    <footer class="foot">© JingApps Premium Library</footer>
   </main>
 
+  <!-- Bottom tab bar (mobile), mirrors the App Store -->
+  <nav class="tabbar" aria-label="Tabs">
+    <button class="tab is-active" data-cat="all" onclick="filterCategory('all')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 3.6 8.6v.9L12 15.3l8.4-5.8v-.9L12 2.8zM4.5 12.3v1.1L12 18.6l7.5-5.2v-1.1L12 17.5l-7.5-5.2zm0 3.4v1.1L12 22l7.5-5.2v-1.1L12 20.8l-7.5-5.1z"/></svg>
+      <span data-i18n="tabApps">Apps</span>
+    </button>
+    <button class="tab" data-cat="patched" onclick="filterCategory('patched')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.4 3.2 8 7.5 9.5 4.3-1.5 7.5-5.1 7.5-9.5V6L12 3z"/><path d="m8.8 12 2.4 2.4 4-4.4"/></svg>
+      <span data-i18n="patched">Patched</span>
+    </button>
+    <button class="tab" data-cat="tweaked" onclick="filterCategory('tweaked')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
+      <span data-i18n="tweaked">Tweaked</span>
+    </button>
+    <button class="tab" id="tabSearch" onclick="focusSearch()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></svg>
+      <span data-i18n="tabSearch">Search</span>
+    </button>
+  </nav>
+
   <script>
+    /* ================= i18n ================= */
+    const LANGS = {
+      en: { name: 'English', locale: 'en-US', t: {
+        joinTelegram: 'Join Telegram', title: 'Apps', heroLabel: 'Premium Library',
+        heroTitle: 'Premium iOS Mods & Tweaked IPAs',
+        heroSub: 'An iOS app catalog that updates in real time. Get the full .ipa files and sideloading certificates in our Telegram group.',
+        heroCta: 'Get VIP Access', searchPh: 'Search apps, mods or features',
+        all: 'All', patched: 'Patched', tweaked: 'Tweaked', section: 'Latest Apps',
+        count: '{n} Apps', loading: 'Loading catalog…',
+        emptyTitle: 'JingApps Library', emptyNone: 'No apps have been released yet.',
+        emptyErr: 'The catalog is being updated or has no data yet.', emptyFilter: 'No matching apps found.',
+        by: 'By', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Mod Features',
+        updated: 'Updated', download: 'Download IPA', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
+      id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
+        joinTelegram: 'Gabung Telegram', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
+        heroTitle: 'Mod iOS Premium & IPA Tweaked',
+        heroSub: 'Katalog aplikasi iOS yang diperbarui secara real-time. Dapatkan file .ipa lengkap beserta sertifikat sideloading di grup Telegram kami.',
+        heroCta: 'Dapatkan Akses VIP', searchPh: 'Cari aplikasi, mod, atau fitur',
+        all: 'Semua', patched: 'Patched', tweaked: 'Tweaked', section: 'Aplikasi Terbaru',
+        count: '{n} Aplikasi', loading: 'Memuat katalog…',
+        emptyTitle: 'Pustaka JingApps', emptyNone: 'Belum ada aplikasi yang dirilis.',
+        emptyErr: 'Katalog sedang diperbarui atau belum ada data.', emptyFilter: 'Tidak ada aplikasi yang cocok.',
+        by: 'Oleh', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Fitur Mod',
+        updated: 'Diperbarui', download: 'Unduh IPA', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
+      zh: { name: '简体中文', locale: 'zh-CN', t: {
+        joinTelegram: '加入 Telegram', title: '应用', heroLabel: '高级资源库',
+        heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
+        heroSub: '实时更新的 iOS 应用目录。加入我们的 Telegram 群组，即可获取完整的 .ipa 文件和侧载证书。',
+        heroCta: '获取 VIP 权限', searchPh: '搜索应用、魔改或功能',
+        all: '全部', patched: 'Patched', tweaked: 'Tweaked', section: '最新应用',
+        count: '{n} 个应用', loading: '正在加载目录…',
+        emptyTitle: 'JingApps 资源库', emptyNone: '暂无已发布的应用。',
+        emptyErr: '目录正在更新，或暂无数据。', emptyFilter: '未找到匹配的应用。',
+        by: '作者', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: '魔改功能',
+        updated: '更新于', download: '下载 IPA', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
+      ja: { name: '日本語', locale: 'ja-JP', t: {
+        joinTelegram: 'Telegram に参加', title: 'App', heroLabel: 'プレミアムライブラリ',
+        heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
+        heroSub: 'リアルタイムで更新される iOS アプリのカタログ。Telegram グループで .ipa ファイルとサイドロード用証明書を入手できます。',
+        heroCta: 'VIP アクセスを取得', searchPh: 'App、Mod、機能を検索',
+        all: 'すべて', patched: 'Patched', tweaked: 'Tweaked', section: '最新のApp',
+        count: '{n} 件', loading: 'カタログを読み込み中…',
+        emptyTitle: 'JingApps ライブラリ', emptyNone: '公開されているAppはまだありません。',
+        emptyErr: 'カタログを更新中、またはデータがありません。', emptyFilter: '一致するAppが見つかりません。',
+        by: '提供', iosMin: 'iOS {v}以降', patchedBadge: 'Patched', mod: 'Mod 機能',
+        updated: '更新', download: 'IPAをダウンロード', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
+      th: { name: 'ไทย', locale: 'th-TH', t: {
+        joinTelegram: 'เข้าร่วม Telegram', title: 'แอป', heroLabel: 'คลังพรีเมียม',
+        heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
+        heroSub: 'แคตตาล็อกแอป iOS ที่อัปเดตแบบเรียลไทม์ รับไฟล์ .ipa ฉบับเต็มพร้อมใบรับรอง sideloading ได้ในกลุ่ม Telegram ของเรา',
+        heroCta: 'รับสิทธิ์ VIP', searchPh: 'ค้นหาแอป, มอด หรือฟีเจอร์',
+        all: 'ทั้งหมด', patched: 'Patched', tweaked: 'Tweaked', section: 'แอปล่าสุด',
+        count: '{n} แอป', loading: 'กำลังโหลดแคตตาล็อก…',
+        emptyTitle: 'คลัง JingApps', emptyNone: 'ยังไม่มีแอปที่เผยแพร่',
+        emptyErr: 'แคตตาล็อกกำลังอัปเดตหรือยังไม่มีข้อมูล', emptyFilter: 'ไม่พบแอปที่ตรงกัน',
+        by: 'โดย', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'ฟีเจอร์มอด',
+        updated: 'อัปเดต', download: 'ดาวน์โหลด IPA', get: 'รับ', tabApps: 'แอป', tabSearch: 'ค้นหา', langTitle: 'ภาษา', iosApp: 'แอป iOS' } }
+    };
+
+    let lang = 'en';
+    try { const s = localStorage.getItem('jingapps_lang'); if (s && LANGS[s]) lang = s; } catch (e) {}
+
+    function t(key, vars) {
+      let s = (LANGS[lang].t[key] ?? LANGS.en.t[key] ?? key);
+      if (vars) for (const k in vars) s = s.replace('{' + k + '}', vars[k]);
+      return s;
+    }
+
+    function applyStaticText() {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+      document.getElementById('langLabel').textContent = LANGS[lang].name;
+      try {
+        document.getElementById('todayDate').textContent =
+          new Date().toLocaleDateString(LANGS[lang].locale, { weekday: 'long', month: 'long', day: 'numeric' });
+      } catch (e) {}
+      if (allApps.length) document.getElementById('appCounter').innerText = t('count', { n: allApps.length });
+      renderLangMenu();
+    }
+
+    function setLang(code) {
+      lang = code;
+      try { localStorage.setItem('jingapps_lang', code); } catch (e) {}
+      applyStaticText();
+      if (allApps.length) { renderToday(allApps); filterApps(); }
+      else if (lastEmptyKey) renderEmptyState(lastEmptyKey);
+      closeLangMenu();
+    }
+
+    function renderLangMenu() {
+      const menu = document.getElementById('langMenu');
+      menu.innerHTML = `<div class="menu-title">${t('langTitle')}</div>` + Object.keys(LANGS).map(code => `
+        <button role="menuitemradio" aria-checked="${code === lang}" onclick="setLang('${code}')">
+          <span>${LANGS[code].name}</span>
+          <svg fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
+        </button>`).join('');
+    }
+    function closeLangMenu() {
+      document.getElementById('langMenu').classList.remove('open');
+      document.getElementById('langBtn').setAttribute('aria-expanded', 'false');
+    }
+    document.getElementById('langBtn').addEventListener('click', e => {
+      e.stopPropagation();
+      const m = document.getElementById('langMenu');
+      const open = m.classList.toggle('open');
+      e.currentTarget.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => { if (!e.target.closest('.lang')) closeLangMenu(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLangMenu(); });
+
+    /* ============ Brand icon (Google Drive file) ============ */
+    const ICON_ID = '1TozuJeKpQOL1txNf45SSwjSQHcUK2XtZ';
+    const FALLBACK_ICON = 'data:image/svg+xml,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B5BFF"/><stop offset="1" stop-color="#C13BFF"/></linearGradient></defs><rect width="64" height="64" fill="url(#g)"/><text x="32" y="44" font-family="Helvetica,Arial" font-weight="800" font-size="34" text-anchor="middle" fill="#fff">J</text></svg>');
+    const ICON_SOURCES = [
+      `https://lh3.googleusercontent.com/d/${ICON_ID}=s128`,
+      `https://drive.google.com/thumbnail?id=${ICON_ID}&sz=w128`,
+      `https://drive.google.com/uc?export=view&id=${ICON_ID}`,
+      FALLBACK_ICON
+    ];
+    (function loadBrandIcon() {
+      const img = document.getElementById('brandIcon');
+      let i = 0;
+      img.onerror = () => { i++; if (i < ICON_SOURCES.length) img.src = ICON_SOURCES[i]; };
+      img.onload = () => { document.getElementById('favicon').href = img.src; };
+      img.src = ICON_SOURCES[0];
+    })();
+
+    /* ================= Catalog ================= */
     let allApps = [];
     let currentCategory = 'all';
+    let lastEmptyKey = null;
 
     async function loadCatalog() {
       try {
         const res = await fetch('/data/apps.json?t=' + new Date().getTime());
         if (!res.ok) throw new Error("Catalog data not found");
         allApps = await res.json();
-        
+
         if (!Array.isArray(allApps) || allApps.length === 0) {
-          renderEmptyState("Belum ada aplikasi yang dirilis.");
+          allApps = [];
+          renderEmptyState('emptyNone');
           return;
         }
 
-        document.getElementById('appCounter').innerText = `${allApps.length} Apps`;
+        lastEmptyKey = null;
+        document.getElementById('appCounter').innerText = t('count', { n: allApps.length });
+        renderToday(allApps);
         renderCatalog(allApps);
       } catch (err) {
-        renderEmptyState("Katalog sedang diperbarui atau belum ada data.");
+        allApps = [];
+        renderEmptyState('emptyErr');
       }
     }
 
-    function renderEmptyState(msg) {
+    function renderToday(apps) {
+      const foot = document.getElementById('todayFoot');
+      const bg = document.getElementById('todayBg');
+      const a = apps[0];
+      if (!a) { foot.classList.remove('show'); return; }
+      if (a.thumbnail) bg.style.backgroundImage = `url("${a.thumbnail}")`;
+      foot.innerHTML = `
+        <img src="${a.thumbnail || FALLBACK_ICON}" alt="">
+        <div class="t"><b>${a.app_name}</b><small>${a.modified || (a.modified_by ? t('by') + ' ' + a.modified_by : t('iosApp'))}</small></div>
+        <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="get">${t('get')}</a>`;
+      foot.classList.add('show');
+    }
+
+    function renderEmptyState(key) {
+      lastEmptyKey = key;
       const grid = document.getElementById('catalogGrid');
       grid.innerHTML = `
-        <div class="col-span-full text-center py-16 ios-card rounded-3xl p-8 max-w-sm mx-auto">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 text-3xl">
-            📲
-          </div>
-          <h3 class="text-white font-bold text-base mb-1">App Store Catalog</h3>
-          <p class="text-slate-400 text-xs">${msg}</p>
+        <div class="state">
+          <div class="emoji">📲</div>
+          <h3>${t('emptyTitle')}</h3>
+          <p>${t(key)}</p>
         </div>
       `;
     }
@@ -164,70 +497,57 @@
     function renderCatalog(apps) {
       const grid = document.getElementById('catalogGrid');
       grid.innerHTML = apps.map(app => `
-        <div class="ios-card rounded-3xl p-5 flex flex-col justify-between hover:border-blue-500/40 transition duration-300">
-          <div>
-            <!-- Header Card: Icon + App Name + GET Button -->
-            <div class="flex items-center gap-3.5 mb-4">
-              <img src="${app.thumbnail || 'https://via.placeholder.com/120?text=IPA'}" 
-                   class="w-16 h-16 ios-icon object-cover shrink-0">
-              <div class="overflow-hidden flex-1">
-                <h3 class="font-bold text-base text-white truncate leading-snug mb-0.5">${app.app_name}</h3>
-                <p class="text-xs text-slate-400 truncate mb-1">${app.modified_by ? 'By ' + app.modified_by : 'iOS App'}</p>
-                <div class="flex items-center gap-1.5 flex-wrap">
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-400 border border-blue-500/30">v${app.version}</span>
-                  <span class="text-[10px] font-medium px-2 py-0.5 rounded-md bg-white/5 text-slate-400 border border-white/5">iOS ${app.min_ios}+</span>
-                  ${app.is_patched ? '<span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Patched</span>' : ''}
-                </div>
+        <article class="app">
+          <div class="app-head">
+            <img src="${app.thumbnail || FALLBACK_ICON}" alt="" class="ios-icon">
+            <div class="app-id">
+              <h3 class="app-name">${app.app_name}</h3>
+              <p class="app-by">${app.modified_by ? t('by') + ' ' + app.modified_by : t('iosApp')}</p>
+              <div class="meta">
+                <span class="v">v${app.version}</span>
+                <span>${t('iosMin', { v: app.min_ios })}</span>
+                ${app.is_patched ? `<span class="badge">${t('patchedBadge')}</span>` : ''}
               </div>
-              <a href="https://t.me/steeshigeo" target="_blank" 
-                 class="px-4 py-1.5 rounded-full bg-white/10 hover:bg-blue-600 hover:text-white text-blue-400 font-extrabold text-xs transition duration-200 tracking-wide uppercase shrink-0">
-                GET
-              </a>
             </div>
-
-            <!-- Mod Features Pill Box -->
-            ${app.modified ? `
-              <div class="mb-3 p-3 rounded-2xl bg-white/[0.03] border border-white/5">
-                <span class="text-[10px] font-extrabold text-blue-400 uppercase tracking-wider block mb-1">MOD FEATURES</span>
-                <p class="text-xs font-semibold text-slate-200 leading-snug">${app.modified}</p>
-              </div>
-            ` : ''}
-
-            <!-- Note Box (iOS Sheet Style) -->
-            ${app.note ? `
-              <div class="p-3 rounded-2xl bg-black/40 border border-white/5 text-[11px] text-slate-300 whitespace-pre-wrap max-h-36 overflow-y-auto leading-relaxed font-sans">
-                ${app.note}
-              </div>
-            ` : ''}
+            <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="get">${t('get')}</a>
           </div>
 
-          <!-- Footer Card -->
-          <div class="mt-4 pt-3 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-400 font-medium">
-            <span>Updated ${app.updated_at}</span>
-            <a href="https://t.me/steeshigeo" target="_blank" class="text-blue-400 hover:underline font-semibold flex items-center gap-1">
-              Download IPA ➔
-            </a>
+          ${app.modified ? `
+            <div class="mod">
+              <h4>${t('mod')}</h4>
+              <p>${app.modified}</p>
+            </div>
+          ` : ''}
+
+          ${app.note ? `<div class="note">${app.note}</div>` : ''}
+
+          <div class="app-foot">
+            <span>${t('updated')} ${app.updated_at}</span>
+            <a href="https://t.me/steeshigeo" target="_blank" rel="noopener">${t('download')}</a>
           </div>
-        </div>
+        </article>
       `).join('');
     }
 
     function filterCategory(cat) {
       currentCategory = cat;
-      document.querySelectorAll('.cat-btn').forEach(btn => {
-        btn.classList.remove('bg-blue-600', 'text-white', 'border-blue-500');
-        btn.classList.add('bg-white/5', 'text-slate-300', 'border-white/10');
+      document.querySelectorAll('.cat-btn, .tab[data-cat]').forEach(btn => {
+        btn.classList.toggle('is-active', btn.dataset.cat === cat);
       });
-      event.target.classList.remove('bg-white/5', 'text-slate-300', 'border-white/10');
-      event.target.classList.add('bg-blue-600', 'text-white', 'border-blue-500');
-
       filterApps();
     }
 
+    function focusSearch() {
+      const input = document.getElementById('searchInput');
+      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      input.focus();
+    }
+
     function filterApps() {
+      if (!allApps.length) return;
       const query = document.getElementById('searchInput').value.toLowerCase();
       let filtered = allApps.filter(app => {
-        const matchesQuery = app.app_name.toLowerCase().includes(query) || 
+        const matchesQuery = app.app_name.toLowerCase().includes(query) ||
                              (app.modified && app.modified.toLowerCase().includes(query)) ||
                              (app.note && app.note.toLowerCase().includes(query));
 
@@ -237,12 +557,14 @@
       });
 
       if (filtered.length === 0) {
-        renderEmptyState(`Tidak ditemukan aplikasi yang sesuai.`);
+        renderEmptyState('emptyFilter');
       } else {
+        lastEmptyKey = null;
         renderCatalog(filtered);
       }
     }
 
+    applyStaticText();
     loadCatalog();
   </script>
 </body>
