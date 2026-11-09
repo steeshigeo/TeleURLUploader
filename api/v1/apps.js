@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -11,22 +11,41 @@ module.exports = (req, res) => {
   }
 
   try {
-    const filePath = path.join(process.cwd(), 'public', 'data', 'apps.json');
-    if (!fs.existsSync(filePath)) {
-      return res.status(200).json({
-        success: true,
-        count: 0,
-        data: []
-      });
-    }
-
-    const rawData = fs.readFileSync(filePath, 'utf8');
-    let apps = JSON.parse(rawData || '[]');
-
+    let apps = [];
     const protocol = req.headers['x-forwarded-proto'] || 'https';
     const host = req.headers.host;
     const baseUrl = `${protocol}://${host}`;
 
+    // 1. Coba baca file lokal fs
+    const possiblePaths = [
+      path.join(process.cwd(), 'public', 'data', 'apps.json'),
+      path.join(__dirname, '../../public/data/apps.json'),
+      path.join(__dirname, '../public/data/apps.json')
+    ];
+
+    let fileFound = false;
+    for (const p of possiblePaths) {
+      if (fs.existsSync(p)) {
+        const rawData = fs.readFileSync(p, 'utf8');
+        apps = JSON.parse(rawData || '[]');
+        fileFound = true;
+        break;
+      }
+    }
+
+    // 2. Fallback: Jika fs di-isolate Vercel, fetch data via HTTP secara internal
+    if (!fileFound && host) {
+      try {
+        const fetchRes = await fetch(`${baseUrl}/data/apps.json`);
+        if (fetchRes.ok) {
+          apps = await fetchRes.json();
+        }
+      } catch (e) {
+        // Fallback fetch error ignore
+      }
+    }
+
+    // Format thumbnail_url lengkap
     apps = apps.map(app => ({
       ...app,
       thumbnail_url: app.thumbnail ? `${baseUrl}${app.thumbnail}` : null
