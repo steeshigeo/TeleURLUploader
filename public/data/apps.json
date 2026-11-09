@@ -1,5 +1,18 @@
 [
   {
+    "id": "com.resonantcavity.Voloco",
+    "app_name": "Voloco: Vocal Recording Studio",
+    "version": "9.22.0",
+    "min_ios": "18.6",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Login and force close the app if hack wont work",
+    "thumbnail": "/thumbnails/com.resonantcavity.Voloco.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "stoope.Grit",
     "app_name": "Grit: Daily Habit Tracker",
     "version": "6.2.0",
