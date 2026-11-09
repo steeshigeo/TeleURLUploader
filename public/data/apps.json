@@ -1,5 +1,19 @@
 [
   {
+    "id": "se.resenatverket.FlightRadar24-Free",
+    "app_name": "Flightradar24 | Flight Tracker",
+    "version": "11.15.0",
+    "min_ios": "16.0",
+    "category": "Travel",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/se.resenatverket.FlightRadar24-Free.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "dazz.camera.vintagecamera",
     "app_name": "Dazz Cam - Vintage Camera",
     "version": "2.18",
