@@ -310,6 +310,7 @@
         <button data-cat="productivity" onclick="filterCategory('productivity')" class="cat-btn" hidden><span data-i18n="catProductivity">Productivity</span><span class="n"></span></button>
         <button data-cat="health" onclick="filterCategory('health')" class="cat-btn" hidden><span data-i18n="catHealth">Health &amp; Fitness</span><span class="n"></span></button>
         <button data-cat="photo" onclick="filterCategory('photo')" class="cat-btn" hidden><span data-i18n="catPhoto">Photo &amp; Video</span><span class="n"></span></button>
+        <button data-cat="other" onclick="filterCategory('other')" class="cat-btn" hidden><span data-i18n="catOther">Other</span><span class="n"></span></button>
       </div>
     </section>
 
@@ -349,7 +350,7 @@
     /* ================= i18n ================= */
     const LANGS = {
       en: { name: 'English', locale: 'en-US', t: {
-        catUtilities: 'Utilities', catGames: 'Games', catProductivity: 'Productivity', catHealth: 'Health & Fitness', catPhoto: 'Photo & Video',
+        catUtilities: 'Utilities', catGames: 'Games', catProductivity: 'Productivity', catHealth: 'Health & Fitness', catPhoto: 'Photo & Video', catOther: 'Other',
         themeTitle: 'Appearance', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
         joinTelegram: 'Join Telegram', title: 'Apps', heroLabel: 'Premium Library',
         heroTitle: 'Premium iOS Mods & Tweaked IPAs',
@@ -362,7 +363,7 @@
         by: 'By', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Mod Features',
         updated: 'Updated', download: 'Download IPA', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
-        catUtilities: 'Utilitas', catGames: 'Game', catProductivity: 'Produktivitas', catHealth: 'Kesehatan & Kebugaran', catPhoto: 'Foto & Video',
+        catUtilities: 'Utilitas', catGames: 'Game', catProductivity: 'Produktivitas', catHealth: 'Kesehatan & Kebugaran', catPhoto: 'Foto & Video', catOther: 'Lainnya',
         themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
         joinTelegram: 'Gabung Telegram', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
         heroTitle: 'Mod iOS Premium & IPA Tweaked',
@@ -375,7 +376,7 @@
         by: 'Oleh', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Fitur Mod',
         updated: 'Diperbarui', download: 'Unduh IPA', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
-        catUtilities: '工具', catGames: '游戏', catProductivity: '效率', catHealth: '健康与健身', catPhoto: '摄影与录像',
+        catUtilities: '工具', catGames: '游戏', catProductivity: '效率', catHealth: '健康与健身', catPhoto: '摄影与录像', catOther: '其他',
         themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
         joinTelegram: '加入 Telegram', title: '应用', heroLabel: '高级资源库',
         heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
@@ -388,7 +389,7 @@
         by: '作者', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: '魔改功能',
         updated: '更新于', download: '下载 IPA', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
-        catUtilities: 'ユーティリティ', catGames: 'ゲーム', catProductivity: '仕事効率化', catHealth: 'ヘルスケア/フィットネス', catPhoto: '写真/ビデオ',
+        catUtilities: 'ユーティリティ', catGames: 'ゲーム', catProductivity: '仕事効率化', catHealth: 'ヘルスケア/フィットネス', catPhoto: '写真/ビデオ', catOther: 'その他',
         themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
         joinTelegram: 'Telegram に参加', title: 'App', heroLabel: 'プレミアムライブラリ',
         heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
@@ -401,7 +402,7 @@
         by: '提供', iosMin: 'iOS {v}以降', patchedBadge: 'Patched', mod: 'Mod 機能',
         updated: '更新', download: 'IPAをダウンロード', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
-        catUtilities: 'ยูทิลิตี้', catGames: 'เกม', catProductivity: 'ประสิทธิภาพการทำงาน', catHealth: 'สุขภาพและฟิตเนส', catPhoto: 'ภาพถ่ายและวิดีโอ',
+        catUtilities: 'ยูทิลิตี้', catGames: 'เกม', catProductivity: 'ประสิทธิภาพการทำงาน', catHealth: 'สุขภาพและฟิตเนส', catPhoto: 'ภาพถ่ายและวิดีโอ', catOther: 'อื่น ๆ',
         themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
         joinTelegram: 'เข้าร่วม Telegram', title: 'แอป', heroLabel: 'คลังพรีเมียม',
         heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
@@ -528,7 +529,7 @@
     let lastEmptyKey = null;
 
     /* Genre filters. Matches the "category" field in apps.json (App Store genre names).
-       Apps with another genre (e.g. "Sports") still show under All. */
+       Any other genre (or no category) goes to "other". */
     const GENRES = [
       { key: 'utilities',    re: /utilit/ },
       { key: 'games',        re: /game/ },
@@ -539,7 +540,7 @@
     function genreOf(app) {
       const c = String(app.category || '').toLowerCase();
       const g = GENRES.find(g => g.re.test(c));
-      return g ? g.key : null;
+      return g ? g.key : 'other';
     }
 
     async function loadCatalog() {
@@ -569,7 +570,7 @@
     /* show only genre chips that have apps, with counts */
     function updateCatUI() {
       const counts = {};
-      GENRES.forEach(g => { counts[g.key] = allApps.filter(a => a._genre === g.key).length; });
+      [...GENRES.map(g => g.key), 'other'].forEach(k => { counts[k] = allApps.filter(a => a._genre === k).length; });
       document.querySelectorAll('.cat-btn[data-cat]').forEach(el => {
         const k = el.dataset.cat;
         if (k in counts) {
