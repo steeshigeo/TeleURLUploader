@@ -1,5 +1,19 @@
 [
   {
+    "id": "org.reactjs.native.example.FluentAI_1794325507",
+    "app_name": "FluentPal - Get fluent faster",
+    "version": "3.1.8",
+    "min_ios": "16.4",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/org.reactjs.native.example.FluentAI_1794325507.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "riccqi.Camel_1794325473",
     "app_name": "OpenCam: Open Gate Camera",
     "version": "2.4",
