@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.adobe.fresco.ios",
+    "app_name": "Adobe Fresco: Draw \u0026 Paint App",
+    "version": "8.1.0",
+    "min_ios": "18.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in with a random account (switch to the U.S. region if Adobe is blocked). Select the highest plan and click Buy then Cancel and restart the app, you should now have premium.",
+    "thumbnail": "/thumbnails/com.adobe.fresco.ios.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.tripleglazedstudios.Weather",
     "app_name": "Mercury Weather",
     "version": "3.8.2",
