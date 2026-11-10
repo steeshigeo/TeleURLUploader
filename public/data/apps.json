@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ideas67.courtsix_1794329766",
+    "app_name": "Court Six: 3D Volleyball Game",
+    "version": "1.1.2",
+    "min_ios": "10.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features:\n• ADD Gem → Instant premium currency for unlocks and upgrades\n• ADD Gold → Unlimited in-game currency to accelerate progression \n• AI Freeze → Pause opponent movement to control the rally",
+    "thumbnail": "/thumbnails/com.ideas67.courtsix_1794329766.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "io.randomco.travel_1794329536",
     "app_name": "Travel Town - Merge Adventure",
     "version": "2.12.1822",
