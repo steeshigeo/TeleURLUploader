@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.clearmindshypnotherapy.app_1794323075",
+    "app_name": "Clear Minds - Hypnotherapy",
+    "version": "84.0.13",
+    "min_ios": "16.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.clearmindshypnotherapy.app_1794323075.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.aheadsolutions.aHead_1794323030",
     "app_name": "Ahead: Emotional Intelligence",
     "version": "1.60.31",
