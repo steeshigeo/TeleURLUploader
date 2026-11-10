@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.evolve.helm_1794325029",
+    "app_name": "Rest: Fix Your Sleep For Good",
+    "version": "3.210.0",
+    "min_ios": "15.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.evolve.helm_1794325029.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.picsart.studio_1794324968",
     "app_name": "Picsart AI Photo Editor, Video",
     "version": "30.9.6",
