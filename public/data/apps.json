@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.karteto.application_1794325466",
+    "app_name": "Karteto: Vocabulary Flashcards",
+    "version": "0.11.02",
+    "min_ios": "14.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.karteto.application_1794325466.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.ashutoshbilla.procam_1794325448",
     "app_name": "Pro Camera RAW: Modus ProCam",
     "version": "6.4",
