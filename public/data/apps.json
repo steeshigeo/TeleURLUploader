@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.itwcalculator.weatherplusfree",
+    "app_name": "Weather⁺",
+    "version": "4.18.22",
+    "min_ios": "15.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscriptions unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.itwcalculator.weatherplusfree.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "jp.co.bandainamcoent.BNEI0334",
     "app_name": "DRAGON BALL LEGENDS",
     "version": "6.30.0",
