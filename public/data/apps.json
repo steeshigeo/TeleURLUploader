@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.swirski.photo-booth-a7m3",
+    "app_name": "Shutter+ Sony Camera Remote",
+    "version": "6.1.1",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.swirski.photo-booth-a7m3.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.polarsteps.Polarsteps",
     "app_name": "Polarsteps",
     "version": "10.20.0",
