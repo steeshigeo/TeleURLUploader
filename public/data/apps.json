@@ -5,11 +5,11 @@
     "version": "9.1.90",
     "min_ios": "16.1",
     "category": "Music",
-    "is_patched": false,
+    "is_patched": true,
     "modified": "Taurus Patched",
     "modified_by": "@SteeShigeo",
     "tweaker": "",
-    "note": "Builds of Spotify 9.1.90 (Taurus 0.60.6)\n• Taurus is a GPL-3.0 fork of Chroma.pw\n• Ad blocking, Offline Listening (Pixie), and Spotify Premium settings\n• Liquid GlassBuilds\n• Taurus 0.60.6 (Patched)-Use Spotify Patched build if you use Feather and a Paid Certificate \n• Taurus 0.60.6 (No Plugins)-Use Spotify No Plugins build if you use SideStore/AltStore/SideloadlySteps to access\n\nTaurus settings:\n1. Open Spotify\n2. Tap on your Spotify profile picture on the top corner\n3. Tap Taurus Settings\n4. Tap on Premium, ads \u0026 privacy\n5. Toggle ON: Hide ads, Hide upsells, Spoof Premium\n6. Restart Spotify\n\nDownload Songs:\n1. Play the song you want to download. Tap the Download button. If that doesn't work, follow steps 2-5\n2 Press and hold the Home tab bar to Open Taurus settings\n3. Tap on Downloads\n4. Tap Download current track\n5. Once downloaded, a green downloaded icon 📥 appears next to the song\n\nTaurus 0.60.6 by samj-exe: https://github.com/samj-exe/taurus (Forked from Chroma.pw) by skopevoj: https://github.com/skopevoj/spoti.pw",
+    "note": "Spotify 9.1.90 (Taurus 0.60.6)\n• Fork of Chroma.pw (GPL-3.0): ad blocking, offline listening, Premium settings\n• Liquid Glass builds\n• Patched: for Feather + paid certificate\n• No Plugins: for SideStore/AltStore/Sideloadly\n\nSetup:\n1. Open Spotify \u003e profile picture \u003e Taurus Settings\n2. Premium, ads \u0026 privacy\n3. Toggle ON: Hide ads, Hide upsells, Spoof Premium\n4. Restart Spotify\n\nDownload songs:\n1. Tap Download on a song. If it doesn't work, hold the Home tab bar \u003e Taurus settings\n2. Downloads \u003e Download current track\n3. A green 📥 icon appears when done\n\nCredit: Taurus by samj-exe (github.com/samj-exe/taurus), fork of Chroma.pw by skopevoj",
     "thumbnail": "/thumbnails/com.spotify.client.jpg",
     "updated_at": "2026-11-10"
   },
