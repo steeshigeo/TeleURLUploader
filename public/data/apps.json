@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.aheadsolutions.aHead_1794323030",
+    "app_name": "Ahead: Emotional Intelligence",
+    "version": "1.60.31",
+    "min_ios": "16.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.aheadsolutions.aHead_1794323030.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "gronda.gmbh_1794322886",
     "app_name": "Gronda: Recipes for Chefs",
     "version": "8.41.2",
