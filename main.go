@@ -260,15 +260,8 @@ func processAndSendIPA(bot *tgbotapi.BotAPI, userChatID int64, localPath string,
 		}
 	}
 
-	sendErr := sendDocumentDirectly(bot.Token, targetChatID, topicID, finalFilePath, "", iconPath)
+	sendErr := sendDocumentDirectly(bot.Token, targetChatID, topicID, finalFilePath, captionText, iconPath)
 	if sendErr == nil {
-		textMsg := tgbotapi.NewMessage(targetChatID, captionText)
-		textMsg.ParseMode = "HTML"
-		if topicID != 0 {
-			textMsg.MessageThreadID = topicID
-		}
-		bot.Send(textMsg)
-
 		go SaveAndSyncCatalog(meta, iconPath)
 
 		if statusMsgID != 0 {
