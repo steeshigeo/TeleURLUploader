@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.intsig.CamScannerLite_1794323433",
+    "app_name": "CamScanner - PDF Scanner App",
+    "version": "7.29.0",
+    "min_ios": "15.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.intsig.CamScannerLite_1794323433.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "nutrition.coach_1794323308",
     "app_name": "Nutrition Coach: AI Food Diary",
     "version": "2.7.0",
