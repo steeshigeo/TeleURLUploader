@@ -1,13 +1,4 @@
-// Static require memaksa Vercel bundler memasukkan public/data/apps.json ke dalam Serverless Package
-let catalogData = [];
-try {
-  catalogData = require('../../public/data/apps.json');
-} catch (e) {
-  catalogData = [];
-}
-
-module.exports = (req, res) => {
-  // Set Headers CORS
+module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -18,11 +9,19 @@ module.exports = (req, res) => {
 
   try {
     const protocol = req.headers['x-forwarded-proto'] || 'https';
-    const host = req.headers.host || '';
-    const baseUrl = host ? `${protocol}://${host}` : '';
+    const host = req.headers.host || 'jingapps-premium.vercel.app';
+    const baseUrl = `${protocol}://${host}`;
+    const dataUrl = `${baseUrl}/data/apps.json`;
 
-    // Salin data katalog agar aman saat dibaca
-    let apps = JSON.parse(JSON.stringify(catalogData));
+    let apps = [];
+    try {
+      const response = await fetch(dataUrl);
+      if (response.ok) {
+        apps = await response.json();
+      }
+    } catch (e) {
+      apps = [];
+    }
 
     apps = apps.map(app => ({
       ...app,
@@ -31,7 +30,6 @@ module.exports = (req, res) => {
 
     const { id, search, category, limit } = req.query || {};
 
-    // 1. Filter spesifik Bundle ID
     if (id) {
       const singleApp = apps.find(a => (a.id || '').toLowerCase() === id.toLowerCase());
       if (!singleApp) {
@@ -46,12 +44,10 @@ module.exports = (req, res) => {
       });
     }
 
-    // 2. Filter Kategori
     if (category) {
       apps = apps.filter(a => (a.category || '').toLowerCase() === category.toLowerCase());
     }
 
-    // 3. Filter Query Pencarian
     if (search) {
       const q = search.toLowerCase();
       apps = apps.filter(a =>
@@ -61,7 +57,6 @@ module.exports = (req, res) => {
       );
     }
 
-    // 4. Limit Jumlah Data
     if (limit && !isNaN(parseInt(limit))) {
       apps = apps.slice(0, parseInt(limit));
     }
