@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.battlecreek.nolimit2_1794333949",
+    "app_name": "No Limit Drag Racing 2",
+    "version": "2.30.71",
+    "min_ios": "10.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features:\n• Free Everything → all premium content accessible without payment \n• Unlimited Money \u0026 Gold → spend freely on car upgrades and customization \n• Unlimited XP → level up instantly and unlock all progression rewards \n• ViP → premium account status enabled from the start \n• No ADS → uninterrupted racing without video or banner interruptions",
+    "thumbnail": "/thumbnails/com.battlecreek.nolimit2_1794333949.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.farlightgames.igame.ios_1794331015",
     "app_name": "AFK Journey",
     "version": "1.8.21",
