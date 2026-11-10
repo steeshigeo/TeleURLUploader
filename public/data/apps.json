@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.Pattrn",
+    "app_name": "Pattrn - Discipline Tracker",
+    "version": "3.1.2",
+    "min_ios": "17.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.Pattrn.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "HUTAR.PaintingAR",
     "app_name": "Painter Eye: AR Drawing App",
     "version": "5.5.3",
