@@ -126,20 +126,6 @@
     "updated_at": "2026-11-10"
   },
   {
-    "id": "cz.kolbi.wqfiles",
-    "app_name": "WQ Files",
-    "version": "0.7",
-    "min_ios": "26.0",
-    "category": "Utilities",
-    "is_patched": false,
-    "modified": "",
-    "modified_by": "",
-    "tweaker": "",
-    "note": "",
-    "thumbnail": "/thumbnails/cz.kolbi.wqfiles.jpg",
-    "updated_at": "2026-11-10"
-  },
-  {
     "id": "ovz.Car-Scanner",
     "app_name": "Car Scanner ELM OBD2",
     "version": "2.2.42",
