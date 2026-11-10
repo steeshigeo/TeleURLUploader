@@ -1,5 +1,19 @@
 [
   {
+    "id": "tech.miidii.MDVinyl_1794325690",
+    "app_name": "MD Vinyl Music App",
+    "version": "3.8.7",
+    "min_ios": "16.4",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/tech.miidii.MDVinyl_1794325690.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.polarsteps.Polarsteps_1794325611",
     "app_name": "Polarsteps",
     "version": "10.20.0",
