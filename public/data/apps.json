@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.dr1ven.eraser",
+    "app_name": "Photoroom: AI Photo \u0026 Video",
+    "version": "2026.46.01",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.dr1ven.eraser.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.adobe.fresco.ios",
     "app_name": "Adobe Fresco: Draw \u0026 Paint App",
     "version": "8.1.0",
