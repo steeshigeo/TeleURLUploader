@@ -118,7 +118,7 @@
     .head { padding: 22px 0 12px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
     .head-actions { flex-shrink: 0; margin-bottom: 4px; }
     .t-mobile { display: none; }
-    .menu { z-index: 70; }
+    .menu { z-index: 70; max-height: 70vh; overflow-y: auto; }
     .date { font-size: 13px; font-weight: 600; color: var(--label2); text-transform: uppercase; letter-spacing: .01em; }
     .large-title { font-size: 34px; font-weight: 700; letter-spacing: -.03em; line-height: 1.12; }
 
@@ -136,6 +136,7 @@
     .today-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; opacity: .85; }
     .today h1 { font-size: clamp(30px, 6vw, 46px); font-weight: 800; letter-spacing: -.035em; line-height: 1.08; margin-top: 6px; }
     .today p { margin-top: 12px; font-size: 16px; line-height: 1.4; opacity: .9; max-width: 46ch; }
+    .today p.today-extra { margin-top: 10px; font-size: 14px; font-weight: 600; opacity: .95; }
     .btn-white {
       display: inline-flex; align-items: center; height: 38px; padding: 0 20px; margin-top: 20px;
       border-radius: 999px; background: #fff; color: #0A5BFF; font-size: 15px; font-weight: 700;
@@ -237,8 +238,13 @@
       .brand span { font-size: 16px; }
       .t-desktop { display: none; }
       .t-mobile { display: block; }
-      .pill .lbl { display: none; }
-      .pill { padding: 0 10px; }
+      #settingsBtn .lbl { display: none; }
+      #settingsBtn { padding: 0 10px; }
+      .pill { height: 36px; }
+      .head { flex-wrap: wrap; align-items: flex-start; }
+      .head-actions { flex-basis: 100%; margin: 10px 0 0; }
+      .head-actions .nav-actions { flex-wrap: wrap; }
+      .head-actions .menu { left: 0; right: auto; }
       .tabbar {
         display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
         padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
@@ -265,15 +271,11 @@
       </div>
       <div class="nav-actions" id="navActions">
         <div class="lang">
-          <button class="pill" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.7 4.2 5.9 4.2 9.5s-1.4 6.8-4.2 9.5c-2.8-2.7-4.2-5.9-4.2-9.5S9.2 5.2 12 2.5z"/></svg>
-            <span class="lbl" id="langLabel">English</span>
+          <button class="pill" id="settingsBtn" aria-haspopup="true" aria-expanded="false" aria-label="Settings">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 14.6a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3h0a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8v0a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg>
+            <span class="lbl" data-i18n="settings">Settings</span>
           </button>
-          <div class="menu" id="langMenu" role="menu"></div>
-        </div>
-        <div class="lang">
-          <button class="pill" id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-label="Appearance"><span id="themeIcon" style="display:inline-flex"></span></button>
-          <div class="menu" id="themeMenu" role="menu"></div>
+          <div class="menu" id="settingsMenu" role="menu"></div>
         </div>
         <a href="https://t.me/AmS1gnCloudBot" target="_blank" rel="noopener" class="pill" id="certBtn" aria-label="Instant Certificate">
           <img id="certIcon" alt="" width="20" height="20" style="width:20px;height:20px;border-radius:6px;object-fit:cover">
@@ -303,6 +305,7 @@
         <div class="today-label" data-i18n="heroLabel">Premium Library</div>
         <h1 data-i18n="heroTitle">Premium iOS Mods &amp; Tweaked IPAs</h1>
         <p data-i18n="heroSub">iOS apps with all premium features unlocked, updated regularly. Install straight from your device, no jailbreak or computer needed.</p>
+        <p class="today-extra" data-i18n="heroExtra">Request mod apps, community growth support, and many more.</p>
         <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="btn-white" data-i18n="heroCta">Get VIP Access</a>
       </div>
       <div class="today-foot" id="todayFoot"></div>
@@ -359,7 +362,7 @@
     const LANGS = {
       en: { name: 'English', locale: 'en-US', t: {
         themeTitle: 'Appearance', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
-        joinTelegram: 'Join Telegram', titleToday: 'Today', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: 'Premium Library',
+        joinTelegram: 'Join Telegram', settings: 'Settings', heroExtra: 'Request mod apps, community growth support, and many more.', titleToday: 'Today', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: 'Premium Library',
         heroTitle: 'Premium iOS Mods & Tweaked IPAs',
         heroSub: 'iOS apps with all premium features unlocked, updated regularly. Install straight from your device, no jailbreak or computer needed.',
         heroCta: 'Get VIP Access', searchPh: 'Search apps, mods or features',
@@ -371,7 +374,7 @@
         updated: 'Updated', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
         themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
-        joinTelegram: 'Gabung Telegram', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
+        joinTelegram: 'Gabung Telegram', settings: 'Pengaturan', heroExtra: 'Request aplikasi mod, dukungan pertumbuhan komunitas, dan masih banyak lagi.', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
         heroTitle: 'Mod iOS Premium & IPA Tweaked',
         heroSub: 'Aplikasi iOS dengan semua fitur premium terbuka, diperbarui secara berkala. Pasang langsung dari perangkat Anda, tanpa jailbreak dan tanpa komputer.',
         heroCta: 'Dapatkan Akses VIP', searchPh: 'Cari aplikasi, mod, atau fitur',
@@ -383,7 +386,7 @@
         updated: 'Diperbarui', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
         themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
-        joinTelegram: '加入 Telegram', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '高级资源库',
+        joinTelegram: '加入 Telegram', settings: '设置', heroExtra: '可申请魔改应用、社区成长支持，以及更多服务。', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '高级资源库',
         heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
         heroSub: '解锁全部高级功能的 iOS 应用，定期更新。直接在设备上安装，无需越狱，也无需电脑。',
         heroCta: '获取 VIP 权限', searchPh: '搜索应用、魔改或功能',
@@ -395,7 +398,7 @@
         updated: '更新于', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
         themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
-        joinTelegram: 'Telegram に参加', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: 'プレミアムライブラリ',
+        joinTelegram: 'Telegram に参加', settings: '設定', heroExtra: 'Mod アプリのリクエスト、コミュニティ成長サポートなど、まだまだ。', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: 'プレミアムライブラリ',
         heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
         heroSub: 'プレミアム機能をすべて解放した iOS アプリを、定期的に更新しています。端末から直接インストールでき、脱獄もパソコンも不要です。',
         heroCta: 'VIP アクセスを取得', searchPh: 'App、Mod、機能を検索',
@@ -407,7 +410,7 @@
         updated: '更新', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
         themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
-        joinTelegram: 'เข้าร่วม Telegram', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: 'คลังพรีเมียม',
+        joinTelegram: 'เข้าร่วม Telegram', settings: 'การตั้งค่า', heroExtra: 'ขอแอปม็อด สนับสนุนการเติบโตของชุมชน และอื่น ๆ อีกมากมาย', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: 'คลังพรีเมียม',
         heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
         heroSub: 'แอป iOS ที่ปลดล็อกฟีเจอร์พรีเมียมทั้งหมด อัปเดตอย่างสม่ำเสมอ ติดตั้งได้โดยตรงจากอุปกรณ์ ไม่ต้องเจลเบรกและไม่ต้องใช้คอมพิวเตอร์',
         heroCta: 'รับสิทธิ์ VIP', searchPh: 'ค้นหาแอป, มอด หรือฟีเจอร์',
@@ -432,14 +435,12 @@
       document.documentElement.lang = lang;
       document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
       document.querySelectorAll('[data-i18n-ph]').forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
-      document.getElementById('langLabel').textContent = LANGS[lang].name;
       try {
         document.getElementById('todayDate').textContent =
           new Date().toLocaleDateString(LANGS[lang].locale, { weekday: 'long', month: 'long', day: 'numeric' });
       } catch (e) {}
       if (allApps.length) document.getElementById('appCounter').innerText = t('count', { n: allApps.length });
-      renderLangMenu();
-      renderThemeMenu();
+      renderSettingsMenu();
     }
 
     function setLang(code) {
@@ -448,16 +449,6 @@
       applyStaticText();
       if (allApps.length) { renderToday(allApps); filterApps(); }
       else if (lastEmptyKey) renderEmptyState(lastEmptyKey);
-      closeMenus();
-    }
-
-    function renderLangMenu() {
-      const menu = document.getElementById('langMenu');
-      menu.innerHTML = `<div class="menu-title">${t('langTitle')}</div>` + Object.keys(LANGS).map(code => `
-        <button role="menuitemradio" aria-checked="${code === lang}" onclick="setLang('${code}')">
-          <span>${LANGS[code].name}</span>
-          <svg fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
-        </button>`).join('');
     }
 
     /* ---- appearance: auto (device) / light / dark ---- */
@@ -474,22 +465,27 @@
       if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
       else document.documentElement.setAttribute('data-theme', mode);
       if (save) { try { mode === 'auto' ? localStorage.removeItem('jingapps_theme') : localStorage.setItem('jingapps_theme', mode); } catch (e) {} }
-      document.getElementById('themeIcon').innerHTML = THEME_ICONS[mode];
-      renderThemeMenu();
+      renderSettingsMenu();
     }
-    function renderThemeMenu() {
-      const menu = document.getElementById('themeMenu');
+    function renderSettingsMenu() {
+      const check = '<svg fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></svg>';
       const label = { auto: t('themeAuto'), light: t('themeLight'), dark: t('themeDark') };
-      document.getElementById('themeBtn').setAttribute('aria-label', t('themeTitle'));
-      menu.innerHTML = `<div class="menu-title">${t('themeTitle')}</div>` + ['auto', 'light', 'dark'].map(m => `
-        <button role="menuitemradio" aria-checked="${m === theme}" onclick="applyTheme('${m}', true); closeMenus()">
-          <span>${label[m]}</span>
-          <svg fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></svg>
-        </button>`).join('');
+      document.getElementById('settingsBtn').setAttribute('aria-label', t('settings'));
+      document.getElementById('settingsMenu').innerHTML =
+        `<div class="menu-title">${t('langTitle')}</div>` +
+        Object.keys(LANGS).map(code => `
+          <button role="menuitemradio" aria-checked="${code === lang}" onclick="setLang('${code}')">
+            <span>${LANGS[code].name}</span>${check}
+          </button>`).join('') +
+        `<div class="menu-title" style="margin-top:6px">${t('themeTitle')}</div>` +
+        ['auto', 'light', 'dark'].map(m => `
+          <button role="menuitemradio" aria-checked="${m === theme}" onclick="applyTheme('${m}', true)">
+            <span>${label[m]}</span>${check}
+          </button>`).join('');
     }
 
     /* ---- popup menus ---- */
-    const MENUS = [['langBtn', 'langMenu'], ['themeBtn', 'themeMenu']];
+    const MENUS = [['settingsBtn', 'settingsMenu']];
     function closeMenus() {
       MENUS.forEach(([b, m]) => {
         document.getElementById(m).classList.remove('open');
@@ -505,7 +501,11 @@
         if (willOpen) { menu.classList.add('open'); e.currentTarget.setAttribute('aria-expanded', 'true'); }
       });
     });
-    document.addEventListener('click', e => { if (!e.target.closest('.menu')) closeMenus(); });
+    document.addEventListener('click', e => {
+      /* composedPath is captured at dispatch, so it still works after a menu item re-rendered the menu */
+      const inside = e.composedPath().some(n => n.classList && n.classList.contains('menu'));
+      if (!inside) closeMenus();
+    });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenus(); });
 
     /* ============ Brand icon (Google Drive file) ============ */
