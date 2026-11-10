@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.fluffyfairygames.idleminertycoon",
+    "app_name": "Idle Miner Tycoon clicker game",
+    "version": "5.68.0",
+    "min_ios": "15.2",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Free in app purchase, (buy-wait and cancel) Enjoy!",
+    "thumbnail": "/thumbnails/com.fluffyfairygames.idleminertycoon.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.dr1ven.eraser",
     "app_name": "Photoroom: AI Photo \u0026 Video",
     "version": "2026.46.01",
