@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.glority.everlens_1794323270",
+    "app_name": "Mobile Scanner App - Scan PDF",
+    "version": "2.26.5",
+    "min_ios": "15.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.glority.everlens_1794323270.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "uni.cbum_1794323223",
     "app_name": "STNDRD Workout \u0026 Fitness Plans",
     "version": "4.1.64",
