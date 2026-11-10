@@ -132,10 +132,10 @@
     "min_ios": "26.0",
     "category": "Utilities",
     "is_patched": true,
-    "modified": "Tweaked",
+    "modified": "Subscription unlocked, Thumbnail: https://id.wikipedia.org/wiki/Berkas:Instagram_icon.png, Target: private",
     "modified_by": "@SteeShigeo",
     "tweaker": "",
-    "note": "WQ Files (iOS 26 – 27)\nOverview:\nA jailbreak-free file browser, app data manager, and cache cleaner powered by the worse_query sandbox technique. It accesses app and system containers without requiring a kernel exploit.\nKey Highlights:\nCompatibility: Supports iOS 26 (26.0–26.7.2) and iOS 27 (tested on 26.7.1, 27.0.1, and 27.2).\nNo Jailbreak Required: Reads app, extension, daemon, and app group containers.\niOS 26 Optimization: Uses the LaunchServices database to quickly list app data (avoiding slow inode scans). System Data/groups are hidden and crash-log cleaning is disabled on iOS 26.\nCore Functions: Full file browsing, cache cleaning, app data clearing, and backup/restore features across supported iOS versions.\n\nWQ Files: https://github.com/kolbicz/WQFiles",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
     "thumbnail": "/thumbnails/cz.kolbi.wqfiles.jpg",
     "updated_at": "2026-11-10"
   },
