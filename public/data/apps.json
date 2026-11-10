@@ -1,5 +1,19 @@
 [
   {
+    "id": "uni.cbum_1794323223",
+    "app_name": "STNDRD Workout \u0026 Fitness Plans",
+    "version": "4.1.64",
+    "min_ios": "15.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/uni.cbum_1794323223.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.robnorback.LiveTranscribe_1794323095",
     "app_name": "Live Transcribe",
     "version": "2.97",
