@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ironotes.Ironotes_1794325258",
+    "app_name": "Simple Workout Log - Ironotes",
+    "version": "1.250",
+    "min_ios": "16.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ironotes.Ironotes_1794325258.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.superfan.app_1794325230",
     "app_name": "Superfan: social music",
     "version": "1.28.17",
