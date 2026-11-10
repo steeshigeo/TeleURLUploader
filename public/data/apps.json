@@ -1,5 +1,19 @@
 [
   {
+    "id": "nutrition.coach_1794323308",
+    "app_name": "Nutrition Coach: AI Food Diary",
+    "version": "2.7.0",
+    "min_ios": "17.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/nutrition.coach_1794323308.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.glority.everlens_1794323270",
     "app_name": "Mobile Scanner App - Scan PDF",
     "version": "2.26.5",
