@@ -1,5 +1,19 @@
 [
   {
+    "id": "net.tengl.frmd_1794325392",
+    "app_name": "FRMD",
+    "version": "2.6",
+    "min_ios": "26.2",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/net.tengl.frmd_1794325392.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "ai.topicfinder.podcastdiscovery_1794325379",
     "app_name": "Snipd | AI Podcast Player",
     "version": "4.3.22",
