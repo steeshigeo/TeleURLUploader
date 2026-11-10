@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.consumedbycode.slopes_1794323735",
+    "app_name": "Slopes: Ski \u0026 Snowboard",
+    "version": "2026.17",
+    "min_ios": "18.0",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.consumedbycode.slopes_1794323735.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.nixwang.decision_1794323674",
     "app_name": "Tiny Decisions: Spin Wheel",
     "version": "26.13.2",
