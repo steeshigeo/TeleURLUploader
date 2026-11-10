@@ -263,6 +263,12 @@
       .tab svg { width: 26px; height: 26px; }
       .tab.is-active { color: var(--blue); }
     }
+    .modal-backdrop { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(0,0,0,.4); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    .modal-backdrop[hidden] { display: none; }
+    .modal { width: min(280px, 100%); border-radius: 16px; overflow: hidden; text-align: center; background: var(--surface); box-shadow: 0 20px 60px rgba(0,0,0,.35); animation: pop .18s ease-out; }
+    .modal p { padding: 22px 18px 18px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+    .modal button { width: 100%; height: 46px; border: 0; border-top: .5px solid var(--sep); background: transparent; color: var(--blue); font: 700 17px var(--font); cursor: pointer; }
+    .modal button:active { background: var(--fill); }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
 </head>
@@ -309,8 +315,8 @@
       <div class="today-copy">
         <div class="today-label" data-i18n="heroLabel">Premium Library</div>
         <h1 data-i18n="heroTitle">Premium iOS Mods &amp; Tweaked IPAs</h1>
-        <p data-i18n="heroSub">iOS apps with all premium features unlocked, updated regularly. Install straight from your device, no jailbreak or computer needed.</p>
-        <p class="today-extra" data-i18n="heroExtra">Request mod apps, community growth support, and many more.</p>
+        <p data-i18n="heroSub">Tweaked premium iOS apps, Updated regularly, Direct install—no jailbreak or PC needed!</p>
+        <p class="today-extra" data-i18n="heroExtra">Request Mod Apps, Community growth—support, And many more.</p>
         <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="btn-white" data-i18n="heroCta">Get VIP Access</a>
       </div>
       <div class="today-foot" id="todayFoot"></div>
@@ -362,14 +368,21 @@
     </button>
   </nav>
 
+  <div class="modal-backdrop" id="getModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="getModalText">
+      <p id="getModalText" data-i18n="getPopup">Subscribe and enjoy all JingApps Premium services!</p>
+      <button type="button" id="getModalOk" data-i18n="ok">OK</button>
+    </div>
+  </div>
+
   <script>
     /* ================= i18n ================= */
     const LANGS = {
       en: { name: 'English', locale: 'en-US', t: {
         themeTitle: 'Appearance', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
-        joinTelegram: 'Join Telegram', settings: 'Settings', heroExtra: 'Request mod apps, community growth support, and many more.', titleToday: 'Today', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: 'Premium Library',
+        joinTelegram: 'Join Telegram', getPopup: 'Subscribe and enjoy all JingApps Premium services!', ok: 'OK', settings: 'Settings', heroExtra: 'Request Mod Apps, Community growth—support, And many more.', titleToday: 'Today', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: 'Premium Library',
         heroTitle: 'Premium iOS Mods & Tweaked IPAs',
-        heroSub: 'iOS apps with all premium features unlocked, updated regularly. Install straight from your device, no jailbreak or computer needed.',
+        heroSub: 'Tweaked premium iOS apps, Updated regularly, Direct install—no jailbreak or PC needed!',
         heroCta: 'Get VIP Access', searchPh: 'Search apps, mods or features',
         all: 'All', patched: 'Patched', tweaked: 'Tweaked', section: 'Latest Apps',
         count: '{n} Apps', loading: 'Loading catalog…',
@@ -379,9 +392,9 @@
         updated: 'Updated', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
         themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
-        joinTelegram: 'Gabung Telegram', settings: 'Pengaturan', heroExtra: 'Request aplikasi mod, dukungan pertumbuhan komunitas, dan masih banyak lagi.', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
+        joinTelegram: 'Gabung Telegram', getPopup: 'Langganan dan nikmati semua layanan JingApps Premium!', ok: 'Oke', settings: 'Pengaturan', heroExtra: 'Request aplikasi mod, Pertumbuhan komunitas—dukungan, Dan masih banyak lagi.', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
         heroTitle: 'Mod iOS Premium & IPA Tweaked',
-        heroSub: 'Aplikasi iOS dengan semua fitur premium terbuka, diperbarui secara berkala. Pasang langsung dari perangkat Anda, tanpa jailbreak dan tanpa komputer.',
+        heroSub: 'Aplikasi iOS premium tweaked, Diperbarui rutin, Instal langsung—tanpa jailbreak atau PC!',
         heroCta: 'Dapatkan Akses VIP', searchPh: 'Cari aplikasi, mod, atau fitur',
         all: 'Semua', patched: 'Patched', tweaked: 'Tweaked', section: 'Aplikasi Terbaru',
         count: '{n} Aplikasi', loading: 'Memuat katalog…',
@@ -391,9 +404,9 @@
         updated: 'Diperbarui', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
         themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
-        joinTelegram: '加入 Telegram', settings: '设置', heroExtra: '可申请魔改应用、社区成长支持，以及更多服务。', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '高级资源库',
+        joinTelegram: '加入 Telegram', getPopup: '订阅即可享受 JingApps Premium 的全部服务！', ok: '好', settings: '设置', heroExtra: '可申请魔改应用，社区成长——支持，还有更多服务。', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '高级资源库',
         heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
-        heroSub: '解锁全部高级功能的 iOS 应用，定期更新。直接在设备上安装，无需越狱，也无需电脑。',
+        heroSub: 'Tweaked 高级 iOS 应用，定期更新，直接安装——无需越狱或电脑！',
         heroCta: '获取 VIP 权限', searchPh: '搜索应用、魔改或功能',
         all: '全部', patched: 'Patched', tweaked: 'Tweaked', section: '最新应用',
         count: '{n} 个应用', loading: '正在加载目录…',
@@ -403,9 +416,9 @@
         updated: '更新于', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
         themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
-        joinTelegram: 'Telegram に参加', settings: '設定', heroExtra: 'Mod アプリのリクエスト、コミュニティ成長サポートなど、まだまだ。', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: 'プレミアムライブラリ',
+        joinTelegram: 'Telegram に参加', getPopup: '購読して、JingApps Premium のすべてのサービスをお楽しみください！', ok: 'OK', settings: '設定', heroExtra: 'Mod アプリのリクエスト、コミュニティ成長のサポート、そのほか多数。', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: 'プレミアムライブラリ',
         heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
-        heroSub: 'プレミアム機能をすべて解放した iOS アプリを、定期的に更新しています。端末から直接インストールでき、脱獄もパソコンも不要です。',
+        heroSub: 'Tweaked プレミアム iOS アプリ、定期アップデート、直接インストール。脱獄もパソコンも不要！',
         heroCta: 'VIP アクセスを取得', searchPh: 'App、Mod、機能を検索',
         all: 'すべて', patched: 'Patched', tweaked: 'Tweaked', section: '最新のApp',
         count: '{n} 件', loading: 'カタログを読み込み中…',
@@ -415,9 +428,9 @@
         updated: '更新', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
         themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
-        joinTelegram: 'เข้าร่วม Telegram', settings: 'การตั้งค่า', heroExtra: 'ขอแอปม็อด สนับสนุนการเติบโตของชุมชน และอื่น ๆ อีกมากมาย', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: 'คลังพรีเมียม',
+        joinTelegram: 'เข้าร่วม Telegram', getPopup: 'สมัครสมาชิกและเพลิดเพลินกับบริการทั้งหมดของ JingApps Premium!', ok: 'ตกลง', settings: 'การตั้งค่า', heroExtra: 'ขอแอปม็อด สนับสนุนการเติบโตของชุมชน และอื่น ๆ อีกมากมาย', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: 'คลังพรีเมียม',
         heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
-        heroSub: 'แอป iOS ที่ปลดล็อกฟีเจอร์พรีเมียมทั้งหมด อัปเดตอย่างสม่ำเสมอ ติดตั้งได้โดยตรงจากอุปกรณ์ ไม่ต้องเจลเบรกและไม่ต้องใช้คอมพิวเตอร์',
+        heroSub: 'แอป iOS พรีเมียมแบบ Tweaked อัปเดตสม่ำเสมอ ติดตั้งโดยตรง ไม่ต้องเจลเบรกหรือใช้พีซี!',
         heroCta: 'รับสิทธิ์ VIP', searchPh: 'ค้นหาแอป, มอด หรือฟีเจอร์',
         all: 'ทั้งหมด', patched: 'Patched', tweaked: 'Tweaked', section: 'แอปล่าสุด',
         count: '{n} แอป', loading: 'กำลังโหลดแคตตาล็อก…',
@@ -547,7 +560,33 @@
       img.src = sources[0];
     })();
 
+    /* GET buttons: show a popup first, then continue to the link */
+    let pendingUrl = null;
+    function openGetDialog(url) {
+      pendingUrl = url;
+      document.getElementById('getModal').hidden = false;
+      document.getElementById('getModalOk').focus();
+    }
+    function closeGetDialog() {
+      document.getElementById('getModal').hidden = true;
+      pendingUrl = null;
+    }
+    document.addEventListener('click', e => {
+      const a = e.target.closest && e.target.closest('a.get');
+      if (!a) return;
+      e.preventDefault();
+      openGetDialog(a.href);
+    });
+    document.getElementById('getModalOk').addEventListener('click', () => {
+      const url = pendingUrl;
+      closeGetDialog();
+      if (url) window.open(url, '_blank', 'noopener');
+    });
+    document.getElementById('getModal').addEventListener('click', e => { if (e.target.id === 'getModal') closeGetDialog(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGetDialog(); });
+
     /* ================= Catalog ================= */
+    const GET_URL = 'https://t.me/+rJfkjsdFYVo3MWNl';
     let allApps = [];
     let currentCategory = 'all';   // all | patched | tweaked | utilities | games | productivity | health | photo
     let lastEmptyKey = null;
@@ -619,7 +658,7 @@
       foot.innerHTML = `
         <img src="${a.thumbnail || FALLBACK_ICON}" alt="">
         <div class="t"><b>${a.app_name}</b><small>${a.modified || (a.modified_by ? t('by') + ' ' + a.modified_by : t('iosApp'))}</small></div>
-        <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="get">${t('get')}</a>`;
+        <a href="${GET_URL}" target="_blank" rel="noopener" class="get">${t('get')}</a>`;
       foot.classList.add('show');
     }
 
@@ -652,7 +691,7 @@
                 ${app.is_patched ? `<span class="badge">${t('patchedBadge')}</span>` : ''}
               </div>
             </div>
-            <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="get">${t('get')}</a>
+            <a href="${GET_URL}" target="_blank" rel="noopener" class="get">${t('get')}</a>
           </div>
 
           ${app.modified ? `
