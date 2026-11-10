@@ -1,5 +1,19 @@
 [
   {
+    "id": "jayraavi.SoloMatch_1794327242",
+    "app_name": "nomadtable: travel friends",
+    "version": "16.2.53",
+    "min_ios": "15.5",
+    "category": "Travel",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/jayraavi.SoloMatch_1794327242.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.vertventures.stella_1794327008",
     "app_name": "Astra - Life Advice",
     "version": "3.12.79",
