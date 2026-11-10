@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.randomco.travel_1794329536",
+    "app_name": "Travel Town - Merge Adventure",
+    "version": "2.12.1822",
+    "min_ios": "10.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Freeze Energy",
+    "thumbnail": "/thumbnails/io.randomco.travel_1794329536.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.mobile-softing.coinmaster_1794329396",
     "app_name": "Coin Master",
     "version": "3.5.2781",
