@@ -115,7 +115,10 @@
     .menu-title { padding: 8px 12px 4px; font-size: 12px; color: var(--label2); font-weight: 600; }
 
     /* ---------- Large title ---------- */
-    .head { padding: 22px 0 12px; }
+    .head { padding: 22px 0 12px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+    .head-actions { flex-shrink: 0; margin-bottom: 4px; }
+    .t-mobile { display: none; }
+    .menu { z-index: 70; }
     .date { font-size: 13px; font-weight: 600; color: var(--label2); text-transform: uppercase; letter-spacing: .01em; }
     .large-title { font-size: 34px; font-weight: 700; letter-spacing: -.03em; line-height: 1.12; }
 
@@ -232,6 +235,8 @@
       .wrap { padding: 0 16px; }
       .today { min-height: 380px; }
       .brand span { font-size: 16px; }
+      .t-desktop { display: none; }
+      .t-mobile { display: block; }
       .pill .lbl { display: none; }
       .pill { padding: 0 10px; }
       .tabbar {
@@ -258,7 +263,7 @@
         <img id="brandIcon" alt="JingApps" width="32" height="32">
         <span>JingApps Premium Library</span>
       </div>
-      <div class="nav-actions">
+      <div class="nav-actions" id="navActions">
         <div class="lang">
           <button class="pill" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.7 4.2 5.9 4.2 9.5s-1.4 6.8-4.2 9.5c-2.8-2.7-4.2-5.9-4.2-9.5S9.2 5.2 12 2.5z"/></svg>
@@ -284,8 +289,12 @@
 
   <main class="wrap">
     <div class="head">
-      <div class="date" id="todayDate"></div>
-      <h2 class="large-title" data-i18n="title">Apps</h2>
+      <div>
+        <div class="date" id="todayDate"></div>
+        <h2 class="large-title t-desktop" data-i18n="title">Apps</h2>
+        <h2 class="large-title t-mobile" data-i18n="titleToday">Today</h2>
+      </div>
+      <div class="head-actions" id="headActions"></div>
     </div>
 
     <section class="today" id="todayCard">
@@ -350,7 +359,7 @@
     const LANGS = {
       en: { name: 'English', locale: 'en-US', t: {
         themeTitle: 'Appearance', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
-        joinTelegram: 'Join Telegram', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: 'Premium Library',
+        joinTelegram: 'Join Telegram', titleToday: 'Today', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: 'Premium Library',
         heroTitle: 'Premium iOS Mods & Tweaked IPAs',
         heroSub: 'iOS apps with all premium features unlocked, updated regularly. Install straight from your device, no jailbreak or computer needed.',
         heroCta: 'Get VIP Access', searchPh: 'Search apps, mods or features',
@@ -362,7 +371,7 @@
         updated: 'Updated', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
         themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
-        joinTelegram: 'Gabung Telegram', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
+        joinTelegram: 'Gabung Telegram', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
         heroTitle: 'Mod iOS Premium & IPA Tweaked',
         heroSub: 'Aplikasi iOS dengan semua fitur premium terbuka, diperbarui secara berkala. Pasang langsung dari perangkat Anda, tanpa jailbreak dan tanpa komputer.',
         heroCta: 'Dapatkan Akses VIP', searchPh: 'Cari aplikasi, mod, atau fitur',
@@ -374,7 +383,7 @@
         updated: 'Diperbarui', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
         themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
-        joinTelegram: '加入 Telegram', instantCert: '即时证书', title: '应用', heroLabel: '高级资源库',
+        joinTelegram: '加入 Telegram', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '高级资源库',
         heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
         heroSub: '解锁全部高级功能的 iOS 应用，定期更新。直接在设备上安装，无需越狱，也无需电脑。',
         heroCta: '获取 VIP 权限', searchPh: '搜索应用、魔改或功能',
@@ -386,7 +395,7 @@
         updated: '更新于', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
         themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
-        joinTelegram: 'Telegram に参加', instantCert: '即時証明書', title: 'App', heroLabel: 'プレミアムライブラリ',
+        joinTelegram: 'Telegram に参加', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: 'プレミアムライブラリ',
         heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
         heroSub: 'プレミアム機能をすべて解放した iOS アプリを、定期的に更新しています。端末から直接インストールでき、脱獄もパソコンも不要です。',
         heroCta: 'VIP アクセスを取得', searchPh: 'App、Mod、機能を検索',
@@ -398,7 +407,7 @@
         updated: '更新', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
         themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
-        joinTelegram: 'เข้าร่วม Telegram', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: 'คลังพรีเมียม',
+        joinTelegram: 'เข้าร่วม Telegram', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: 'คลังพรีเมียม',
         heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
         heroSub: 'แอป iOS ที่ปลดล็อกฟีเจอร์พรีเมียมทั้งหมด อัปเดตอย่างสม่ำเสมอ ติดตั้งได้โดยตรงจากอุปกรณ์ ไม่ต้องเจลเบรกและไม่ต้องใช้คอมพิวเตอร์',
         heroCta: 'รับสิทธิ์ VIP', searchPh: 'ค้นหาแอป, มอด หรือฟีเจอร์',
@@ -695,6 +704,17 @@
         renderCatalog(filtered);
       }
     }
+
+    /* On phones the action buttons (language, appearance, certificate, Telegram) sit in the title row */
+    const phoneMQ = window.matchMedia('(max-width: 720px)');
+    function placeActions() {
+      const box = document.getElementById('navActions');
+      const target = phoneMQ.matches ? document.getElementById('headActions') : document.querySelector('.navbar .wrap');
+      if (box.parentElement !== target) { closeMenus(); target.appendChild(box); }
+    }
+    if (phoneMQ.addEventListener) phoneMQ.addEventListener('change', placeActions);
+    else phoneMQ.addListener(placeActions);
+    placeActions();
 
     applyTheme(theme, false);
     applyStaticText();
