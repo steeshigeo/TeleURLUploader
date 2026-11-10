@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ashutoshbilla.procam_1794325448",
+    "app_name": "Pro Camera RAW: Modus ProCam",
+    "version": "6.4",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ashutoshbilla.procam_1794325448.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "net.tengl.frmd_1794325392",
     "app_name": "FRMD",
     "version": "2.6",
