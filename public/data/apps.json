@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.mindist.well_1794325828",
+    "app_name": "Numo: ADHD Brain Dump",
+    "version": "12.6.6",
+    "min_ios": "15.1",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/io.mindist.well_1794325828.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.manymanypixels.pomodrone_1794325785",
     "app_name": "Emphasis: Flow \u0026 Focus Timer",
     "version": "10.7.0",
