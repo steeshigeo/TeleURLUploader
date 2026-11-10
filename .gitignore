@@ -8,4 +8,8 @@
 /TeleURLUploader-*
 /.env
 downloads/
+<<<<<<< HEAD
+downloads/
+=======
+>>>>>>> 14227ac90656875b8e88f078f2ebed7fca8a17f1
 downloads/
