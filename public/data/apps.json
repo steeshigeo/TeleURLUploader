@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.samvermette.Transit_1794327780",
+    "app_name": "Transit • Subway \u0026 Bus Times",
+    "version": "6.3.7",
+    "min_ios": "16.0",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.samvermette.Transit_1794327780.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.gp.rumi_1794327620",
     "app_name": "Digital Camera - Rumi Cam",
     "version": "1.9.6",
