@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.maartenrietdijk.raceday",
+    "app_name": "RaceDay - Racing Calendar",
+    "version": "1.6.3",
+    "min_ios": "17.0",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.maartenrietdijk.raceday.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.whiostudios.CommaTracker",
     "app_name": "Comma: Private Period Tracker",
     "version": "1.20",
