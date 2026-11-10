@@ -263,12 +263,48 @@
       .tab svg { width: 26px; height: 26px; }
       .tab.is-active { color: var(--blue); }
     }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(0,0,0,.4); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+    /* iOS 26 "Liquid Glass" alert */
+    .modal-backdrop {
+      position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 24px;
+      background: rgba(0, 0, 0, .28); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      animation: fadeIn .22s ease-out;
+    }
     .modal-backdrop[hidden] { display: none; }
-    .modal { width: min(280px, 100%); border-radius: 16px; overflow: hidden; text-align: center; background: var(--surface); box-shadow: 0 20px 60px rgba(0,0,0,.35); animation: pop .18s ease-out; }
-    .modal p { padding: 22px 18px 18px; font-size: 16px; font-weight: 600; line-height: 1.4; }
-    .modal button { width: 100%; height: 46px; border: 0; border-top: .5px solid var(--sep); background: transparent; color: var(--blue); font: 700 17px var(--font); cursor: pointer; }
-    .modal button:active { background: var(--fill); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes springIn { 0% { opacity: 0; transform: scale(.86) translateY(12px); } 60% { opacity: 1; transform: scale(1.025); } 100% { transform: scale(1); } }
+    .modal {
+      position: relative; isolation: isolate; width: min(320px, 100%); padding: 28px 20px 20px; text-align: center;
+      border-radius: 38px; overflow: hidden;
+      background: color-mix(in srgb, var(--surface) 58%, transparent);
+      backdrop-filter: blur(44px) saturate(210%); -webkit-backdrop-filter: blur(44px) saturate(210%);
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, .35),
+        0 0 0 .5px rgba(255, 255, 255, .35),
+        inset 0 1.5px 0 rgba(255, 255, 255, .6),
+        inset 0 -1px 0 rgba(255, 255, 255, .14),
+        inset 0 0 28px rgba(255, 255, 255, .08);
+      animation: springIn .42s cubic-bezier(.2, .9, .3, 1.1) both;
+    }
+    .modal::before {   /* specular highlight */
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(120% 70% at 18% -10%, rgba(255, 255, 255, .5), transparent 55%),
+        linear-gradient(180deg, rgba(255, 255, 255, .12), transparent 40%);
+    }
+    .modal img {
+      width: 68px; height: 68px; margin: 0 auto 16px; display: block; object-fit: cover; border-radius: 22.37%;
+      background: var(--fill); box-shadow: 0 10px 24px rgba(0, 0, 0, .28), 0 0 0 .5px rgba(255, 255, 255, .5);
+    }
+    .modal p { font-size: 19px; font-weight: 700; letter-spacing: -.02em; line-height: 1.3; margin: 0 4px 22px; }
+    .modal button {
+      width: 100%; height: 52px; border: 0; border-radius: 999px; cursor: pointer;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--blue) 88%, #fff), var(--blue));
+      color: #fff; font: 700 17px var(--font);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), inset 0 -1px 0 rgba(0, 0, 0, .08), 0 8px 22px color-mix(in srgb, var(--blue) 45%, transparent);
+      transition: transform .15s cubic-bezier(.2, .9, .3, 1.2), filter .15s ease;
+    }
+    .modal button:hover { filter: brightness(1.06); }
+    .modal button:active { transform: scale(.96); }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
 </head>
@@ -370,6 +406,7 @@
 
   <div class="modal-backdrop" id="getModal" hidden>
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="getModalText">
+      <img id="getModalIcon" alt="">
       <p id="getModalText" data-i18n="getPopup">Subscribe and enjoy all JingApps Premium services!</p>
       <button type="button" id="getModalOk" data-i18n="ok">OK</button>
     </div>
@@ -564,6 +601,7 @@
     let pendingUrl = null;
     function openGetDialog(url) {
       pendingUrl = url;
+      document.getElementById('getModalIcon').src = document.getElementById('brandIcon').src;
       document.getElementById('getModal').hidden = false;
       document.getElementById('getModalOk').focus();
     }
