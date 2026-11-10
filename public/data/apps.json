@@ -6,10 +6,10 @@
     "min_ios": "17.0",
     "category": "Photo \u0026 Video",
     "is_patched": false,
-    "modified": "YouMod 2.0.0",
+    "modified": "YTKACE 1.1.5",
     "modified_by": "@SteeShigeo",
     "tweaker": "",
-    "note": "YouTube (YouMod 2.0.0)\n\nAdded tweaks:\nYTABConfig, YTweaks, YouPIP, VolumeBoostYT, DontEatMyContent, ReturnYouTubeDislike, LowContrastMode, VideoOverlay, YouGetCaption, YouTubeNativeShare, YouQuality, YouSlider, YTUHD, UncappedAVPlayer\n\nYouMod settings:\n1. Tap your profile icon on the bottom right-hand corner of the tab bar\n2. Tap the ⚙ Settings icon (top right)\n3. Tap YouMod\n\nCredits:\nYouMod 2.0.0 by Tonwalter888",
+    "note": "YouTube 21.45.4 (YTKACE 1.1.5) - Native Liquid Glass rolling out!\n\nAdded Tweaks:\nYTABConfig, YTweaks, YouPIP, VolumeBoostYT, DontEatMyContent, ReturnYouTubeDislike, LowContrastMode, VideoOverlay, YouGetCaption, YouQuality, YouChooseQuality, YTHoldForSpeed, YouGroupSettings\n\nYTKACE settings (Enable Liquid Glass):\n1. Go to YTKACE Settings\n2. Tap Liquid Glass\n3. Tap Tab Bar\n4. Select YouTube on the list\n5. Restart YouTube\n\nCredits:\nYTKACE 1.1.5 by @itzzace0",
     "thumbnail": "/thumbnails/com.google.ios.youtube.jpg",
     "updated_at": "2026-11-10"
   },
