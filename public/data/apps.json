@@ -1,5 +1,19 @@
 [
   {
+    "id": "dev.leoestremadoyro.AnimeTracker_1794325769",
+    "app_name": "Chisato: Anime Tracker",
+    "version": "5.2.0",
+    "min_ios": "18.0",
+    "category": "Entertainment",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/dev.leoestremadoyro.AnimeTracker_1794325769.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.waldostudiobv.century_1794325743",
     "app_name": "Century: AI Health Coach",
     "version": "1.51.2",
