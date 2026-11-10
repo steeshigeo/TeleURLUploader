@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.whiostudios.CommaTracker",
+    "app_name": "Comma: Private Period Tracker",
+    "version": "1.20",
+    "min_ios": "18.2",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.whiostudios.CommaTracker.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.swirski.photo-booth-a7m3",
     "app_name": "Shutter+ Sony Camera Remote",
     "version": "6.1.1",
