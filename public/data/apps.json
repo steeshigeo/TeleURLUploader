@@ -1,5 +1,19 @@
 [
   {
+    "id": "cz.kolbi.wqfiles",
+    "app_name": "WQ Files",
+    "version": "0.7",
+    "min_ios": "26.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "WQ Files (iOS 26 – 27)\nChangelogs:\nWQ Files v0.7\nSystem Updates \u0026 Fixes:\niOS 27.2 Fixes: Restored missing app names and fixed Cache Cleaner by adapting to the new app database layout.\niOS 26 Support (26.0–26.7.2): Added support with cached database indexing, real app icons, and hidden unreachable System Data/Groups.\nPerformance \u0026 UI Enhancements:\nFaster Scans: Background incremental scanning (only checks new files after the first run), persistent progress across screen navigation, and real-time status indicators.\nSwipe to Delete: Swipe left/right to delete files (includes confirmation prompt and automatic backup).\nFixes \u0026 Logging: Automatic fallback for failed folder access, expanded scan logs, and corrected error reporting for cancelled scans.\n\nWQ Files: https://github.com/kolbicz/WQFiles",
+    "thumbnail": "/thumbnails/cz.kolbi.wqfiles.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.Pattrn",
     "app_name": "Pattrn - Discipline Tracker",
     "version": "3.1.2",
