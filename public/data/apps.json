@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.quanto.quanto_1794325534",
+    "app_name": "Quanto: Budget Expense Tracker",
+    "version": "1.10.7",
+    "min_ios": "15.5",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/app.quanto.quanto_1794325534.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "org.reactjs.native.example.FluentAI_1794325507",
     "app_name": "FluentPal - Get fluent faster",
     "version": "3.1.8",
