@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.manymanypixels.pomodrone_1794325785",
+    "app_name": "Emphasis: Flow \u0026 Focus Timer",
+    "version": "10.7.0",
+    "min_ios": "17.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.manymanypixels.pomodrone_1794325785.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "dev.leoestremadoyro.AnimeTracker_1794325769",
     "app_name": "Chisato: Anime Tracker",
     "version": "5.2.0",
