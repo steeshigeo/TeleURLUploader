@@ -17,7 +17,6 @@ import (
 	"howett.net/plist"
 )
 
-// Fungsi pembantu untuk mengunduh file dari URL
 func downloadFile(url string, filepath string) error {
 	out, err := os.Create(filepath)
 	if err != nil {
@@ -39,7 +38,6 @@ func downloadFile(url string, filepath string) error {
 	return err
 }
 
-// Struct data dari Info.plist
 type InfoPlistData struct {
 	BundleName       string `plist:"CFBundleDisplayName"`
 	FallbackName     string `plist:"CFBundleName"`
@@ -48,7 +46,6 @@ type InfoPlistData struct {
 	MinimumOSVersion string `plist:"MinimumOSVersion"`
 }
 
-// Struct penampung respon iTunes API (Termasuk Genre / Kategori)
 type ITunesResponse struct {
 	Results []struct {
 		TrackName        string   `json:"trackName"`
@@ -59,7 +56,6 @@ type ITunesResponse struct {
 	} `json:"results"`
 }
 
-// Struct data akhir untuk caption, catalog & thumbnail
 type AppMetadata struct {
 	AppName       string
 	BundleID      string
@@ -78,7 +74,6 @@ type AppMetadata struct {
 	FinalFileName string
 }
 
-// Membersihkan string agar aman untuk nama file
 func sanitizeFilename(s string) string {
 	var builder strings.Builder
 	for _, r := range s {
@@ -95,7 +90,6 @@ func sanitizeFilename(s string) string {
 	return strings.Trim(result, "_")
 }
 
-// Menyusun nama file IPA otomatis
 func generateDefaultFileName(appName, version, modifier, customName string) string {
 	var parts []string
 
@@ -126,7 +120,6 @@ func generateDefaultFileName(appName, version, modifier, customName string) stri
 	return strings.Join(parts, "_") + ".ipa"
 }
 
-// Mencari Link App Store, Icon, Nama Resmi, dan Kategori/Genre via iTunes API
 func FetchAppStoreData(bundleID string) (appStoreURL string, artworkURL string, trackName string, category string) {
 	if strings.TrimSpace(bundleID) == "" {
 		return "", "", "", ""
@@ -153,7 +146,6 @@ func FetchAppStoreData(bundleID string) (appStoreURL string, artworkURL string, 
 	return "", "", "", ""
 }
 
-// Membaca deskripsi/caption dari Telegram (Dengan Dukungan Multi-Line Note)
 func parseCaptionOptions(userCaption string) (modified string, modifiedBy string, isPatched bool, note string, tweaker string, customName string) {
 	if strings.TrimSpace(userCaption) == "" {
 		return "", "", false, "", "", ""
@@ -216,7 +208,6 @@ func parseCaptionOptions(userCaption string) (modified string, modifiedBy string
 	return modified, modifiedBy, isPatched, note, tweaker, customName
 }
 
-// Membaca Info.plist dari dalam file .ipa
 func ExtractIPAMetadata(ipaPath string, userCaption string) (AppMetadata, error) {
 	r, err := zip.OpenReader(ipaPath)
 	if err != nil {
@@ -254,7 +245,6 @@ func ExtractIPAMetadata(ipaPath string, userCaption string) (AppMetadata, error)
 		return AppMetadata{}, err
 	}
 
-	// Fetch data App Store (Termasuk Category)
 	appStoreURL, artworkURL, storeAppName, category := FetchAppStoreData(parsedPlist.BundleID)
 
 	appName := storeAppName
@@ -269,11 +259,10 @@ func ExtractIPAMetadata(ipaPath string, userCaption string) (AppMetadata, error)
 	}
 
 	if category == "" {
-		category = "Utilities" // Fallback default jika aplikasi private/tweak khusus
+		category = "Utilities"
 	}
 
 	modifiedText, modifiedByText, isPatched, noteText, tweakerText, customName := parseCaptionOptions(userCaption)
-
 	finalFileName := generateDefaultFileName(appName, parsedPlist.Version, modifiedText, customName)
 
 	meta := AppMetadata{
@@ -297,7 +286,6 @@ func ExtractIPAMetadata(ipaPath string, userCaption string) (AppMetadata, error)
 	return meta, nil
 }
 
-// Ekstrak AppIcon dari IPA & Konversi CgBI PNG ke JPEG standar via macOS 'sips'
 func ExtractIPAIcon(ipaPath, outputDir string) (string, error) {
 	r, err := zip.OpenReader(ipaPath)
 	if err != nil {
@@ -361,7 +349,6 @@ func ExtractIPAIcon(ipaPath, outputDir string) (string, error) {
 	return rawIconPath, nil
 }
 
-// ALUR PRIORITAS THUMBNAIL (1: AppIcon dari IPA -> 2: Artwork dari App Store)
 func GetAppIconThumbnail(meta AppMetadata, ipaPath, outputDir string) string {
 	iconPath, err := ExtractIPAIcon(ipaPath, outputDir)
 	if err == nil && iconPath != "" {
@@ -378,7 +365,7 @@ func GetAppIconThumbnail(meta AppMetadata, ipaPath, outputDir string) string {
 	return ""
 }
 
-// Menyusun caption berformat Telegram Blockquote
+// Menyusun caption dengan pembatasan otomatis maksimal 1024 karakter Telegram API
 func BuildIPACaption(meta AppMetadata) string {
 	titleText := fmt.Sprintf("<b>%s</b>", meta.AppName)
 	if meta.AppStoreURL != "" {
@@ -414,9 +401,28 @@ func BuildIPACaption(meta AppMetadata) string {
 		strings.Join(blockLines, "\n"),
 	)
 
+	const maxCaptionLength = 1024
+
 	if strings.TrimSpace(meta.Note) != "" {
 		safeNote := html.EscapeString(meta.Note)
-		caption += fmt.Sprintf("\n\n<blockquote>• Note:\n%s</blockquote>", safeNote)
+		noteHeader := "\n\n<blockquote>• Note:\n"
+		noteFooter := "</blockquote>"
+
+		currentRunes := []rune(caption)
+		allowedLen := maxCaptionLength - len(currentRunes) - len([]rune(noteHeader)) - len([]rune(noteFooter))
+
+		if allowedLen > 15 {
+			noteRunes := []rune(safeNote)
+			if len(noteRunes) > allowedLen {
+				safeNote = string(noteRunes[:allowedLen-3]) + "..."
+			}
+			caption += noteHeader + safeNote + noteFooter
+		}
+	}
+
+	captionRunes := []rune(caption)
+	if len(captionRunes) > maxCaptionLength {
+		caption = string(captionRunes[:maxCaptionLength-3]) + "..."
 	}
 
 	return caption

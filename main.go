@@ -20,7 +20,6 @@ import (
 var activeCaptions = make(map[int64]string)
 
 func main() {
-	// 1. Muat file .env
 	errEnv := godotenv.Load(".env")
 	if errEnv != nil {
 		log.Printf("⚠️ WARNING: Gagal memuat file .env! Error: %v", errEnv)
@@ -67,7 +66,6 @@ func main() {
 			continue
 		}
 
-		// FILTER: Bot hanya merespons Private Chat (DM) & mengabaikan pesan grup
 		if !update.Message.Chat.IsPrivate() {
 			continue
 		}
@@ -75,7 +73,6 @@ func main() {
 		chatID := update.Message.Chat.ID
 		senderUsername := update.Message.From.UserName
 
-		// SECURITY LOCK: Owner Only
 		if allowedUsername != "" && !strings.EqualFold(senderUsername, allowedUsername) {
 			log.Printf("Akses DM ditolak untuk user: @%s (ID: %d)", senderUsername, update.Message.From.ID)
 			msg := tgbotapi.NewMessage(chatID, "⛔ <b>Akses Ditolak.</b>\nBot ini dikunci khusus untuk Owner.")
@@ -84,7 +81,6 @@ func main() {
 			continue
 		}
 
-		// A. UPLOAD FILE (.IPA)
 		if update.Message.Document != nil {
 			doc := update.Message.Document
 
@@ -113,11 +109,9 @@ func main() {
 			continue
 		}
 
-		// B. PESAN TEKS (DIRECT URL, COMMAND, DELETE, DESKRIPSI)
 		if update.Message.Text != "" {
 			text := update.Message.Text
 
-			// Direct URL IPA
 			if strings.HasPrefix(text, "http://") || strings.HasPrefix(text, "https://") {
 				lines := strings.Split(text, "\n")
 				fileURL := strings.TrimSpace(lines[0])
@@ -152,7 +146,6 @@ func main() {
 				}
 			}
 
-			// Command /start
 			if text == "/start" {
 				welcomeText := fmt.Sprintf(
 					"👋 Halo <b>%s</b>!\n\n"+
@@ -175,7 +168,6 @@ func main() {
 				continue
 			}
 
-			// Command /delete atau /hapus
 			if strings.HasPrefix(text, "/delete") || strings.HasPrefix(text, "/hapus") {
 				parts := strings.SplitN(text, " ", 2)
 				if len(parts) > 1 && strings.TrimSpace(parts[1]) != "" {
@@ -197,7 +189,6 @@ func main() {
 				continue
 			}
 
-			// Fallback: teks biasa disimpan sebagai deskripsi/caption aktif
 			activeCaptions[chatID] = text
 			msg := tgbotapi.NewMessage(chatID, "📝 <b>Deskripsi diperbarui & aktif!</b>\nSilakan kirim file <code>.ipa</code> kamu.")
 			msg.ParseMode = "HTML"
@@ -269,9 +260,15 @@ func processAndSendIPA(bot *tgbotapi.BotAPI, userChatID int64, localPath string,
 		}
 	}
 
-	sendErr := sendDocumentDirectly(bot.Token, targetChatID, topicID, finalFilePath, captionText, iconPath)
+	sendErr := sendDocumentDirectly(bot.Token, targetChatID, topicID, finalFilePath, "", iconPath)
 	if sendErr == nil {
-		// Otomatis Simpan Metadata ke JSON & Auto-Push ke Vercel Catalog
+		textMsg := tgbotapi.NewMessage(targetChatID, captionText)
+		textMsg.ParseMode = "HTML"
+		if topicID != 0 {
+			textMsg.MessageThreadID = topicID
+		}
+		bot.Send(textMsg)
+
 		go SaveAndSyncCatalog(meta, iconPath)
 
 		if statusMsgID != 0 {
@@ -294,7 +291,6 @@ func processAndSendIPA(bot *tgbotapi.BotAPI, userChatID int64, localPath string,
 	}
 }
 
-// Pengirim HTTP Multipart Streaming ke Local Telegram API
 func sendDocumentDirectly(botToken string, chatID int64, topicID int, filePath string, caption string, thumbPath string) error {
 	localAPI := strings.TrimRight(os.Getenv("LOCAL_API_URL"), "/")
 	var apiURL string
@@ -319,8 +315,10 @@ func sendDocumentDirectly(botToken string, chatID int64, topicID int, filePath s
 		if topicID != 0 {
 			_ = writer.WriteField("message_thread_id", strconv.Itoa(topicID))
 		}
-		_ = writer.WriteField("caption", caption)
-		_ = writer.WriteField("parse_mode", "HTML")
+		if caption != "" {
+			_ = writer.WriteField("caption", caption)
+			_ = writer.WriteField("parse_mode", "HTML")
+		}
 
 		docFile, err := os.Open(filePath)
 		if err != nil {

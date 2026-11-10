@@ -29,7 +29,7 @@ type CatalogItem struct {
 
 var catalogMutex sync.Mutex
 
-// Menambahkan atau memperbarui aplikasi di Web Catalog
+// Menambahkan aplikasi baru ke Web Catalog tanpa menimpa build lama
 func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 	catalogMutex.Lock()
 	defer catalogMutex.Unlock()
@@ -39,10 +39,13 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 
 	jsonFilePath := "./public/data/apps.json"
 
-	// 1. Simpan Icon ke folder public/thumbnails
+	// Membuat Unique ID berbasis timestamp agar setiap build .ipa tersimpan terpisah
+	uniqueID := fmt.Sprintf("%s_%d", meta.BundleID, time.Now().Unix())
+
+	// 1. Simpan Icon ke folder public/thumbnails dengan Unique ID
 	thumbWebPath := ""
 	if iconPath != "" {
-		fileName := meta.BundleID + ".jpg"
+		fileName := uniqueID + ".jpg"
 		dstPath := filepath.Join("./public/thumbnails", fileName)
 		if err := copyFile(iconPath, dstPath); err == nil {
 			thumbWebPath = "/thumbnails/" + fileName
@@ -57,7 +60,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 	}
 
 	newItem := CatalogItem{
-		ID:         meta.BundleID,
+		ID:         uniqueID,
 		AppName:    meta.AppName,
 		Version:    meta.Version,
 		MinIOS:     meta.MinIOS,
@@ -71,19 +74,8 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 		UpdatedAt:  time.Now().Format("2006-01-02"),
 	}
 
-	// Update jika aplikasi sudah ada, atau tambahkan di paling atas jika baru
-	updated := false
-	for i, item := range items {
-		if item.ID == newItem.ID {
-			items[i] = newItem
-			updated = true
-			break
-		}
-	}
-
-	if !updated {
-		items = append([]CatalogItem{newItem}, items...)
-	}
+	// Selalu tambahkan build baru di posisi paling atas catalog
+	items = append([]CatalogItem{newItem}, items...)
 
 	// 3. Tulis ulang file public/data/apps.json
 	output, err := json.MarshalIndent(items, "", "  ")
@@ -103,7 +95,7 @@ func SaveAndSyncCatalog(meta AppMetadata, iconPath string) error {
 	return nil
 }
 
-// Menghapus aplikasi dari Web Catalog berdasarkan Nama atau Bundle ID
+// Menghapus aplikasi dari Web Catalog berdasarkan Nama, Bundle ID, atau Unique ID
 func DeleteFromCatalog(target string) (string, error) {
 	catalogMutex.Lock()
 	defer catalogMutex.Unlock()
@@ -119,14 +111,20 @@ func DeleteFromCatalog(target string) (string, error) {
 
 	newItems := []CatalogItem{}
 	deletedAppName := ""
-	deletedBundleID := ""
 
 	targetLower := strings.ToLower(strings.TrimSpace(target))
 
 	for _, item := range items {
-		if strings.EqualFold(item.ID, targetLower) || strings.Contains(strings.ToLower(item.AppName), targetLower) {
+		isMatch := strings.EqualFold(item.ID, targetLower) ||
+			strings.HasPrefix(strings.ToLower(item.ID), targetLower+"_") ||
+			strings.Contains(strings.ToLower(item.AppName), targetLower)
+
+		if isMatch {
 			deletedAppName = item.AppName
-			deletedBundleID = item.ID
+			if item.Thumbnail != "" {
+				thumbFile := filepath.Base(item.Thumbnail)
+				_ = os.Remove(filepath.Join("./public/thumbnails", thumbFile))
+			}
 			continue
 		}
 		newItems = append(newItems, item)
@@ -142,10 +140,6 @@ func DeleteFromCatalog(target string) (string, error) {
 	}
 	if err := os.WriteFile(jsonFilePath, output, 0644); err != nil {
 		return "", fmt.Errorf("gagal memperbarui file catalog: %v", err)
-	}
-
-	if deletedBundleID != "" {
-		_ = os.Remove(filepath.Join("./public/thumbnails", deletedBundleID+".jpg"))
 	}
 
 	log.Printf("🗑️ Katalog lokal diperbarui: Menghapus %s", deletedAppName)
