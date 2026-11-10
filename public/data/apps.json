@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.magneticzero.pennies_1794325589",
+    "app_name": "Pennies: Budget \u0026 Bill Tracker",
+    "version": "6.6.1",
+    "min_ios": "15.0",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.magneticzero.pennies_1794325589.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.soccerFitYou.App_1794325566",
     "app_name": "B42 - Soccer Training",
     "version": "7.15.0",
