@@ -1,5 +1,19 @@
 [
   {
+    "id": "ovz.Car-Scanner",
+    "app_name": "Car Scanner ELM OBD2",
+    "version": "2.2.42",
+    "min_ios": "13.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/ovz.Car-Scanner.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.wallpaperscraft.wallpapers",
     "app_name": "Wallcraft – Wallpapers, live",
     "version": "3.43",
