@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.wikiloc.wikiloc_1794323510",
+    "app_name": "Wikiloc",
+    "version": "3.31.2",
+    "min_ios": "17.4",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.wikiloc.wikiloc_1794323510.jpg",
+    "updated_at": "2026-11-10"
+  },
+  {
     "id": "com.intsig.CamScannerLite_1794323433",
     "app_name": "CamScanner - PDF Scanner App",
     "version": "7.29.0",
