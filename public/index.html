@@ -304,13 +304,8 @@
         <button data-cat="all" onclick="filterCategory('all')" class="cat-btn is-active" data-i18n="all">All</button>
         <button data-cat="patched" onclick="filterCategory('patched')" class="cat-btn" data-i18n="patched">Patched</button>
         <button data-cat="tweaked" onclick="filterCategory('tweaked')" class="cat-btn" data-i18n="tweaked">Tweaked</button>
-        <span class="chip-sep"></span>
-        <button data-cat="utilities" onclick="filterCategory('utilities')" class="cat-btn" hidden><span data-i18n="catUtilities">Utilities</span><span class="n"></span></button>
-        <button data-cat="games" onclick="filterCategory('games')" class="cat-btn" hidden><span data-i18n="catGames">Games</span><span class="n"></span></button>
-        <button data-cat="productivity" onclick="filterCategory('productivity')" class="cat-btn" hidden><span data-i18n="catProductivity">Productivity</span><span class="n"></span></button>
-        <button data-cat="health" onclick="filterCategory('health')" class="cat-btn" hidden><span data-i18n="catHealth">Health &amp; Fitness</span><span class="n"></span></button>
-        <button data-cat="photo" onclick="filterCategory('photo')" class="cat-btn" hidden><span data-i18n="catPhoto">Photo &amp; Video</span><span class="n"></span></button>
-        <button data-cat="other" onclick="filterCategory('other')" class="cat-btn" hidden><span data-i18n="catOther">Other</span><span class="n"></span></button>
+        <span class="chip-sep" id="chipSep" hidden></span>
+        <span id="genreChips" style="display:contents"></span>
       </div>
     </section>
 
@@ -350,7 +345,6 @@
     /* ================= i18n ================= */
     const LANGS = {
       en: { name: 'English', locale: 'en-US', t: {
-        catUtilities: 'Utilities', catGames: 'Games', catProductivity: 'Productivity', catHealth: 'Health & Fitness', catPhoto: 'Photo & Video', catOther: 'Other',
         themeTitle: 'Appearance', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
         joinTelegram: 'Join Telegram', title: 'Apps', heroLabel: 'Premium Library',
         heroTitle: 'Premium iOS Mods & Tweaked IPAs',
@@ -363,7 +357,6 @@
         by: 'By', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Mod Features',
         updated: 'Updated', download: 'Download IPA', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
-        catUtilities: 'Utilitas', catGames: 'Game', catProductivity: 'Produktivitas', catHealth: 'Kesehatan & Kebugaran', catPhoto: 'Foto & Video', catOther: 'Lainnya',
         themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
         joinTelegram: 'Gabung Telegram', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
         heroTitle: 'Mod iOS Premium & IPA Tweaked',
@@ -376,7 +369,6 @@
         by: 'Oleh', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Fitur Mod',
         updated: 'Diperbarui', download: 'Unduh IPA', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
-        catUtilities: '工具', catGames: '游戏', catProductivity: '效率', catHealth: '健康与健身', catPhoto: '摄影与录像', catOther: '其他',
         themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
         joinTelegram: '加入 Telegram', title: '应用', heroLabel: '高级资源库',
         heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
@@ -389,7 +381,6 @@
         by: '作者', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: '魔改功能',
         updated: '更新于', download: '下载 IPA', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
-        catUtilities: 'ユーティリティ', catGames: 'ゲーム', catProductivity: '仕事効率化', catHealth: 'ヘルスケア/フィットネス', catPhoto: '写真/ビデオ', catOther: 'その他',
         themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
         joinTelegram: 'Telegram に参加', title: 'App', heroLabel: 'プレミアムライブラリ',
         heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
@@ -402,7 +393,6 @@
         by: '提供', iosMin: 'iOS {v}以降', patchedBadge: 'Patched', mod: 'Mod 機能',
         updated: '更新', download: 'IPAをダウンロード', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
-        catUtilities: 'ยูทิลิตี้', catGames: 'เกม', catProductivity: 'ประสิทธิภาพการทำงาน', catHealth: 'สุขภาพและฟิตเนส', catPhoto: 'ภาพถ่ายและวิดีโอ', catOther: 'อื่น ๆ',
         themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
         joinTelegram: 'เข้าร่วม Telegram', title: 'แอป', heroLabel: 'คลังพรีเมียม',
         heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
@@ -528,19 +518,15 @@
     let currentCategory = 'all';   // all | patched | tweaked | utilities | games | productivity | health | photo
     let lastEmptyKey = null;
 
-    /* Genre filters. Matches the "category" field in apps.json (App Store genre names).
-       Any other genre (or no category) goes to "other". */
-    const GENRES = [
-      { key: 'utilities',    re: /utilit/ },
-      { key: 'games',        re: /game/ },
-      { key: 'productivity', re: /productiv/ },
-      { key: 'health',       re: /health|fitness/ },
-      { key: 'photo',        re: /photo|video/ }
-    ];
-    function genreOf(app) {
-      const c = String(app.category || '').toLowerCase();
-      const g = GENRES.find(g => g.re.test(c));
-      return g ? g.key : 'other';
+    /* Categories are built automatically from the "category" field in apps.json.
+       A new category in the data becomes a new filter chip, no code change needed. */
+    const BUILTIN_FILTERS = ['all', 'patched', 'tweaked'];
+    function categoryKey(app) {
+      const c = String(app.category || '').trim().toLowerCase();
+      return c || null;
+    }
+    function esc(str) {
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
     async function loadCatalog() {
@@ -555,7 +541,7 @@
           return;
         }
 
-        allApps.forEach(a => { a._genre = genreOf(a); });
+        allApps.forEach(a => { a._genre = categoryKey(a); });
         lastEmptyKey = null;
         document.getElementById('appCounter').innerText = t('count', { n: allApps.length });
         updateCatUI();
@@ -567,23 +553,28 @@
       }
     }
 
-    /* show only genre chips that have apps, with counts */
+    /* build one chip per category found in the data (most apps first), with counts */
     function updateCatUI() {
-      const counts = {};
-      [...GENRES.map(g => g.key), 'other'].forEach(k => { counts[k] = allApps.filter(a => a._genre === k).length; });
-      document.querySelectorAll('.cat-btn[data-cat]').forEach(el => {
-        const k = el.dataset.cat;
-        if (k in counts) {
-          el.hidden = counts[k] === 0;
-          const n = el.querySelector('.n');
-          if (n) n.textContent = counts[k];
-        }
+      const found = new Map();   // key -> { label, count }
+      allApps.forEach(a => {
+        if (!a._genre) return;
+        if (!found.has(a._genre)) found.set(a._genre, { label: String(a.category).trim(), count: 0 });
+        found.get(a._genre).count++;
       });
-      if (currentCategory in counts && counts[currentCategory] === 0) currentCategory = 'all';
+      const list = [...found.entries()].sort((x, y) => y[1].count - x[1].count || x[1].label.localeCompare(y[1].label));
+      document.getElementById('genreChips').innerHTML = list.map(([key, v]) =>
+        `<button data-cat="${esc(key)}" class="cat-btn"><span>${esc(v.label)}</span><span class="n">${v.count}</span></button>`
+      ).join('');
+      document.getElementById('chipSep').hidden = list.length === 0;
+      if (!BUILTIN_FILTERS.includes(currentCategory) && !found.has(currentCategory)) currentCategory = 'all';
       document.querySelectorAll('.cat-btn[data-cat], .tab[data-cat]').forEach(el => {
         el.classList.toggle('is-active', el.dataset.cat === currentCategory);
       });
     }
+    document.getElementById('genreChips').addEventListener('click', e => {
+      const btn = e.target.closest('.cat-btn[data-cat]');
+      if (btn) filterCategory(btn.dataset.cat);
+    });
 
     function renderToday(apps) {
       const foot = document.getElementById('todayFoot');
