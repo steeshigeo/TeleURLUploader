@@ -1,5 +1,19 @@
 [
   {
+    "id": "boomer.Smart-Video_1794416855",
+    "app_name": "Captions: AI Edits Your Video",
+    "version": "13.43.0",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/boomer.Smart-Video_1794416855.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "at.vucak.impostor_1794416813",
     "app_name": "Imposter Game - Party Edition",
     "version": "4.4.0",
