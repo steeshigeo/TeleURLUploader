@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.identification.plant_1794416686",
+    "app_name": "Plant Identifier: LeafSnap",
+    "version": "2.84",
+    "min_ios": "14.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.identification.plant_1794416686.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "net.plantsnap.freemium_1794416670",
     "app_name": "PlantSnap - Plant Scanner",
     "version": "8.1.0",
