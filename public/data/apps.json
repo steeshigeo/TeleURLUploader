@@ -1,5 +1,19 @@
 [
   {
+    "id": "co.visualsupply.cam_1794372803",
+    "app_name": "VSCO: Photo \u0026 Video Editor",
+    "version": "462.1.1",
+    "min_ios": "15.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/co.visualsupply.cam_1794372803.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.kingsoft.office.g.wpsoffice_1794372672",
     "app_name": "WPS Office-AI Doc, PDF, Sheet",
     "version": "26.11.0",
