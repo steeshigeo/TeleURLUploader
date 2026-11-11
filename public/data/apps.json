@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.przemyslawbobak.filtru_1794377671",
+    "app_name": "Best Brew Guide: Filtru Coffee",
+    "version": "5.0.4",
+    "min_ios": "18.0",
+    "category": "Food \u0026 Drink",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.przemyslawbobak.filtru_1794377671.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.g8row.photosbackup_1794377549",
     "app_name": "Photos Backup",
     "version": "0.3.8",
