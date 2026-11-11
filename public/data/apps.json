@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.linecorp.b612_1794373132",
+    "app_name": "B612 AI Photo\u0026Video Editor",
+    "version": "15.5.0",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Ignore purchase popup's and log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.linecorp.b612_1794373132.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.campmobile.snow_1794373044",
     "app_name": "SNOW - AI Profile",
     "version": "15.5.0",
