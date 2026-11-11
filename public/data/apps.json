@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.tripsy.ios_1794417153",
+    "app_name": "Tripsy: Travel Planner",
+    "version": "3.10.8",
+    "min_ios": "18",
+    "category": "Travel",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.tripsy.ios_1794417153.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "us.pixomaticpro.PixomaticPro_1794417122",
     "app_name": "Pixomatic - AI Photo BG Eraser",
     "version": "2.55.37",
