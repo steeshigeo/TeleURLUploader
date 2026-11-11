@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.henge.app_1794376554",
+    "app_name": "Henge",
+    "version": "0.3.0",
+    "min_ios": "17.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom Apps",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Emulate macOS on iOS and iPadOS\n\nChangelogs:\nHenge v0.3\nRequirements:\n- Hardware: iOS 17+, A14 or M1 chip minimum\n- Storage: ~43 GB free space (17 GB download + 26 GB for macOS)\n- JIT: Required (StikDebug, TrollStore, Jailbreak, or built-in StikJIT for iOS 26+)\n- RAM: Recommended to sign with increased memory limit entitlement (4 GB, 6 GB, or 8 GB)\n\nInstallation \u0026 Usage:\n- Select macOS Sequoia 15.6.1 in the Install tab (Tahoe 26.6.2 and macOS 27.2 are experimental)\n- Keep the app open and the device plugged in during setup\n\nCredits: https://github.com/Leviidev/Henge",
+    "thumbnail": "/thumbnails/com.henge.app_1794376554.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.google.ios.youtube_1794376112",
     "app_name": "YouTube",
     "version": "21.33.6",
