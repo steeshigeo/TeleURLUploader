@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.lake.coloring_1794417071",
+    "app_name": "Lake: Coloring Book for Adults",
+    "version": "5.0.1",
+    "min_ios": "18.0",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.lake.coloring_1794417071.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "boomer.Smart-Video_1794416855",
     "app_name": "Captions: AI Edits Your Video",
     "version": "13.43.0",
