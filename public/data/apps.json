@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.br.12min.mobile_1794416790",
+    "app_name": "12min: Book Summaries Daily",
+    "version": "2.16.0",
+    "min_ios": "16.4",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.br.12min.mobile_1794416790.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "mobi.digitalminds.itunerfree_1794416776",
     "app_name": "myTuner Radio - Live Stations",
     "version": "10.3.0",
