@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.kingsoft.office.g.wpsoffice_1794372672",
+    "app_name": "WPS Office-AI Doc, PDF, Sheet",
+    "version": "26.11.0",
+    "min_ios": "16.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked (Pro \u0026 AI Unlocked)",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Ignore any purchase banner",
+    "thumbnail": "/thumbnails/com.kingsoft.office.g.wpsoffice_1794372672.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.vibecode.tradetracker.rusxpp_1794372426",
     "app_name": "TradeTracker AI TradingJournal",
     "version": "1.4.5",
