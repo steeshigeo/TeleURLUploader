@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.facebook.Facebook_1794377431",
+    "app_name": "Facebook",
+    "version": "587.0.0",
+    "min_ios": "15.1",
+    "category": "Social Networking",
+    "is_patched": true,
+    "modified": "Facebook Plus 1.0.5 (by SHAJON-404)",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Facebook 587.0.0 Builds\n\nIncluded Tweaks:\n• Facebook Plus 1.0.5 (by SHAJON-404)\n• Nexus 2.1.1 (by @lucaspedrosa)\n\nKey Features:\n• OLED Mode, Facebook Plus icons, feed filters, \u0026 cache cleaner\n• OpenInFacebook Safari Extension\n\nHow to Access Settings:\n• Facebook Plus: Press \u0026 hold the Home tab icon OR the top Facebook logo",
+    "thumbnail": "/thumbnails/com.facebook.Facebook_1794377431.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.facebook.Facebook_1794377298",
     "app_name": "Facebook",
     "version": "587.0.0",
