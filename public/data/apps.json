@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.local.iPadn_1794374701",
+    "app_name": "iPadn",
+    "version": "1.9.0",
+    "min_ios": "17.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom Apps",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Search, download and install the apps you own on iPhone and iPad: older versions, removed apps, regional prices and native install\n\nCredits: https://github.com/mengangs/ipadn",
+    "thumbnail": "/thumbnails/app.local.iPadn_1794374701.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.ichitaso.regitela_1794374582",
     "app_name": "Regitela",
     "version": "1.0.0",
