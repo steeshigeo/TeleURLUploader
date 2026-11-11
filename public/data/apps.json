@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.hevyapp.hevy_1794373772",
+    "app_name": "Hevy - Workout Tracker Gym Log",
+    "version": "3.2.6",
+    "min_ios": "15.1",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Can't create unlimited routines",
+    "thumbnail": "/thumbnails/com.hevyapp.hevy_1794373772.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.myfitnesspal.mfp_1794373697",
     "app_name": "MyFitnessPal: Calorie Counter",
     "version": "26.45.0",
