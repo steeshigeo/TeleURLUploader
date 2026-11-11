@@ -19,6 +19,7 @@
       --green: #248A3D;
       --green-soft: rgba(52, 199, 89, .16);
       --bar: rgba(249, 249, 249, .82);
+      --hi: rgba(255, 255, 255, .7);
       --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue",
               "PingFang SC", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans", "Noto Sans CJK SC",
               "Noto Sans JP", "Noto Sans Thai", "Sukhumvit Set", "Thonburi", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
@@ -38,6 +39,7 @@
         --green: #30D158;
         --green-soft: rgba(48, 209, 88, .18);
         --bar: rgba(22, 22, 24, .82);
+        --hi: rgba(255, 255, 255, .2);
       }
     }
     :root[data-theme="dark"] {
@@ -51,6 +53,7 @@
         --green: #30D158;
         --green-soft: rgba(48, 209, 88, .18);
         --bar: rgba(22, 22, 24, .82);
+        --hi: rgba(255, 255, 255, .2);
     }
 
     * { box-sizing: border-box; margin: 0; -webkit-tap-highlight-color: transparent; }
@@ -67,13 +70,15 @@
     .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 
     /* ---------- Navigation bar ---------- */
-    .navbar {
-      position: sticky; top: 0; z-index: 50;
-      background: var(--bar);
-      backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px);
-      border-bottom: .5px solid var(--sep);
+    .navbar { position: sticky; top: 0; z-index: 50; padding: 10px 16px 0; pointer-events: none; }
+    .navbar .wrap {
+      pointer-events: auto; max-width: 1000px; height: 56px; padding: 0 8px 0 14px;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--surface) 60%, transparent);
+      backdrop-filter: blur(30px) saturate(190%); -webkit-backdrop-filter: blur(30px) saturate(190%);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, .14), 0 0 0 .5px var(--hi), inset 0 1px 0 var(--hi), inset 0 -1px 0 rgba(255, 255, 255, .06);
     }
-    .navbar .wrap { height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
     .app-icon, .brand img {
       border-radius: 22.37%; object-fit: cover; background: var(--fill);
@@ -125,38 +130,39 @@
     /* ---------- Today card ---------- */
     .today {
       position: relative; overflow: hidden; isolation: isolate;
-      border-radius: 20px; min-height: 420px; color: #fff;
+      border-radius: 28px; min-height: 300px; color: #fff;
       display: flex; flex-direction: column; justify-content: space-between;
       background: linear-gradient(155deg, #3B5BFF 0%, #7A3CFF 55%, #C13BFF 100%);
       box-shadow: 0 14px 34px rgba(30, 20, 90, .28);
     }
     .today-bg { position: absolute; inset: -30px; z-index: -2; background-size: cover; background-position: center; filter: blur(46px) saturate(1.5); opacity: .7; transform: scale(1.2); }
     .today::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,.05) 25%, rgba(0,0,0,.4)); }
-    .today-copy { padding: 24px 24px 20px; max-width: 560px; display: flex; flex-direction: column; }
-    .today-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; opacity: .85; }
-    .today h1 { font-size: clamp(30px, 6vw, 46px); font-weight: 800; letter-spacing: -.035em; line-height: 1.08; margin-top: 6px; }
-    .today p { margin-top: 12px; font-size: clamp(14px, 3.9vw, 16px); line-height: 1.4; opacity: .9; max-width: 46ch; }
-    .today p.today-extra { margin-top: 10px; font-size: 14px; font-weight: 600; opacity: .95; }
-    .btn-white {
-      display: inline-flex; align-items: center; align-self: flex-start;
-      height: clamp(30px, 8vw, 38px); padding: 0 clamp(14px, 4vw, 20px);
-      margin-top: clamp(12px, 3.5vw, 20px);
-      border-radius: 999px; background: #fff; color: #0A5BFF;
+    .today-copy { padding: 20px 22px 0; }
+    .today-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; opacity: .92; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
+    .intro { margin: 2px 0 20px; }
+    .intro h1 { font-size: clamp(30px, 6vw, 46px); font-weight: 800; letter-spacing: -.035em; line-height: 1.08; }
+    .intro p { margin-top: 12px; font-size: clamp(14px, 3.9vw, 16px); line-height: 1.45; color: var(--label2); max-width: 56ch; }
+    .intro p.intro-extra { margin-top: 8px; font-size: clamp(13px, 3.6vw, 15px); font-weight: 600; color: var(--label); }
+    .btn-blue {
+      display: inline-flex; align-items: center; height: clamp(30px, 8vw, 38px); padding: 0 clamp(14px, 4vw, 20px);
+      margin-top: clamp(12px, 3.5vw, 18px); border-radius: 999px; background: var(--blue); color: #fff;
       font-size: clamp(13px, 3.6vw, 15px); font-weight: 700; white-space: nowrap;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 6px 18px color-mix(in srgb, var(--blue) 40%, transparent);
       transition: transform .15s ease;
     }
-    .btn-white:active { transform: scale(.96); }
+    .btn-blue:active { transform: scale(.96); }
     .today-foot {
-      margin: 0 12px 12px; padding: 12px; border-radius: 16px;
-      background: rgba(30, 30, 34, .5);
-      backdrop-filter: blur(28px) saturate(160%); -webkit-backdrop-filter: blur(28px) saturate(160%);
-      display: none; align-items: center; gap: 12px;
+      margin: 0 12px 12px; padding: 12px 14px 12px 12px; border-radius: 999px;
+      background: rgba(255, 255, 255, .16);
+      backdrop-filter: blur(30px) saturate(190%); -webkit-backdrop-filter: blur(30px) saturate(190%);
+      box-shadow: 0 0 0 .5px rgba(255,255,255,.4), inset 0 1px 0 rgba(255,255,255,.45), 0 10px 28px rgba(0,0,0,.2);
+      display: none; align-items: center; gap: 14px;
     }
     .today-foot.show { display: flex; }
-    .today-foot img { width: 52px; height: 52px; border-radius: 22.37%; object-fit: cover; box-shadow: 0 0 0 .5px rgba(255,255,255,.25); flex-shrink: 0; }
+    .today-foot img { width: 60px; height: 60px; border-radius: 22.37%; object-fit: cover; box-shadow: 0 0 0 .5px rgba(255,255,255,.25); flex-shrink: 0; }
     .today-foot .t { flex: 1; min-width: 0; }
-    .today-foot b { display: block; font-size: 15px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .today-foot small { display: block; font-size: 13px; opacity: .75; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .today-foot b { display: block; font-size: clamp(18px, 5vw, 22px); font-weight: 800; letter-spacing: -.025em; line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .today-foot small { display: block; font-size: 12.5px; margin-top: 2px; opacity: .85; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
     /* ---------- Search + filter ---------- */
     .controls { margin: 24px 0 8px; display: flex; flex-direction: column; gap: 12px; }
@@ -235,11 +241,11 @@
     /* ---------- Tab bar (mobile) ---------- */
     .tabbar { display: none; }
     @media (max-width: 720px) {
-      body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+      body { padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px)); }
       .wrap { padding: 0 16px; }
-      .today { min-height: 0; }
-      .today-copy { padding: 20px 18px 16px; }
-      .today-foot { margin-top: 4px; }
+      .today { min-height: 230px; border-radius: 26px; }
+      .today-copy { padding: 18px 18px 0; }
+      .today-foot { margin-top: 20px; }
       .brand span { font-size: 16px; }
       .t-desktop { display: none; }
       .t-mobile { display: block; }
@@ -251,17 +257,25 @@
       .head-actions .nav-actions { flex-wrap: wrap; }
       .head-actions .menu { left: 0; right: auto; }
       .tabbar {
-        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-        padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
-        background: var(--bar); border-top: .5px solid var(--sep);
-        backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px);
+        display: flex; position: fixed; left: 50%; transform: translateX(-50%); z-index: 60;
+        bottom: calc(12px + env(safe-area-inset-bottom, 0px)); width: min(calc(100% - 32px), 420px);
+        padding: 6px; gap: 2px; border-radius: 999px;
+        background: color-mix(in srgb, var(--surface) 62%, transparent);
+        backdrop-filter: blur(30px) saturate(190%); -webkit-backdrop-filter: blur(30px) saturate(190%);
+        box-shadow: 0 14px 36px rgba(0, 0, 0, .22), 0 0 0 .5px var(--hi), inset 0 1px 0 var(--hi);
       }
       .tab {
-        flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 0;
-        border: 0; background: transparent; color: var(--label2); font-size: 10px; font-weight: 500; cursor: pointer;
+        flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 8px 0 6px;
+        border: 0; border-radius: 999px; background: transparent; color: var(--label2);
+        font-size: 10px; font-weight: 600; cursor: pointer;
+        transition: background .25s ease, color .25s ease, transform .15s ease;
       }
-      .tab svg { width: 26px; height: 26px; }
-      .tab.is-active { color: var(--blue); }
+      .tab:active { transform: scale(.94); }
+      .tab svg { width: 24px; height: 24px; }
+      .tab.is-active {
+        color: var(--blue); background: color-mix(in srgb, var(--blue) 15%, transparent);
+        box-shadow: inset 0 1px 0 var(--hi), inset 0 0 0 .5px color-mix(in srgb, var(--blue) 28%, transparent);
+      }
     }
     /* iOS 26 "Liquid Glass" alert */
     .modal-backdrop {
@@ -346,14 +360,17 @@
       <div class="head-actions" id="headActions"></div>
     </div>
 
+    <section class="intro">
+      <h1 data-i18n="heroTitle">Premium iOS Mods &amp; Tweaked IPAs</h1>
+      <p data-i18n="heroSub">Tweaked premium iOS apps, Updated regularly, Direct install—no jailbreak or PC needed!</p>
+      <p class="intro-extra" data-i18n="heroExtra">Request Mod Apps, Community growth—support, And many more.</p>
+      <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="btn-blue" data-i18n="heroCta">Get VIP Access</a>
+    </section>
+
     <section class="today" id="todayCard">
       <div class="today-bg" id="todayBg"></div>
       <div class="today-copy">
-        <div class="today-label" data-i18n="heroLabel">Premium Library</div>
-        <h1 data-i18n="heroTitle">Premium iOS Mods &amp; Tweaked IPAs</h1>
-        <p data-i18n="heroSub">Tweaked premium iOS apps, Updated regularly, Direct install—no jailbreak or PC needed!</p>
-        <p class="today-extra" data-i18n="heroExtra">Request Mod Apps, Community growth—support, And many more.</p>
-        <a href="https://t.me/steeshigeo" target="_blank" rel="noopener" class="btn-white" data-i18n="heroCta">Get VIP Access</a>
+        <div class="today-label" data-i18n="heroLabel">★ Featured App of the Day</div>
       </div>
       <div class="today-foot" id="todayFoot"></div>
     </section>
@@ -387,16 +404,16 @@
   <!-- Bottom tab bar (mobile), mirrors the App Store -->
   <nav class="tabbar" aria-label="Tabs">
     <button class="tab is-active" data-cat="all" onclick="filterCategory('all')">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 3.6 8.6v.9L12 15.3l8.4-5.8v-.9L12 2.8zM4.5 12.3v1.1L12 18.6l7.5-5.2v-1.1L12 17.5l-7.5-5.2zm0 3.4v1.1L12 22l7.5-5.2v-1.1L12 20.8l-7.5-5.1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>
       <span data-i18n="all">All</span>
     </button>
-    <button class="tab" data-cat="patched" onclick="filterCategory('patched')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.4 3.2 8 7.5 9.5 4.3-1.5 7.5-5.1 7.5-9.5V6L12 3z"/><path d="m8.8 12 2.4 2.4 4-4.4"/></svg>
-      <span data-i18n="patched">Patched</span>
+    <button class="tab" data-cat="apps" onclick="filterCategory('apps')">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8 3.6 8.6v.9L12 15.3l8.4-5.8v-.9L12 2.8zM4.5 12.3v1.1L12 18.6l7.5-5.2v-1.1L12 17.5l-7.5-5.2zm0 3.4v1.1L12 22l7.5-5.2v-1.1L12 20.8l-7.5-5.1z"/></svg>
+      <span data-i18n="tabApps">Apps</span>
     </button>
-    <button class="tab" data-cat="tweaked" onclick="filterCategory('tweaked')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg>
-      <span data-i18n="tweaked">Tweaked</span>
+    <button class="tab" data-cat="games" onclick="filterCategory('games')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="10.5" rx="5.2"/><path d="M7.2 10.6v3.2M5.6 12.2h3.2"/><circle cx="15.6" cy="11.4" r=".9" fill="currentColor"/><circle cx="18" cy="13.6" r=".9" fill="currentColor"/></svg>
+      <span data-i18n="tabGames">Games</span>
     </button>
     <button class="tab" id="tabSearch" onclick="focusSearch()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></svg>
@@ -417,7 +434,7 @@
     const LANGS = {
       en: { name: 'English', locale: 'en-US', t: {
         themeTitle: 'Appearance', themeAuto: 'Auto', themeLight: 'Light', themeDark: 'Dark',
-        joinTelegram: 'Join Telegram', getPopup: 'Subscribe and enjoy all JingApps Premium services!', ok: 'OK', settings: 'Settings', heroExtra: 'Request Mod Apps, Community growth—support, And many more.', titleToday: 'Today', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: 'Premium Library',
+        joinTelegram: 'Join Telegram', getPopup: 'Subscribe and enjoy all JingApps Premium services!', ok: 'OK', settings: 'Settings', heroExtra: 'Request Mod Apps, Community growth—support, And many more.', titleToday: 'Today', instantCert: 'Instant Certificate', title: 'Apps', heroLabel: '★ Featured App of the Day',
         heroTitle: 'Premium iOS Mods & Tweaked IPAs',
         heroSub: 'Tweaked premium iOS apps, Updated regularly, Direct install—no jailbreak or PC needed!',
         heroCta: 'Get VIP Access', searchPh: 'Search apps, mods or features',
@@ -426,10 +443,10 @@
         emptyTitle: 'JingApps Library', emptyNone: 'No apps have been released yet.',
         emptyErr: 'The catalog is being updated or has no data yet.', emptyFilter: 'No matching apps found.',
         by: 'By', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Mod Features',
-        updated: 'Updated', get: 'GET', tabApps: 'Apps', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
+        updated: 'Updated', get: 'GET', tabApps: 'Apps', tabGames: 'Games', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
         themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
-        joinTelegram: 'Gabung Telegram', getPopup: 'Langganan dan nikmati semua layanan JingApps Premium!', ok: 'Oke', settings: 'Pengaturan', heroExtra: 'Request aplikasi mod, Pertumbuhan komunitas—dukungan, Dan masih banyak lagi.', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: 'Pustaka Premium',
+        joinTelegram: 'Gabung Telegram', getPopup: 'Langganan dan nikmati semua layanan JingApps Premium!', ok: 'Oke', settings: 'Pengaturan', heroExtra: 'Request aplikasi mod, Pertumbuhan komunitas—dukungan, Dan masih banyak lagi.', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: '★ Aplikasi Unggulan Hari Ini',
         heroTitle: 'Mod iOS Premium & IPA Tweaked',
         heroSub: 'Aplikasi iOS premium tweaked, Diperbarui rutin, Instal langsung—tanpa jailbreak atau PC!',
         heroCta: 'Dapatkan Akses VIP', searchPh: 'Cari aplikasi, mod, atau fitur',
@@ -438,10 +455,10 @@
         emptyTitle: 'Pustaka JingApps', emptyNone: 'Belum ada aplikasi yang dirilis.',
         emptyErr: 'Katalog sedang diperbarui atau belum ada data.', emptyFilter: 'Tidak ada aplikasi yang cocok.',
         by: 'Oleh', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Fitur Mod',
-        updated: 'Diperbarui', get: 'DAPATKAN', tabApps: 'Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
+        updated: 'Diperbarui', get: 'DAPATKAN', tabApps: 'Aplikasi', tabGames: 'Game', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
         themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
-        joinTelegram: '加入 Telegram', getPopup: '订阅即可享受 JingApps Premium 的全部服务！', ok: '好', settings: '设置', heroExtra: '可申请魔改应用，社区成长——支持，还有更多服务。', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '高级资源库',
+        joinTelegram: '加入 Telegram', getPopup: '订阅即可享受 JingApps Premium 的全部服务！', ok: '好', settings: '设置', heroExtra: '可申请魔改应用，社区成长——支持，还有更多服务。', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '★ 今日精选应用',
         heroTitle: '高级 iOS 魔改版与 Tweaked IPA',
         heroSub: 'Tweaked 高级 iOS 应用，定期更新，直接安装——无需越狱或电脑！',
         heroCta: '获取 VIP 权限', searchPh: '搜索应用、魔改或功能',
@@ -450,10 +467,10 @@
         emptyTitle: 'JingApps 资源库', emptyNone: '暂无已发布的应用。',
         emptyErr: '目录正在更新，或暂无数据。', emptyFilter: '未找到匹配的应用。',
         by: '作者', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: '魔改功能',
-        updated: '更新于', get: '获取', tabApps: '应用', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
+        updated: '更新于', get: '获取', tabApps: '应用', tabGames: '游戏', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
         themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
-        joinTelegram: 'Telegram に参加', getPopup: '購読して、JingApps Premium のすべてのサービスをお楽しみください！', ok: 'OK', settings: '設定', heroExtra: 'Mod アプリのリクエスト、コミュニティ成長のサポート、そのほか多数。', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: 'プレミアムライブラリ',
+        joinTelegram: 'Telegram に参加', getPopup: '購読して、JingApps Premium のすべてのサービスをお楽しみください！', ok: 'OK', settings: '設定', heroExtra: 'Mod アプリのリクエスト、コミュニティ成長のサポート、そのほか多数。', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: '★ 今日の注目App',
         heroTitle: 'プレミアム iOS Mod ＆ Tweaked IPA',
         heroSub: 'Tweaked プレミアム iOS アプリ、定期アップデート、直接インストール。脱獄もパソコンも不要！',
         heroCta: 'VIP アクセスを取得', searchPh: 'App、Mod、機能を検索',
@@ -462,10 +479,10 @@
         emptyTitle: 'JingApps ライブラリ', emptyNone: '公開されているAppはまだありません。',
         emptyErr: 'カタログを更新中、またはデータがありません。', emptyFilter: '一致するAppが見つかりません。',
         by: '提供', iosMin: 'iOS {v}以降', patchedBadge: 'Patched', mod: 'Mod 機能',
-        updated: '更新', get: '入手', tabApps: 'App', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
+        updated: '更新', get: '入手', tabApps: 'App', tabGames: 'ゲーム', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
         themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
-        joinTelegram: 'เข้าร่วม Telegram', getPopup: 'สมัครสมาชิกและเพลิดเพลินกับบริการทั้งหมดของ JingApps Premium!', ok: 'ตกลง', settings: 'การตั้งค่า', heroExtra: 'ขอแอปม็อด สนับสนุนการเติบโตของชุมชน และอื่น ๆ อีกมากมาย', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: 'คลังพรีเมียม',
+        joinTelegram: 'เข้าร่วม Telegram', getPopup: 'สมัครสมาชิกและเพลิดเพลินกับบริการทั้งหมดของ JingApps Premium!', ok: 'ตกลง', settings: 'การตั้งค่า', heroExtra: 'ขอแอปม็อด สนับสนุนการเติบโตของชุมชน และอื่น ๆ อีกมากมาย', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: '★ แอปเด่นประจำวัน',
         heroTitle: 'iOS Mod พรีเมียม และ Tweaked IPA',
         heroSub: 'แอป iOS พรีเมียมแบบ Tweaked อัปเดตสม่ำเสมอ ติดตั้งโดยตรง ไม่ต้องเจลเบรกหรือใช้พีซี!',
         heroCta: 'รับสิทธิ์ VIP', searchPh: 'ค้นหาแอป, มอด หรือฟีเจอร์',
@@ -474,7 +491,7 @@
         emptyTitle: 'คลัง JingApps', emptyNone: 'ยังไม่มีแอปที่เผยแพร่',
         emptyErr: 'แคตตาล็อกกำลังอัปเดตหรือยังไม่มีข้อมูล', emptyFilter: 'ไม่พบแอปที่ตรงกัน',
         by: 'โดย', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'ฟีเจอร์มอด',
-        updated: 'อัปเดต', get: 'รับ', tabApps: 'แอป', tabSearch: 'ค้นหา', langTitle: 'ภาษา', iosApp: 'แอป iOS' } }
+        updated: 'อัปเดต', get: 'รับ', tabApps: 'แอป', tabGames: 'เกม', tabSearch: 'ค้นหา', langTitle: 'ภาษา', iosApp: 'แอป iOS' } }
     };
 
     let lang = 'en';
@@ -631,7 +648,7 @@
 
     /* Categories are built automatically from the "category" field in apps.json.
        A new category in the data becomes a new filter chip, no code change needed. */
-    const BUILTIN_FILTERS = ['all', 'patched', 'tweaked'];
+    const BUILTIN_FILTERS = ['all', 'patched', 'tweaked', 'apps', 'games'];
     function categoryKey(app) {
       const c = String(app.category || '').trim().toLowerCase();
       return c || null;
@@ -775,6 +792,8 @@
                              (app.note && app.note.toLowerCase().includes(query));
         if (currentCategory === 'patched') return matchesQuery && app.is_patched;
         if (currentCategory === 'tweaked') return matchesQuery && app.tweaker;
+        if (currentCategory === 'games') return matchesQuery && /game/i.test(app.category || '');
+        if (currentCategory === 'apps') return matchesQuery && !/game/i.test(app.category || '');
         if (currentCategory !== 'all') return matchesQuery && app._genre === currentCategory;
         return matchesQuery;
       });
