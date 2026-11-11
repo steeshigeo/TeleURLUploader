@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.vibecode.tradetracker.rusxpp_1794372426",
+    "app_name": "TradeTracker AI TradingJournal",
+    "version": "1.4.5",
+    "min_ios": "10.0",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.vibecode.tradetracker.rusxpp_1794372426.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.battlecreek.nolimit2_1794333949",
     "app_name": "No Limit Drag Racing 2",
     "version": "2.30.71",
