@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.impalastudios.pianofree_1794417324",
+    "app_name": "Piano ٞ",
+    "version": "2.26.4",
+    "min_ios": "16.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.impalastudios.pianofree_1794417324.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.offlinemusic_1794417286",
     "app_name": "Offline Music Player",
     "version": "4.0.0",
