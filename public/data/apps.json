@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.offlinemusic_1794417286",
+    "app_name": "Offline Music Player",
+    "version": "4.0.0",
+    "min_ios": "18.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.offlinemusic_1794417286.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.endel.endel_1794417268",
     "app_name": "Endel: Focus \u0026 Sleep Sounds",
     "version": "4.49.325",
