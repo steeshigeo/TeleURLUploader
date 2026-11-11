@@ -1,5 +1,19 @@
 [
   {
+    "id": "us.pixomaticpro.PixomaticPro_1794417122",
+    "app_name": "Pixomatic - AI Photo BG Eraser",
+    "version": "2.55.37",
+    "min_ios": "13.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/us.pixomaticpro.PixomaticPro_1794417122.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.lake.coloring_1794417071",
     "app_name": "Lake: Coloring Book for Adults",
     "version": "5.0.1",
