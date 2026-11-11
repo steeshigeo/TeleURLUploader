@@ -1,5 +1,19 @@
 [
   {
+    "id": "at.vucak.impostor_1794416813",
+    "app_name": "Imposter Game - Party Edition",
+    "version": "4.4.0",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/at.vucak.impostor_1794416813.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.lyftaios_1794416803",
     "app_name": "Lyfta: Gym \u0026 Workout Tracker",
     "version": "1.167",
