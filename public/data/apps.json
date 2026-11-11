@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.bakeryscent.recipeai_1794416635",
+    "app_name": "Recipe Keeper \u0026 Saver - Recify",
+    "version": "1.8.1",
+    "min_ios": "15.6",
+    "category": "Food \u0026 Drink",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.bakeryscent.recipeai_1794416635.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "ideastudio.Weather-on-the-Way_1794416626",
     "app_name": "Weather on the Way",
     "version": "2.5.15",
