@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.maxty.gofitness_1794418818",
+    "app_name": "ProFit: Workout Planner",
+    "version": "8.6.0",
+    "min_ios": "17.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.maxty.gofitness_1794418818.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.snowcorp.soda_1794418799",
     "app_name": "SODA - Natural Beauty Camera",
     "version": "10.4.5",
