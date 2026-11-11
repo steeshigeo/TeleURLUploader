@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.g8row.photosbackup_1794377549",
+    "app_name": "Photos Backup",
+    "version": "0.3.8",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom App",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "An experimental, fully on-device iPhone app for backing up selected photos, videos, and albums to Google Photos. It is a single SwiftUI app that completes Google account setup in an in-app web view, so everything happens on the phone without a desktop companion or hosted service.\n\nChangelogs:\nPhotos Backup Update\n\nNew Features:\n- Background Backups: Plays silent audio to prevent app suspension during backups; Location mode available as fallback.\n- Background Persistence Fix: Built with Xcode 26.3 to properly restore background backups \u0026 Live Activity on iOS 26.\n- Full Media Backup: Backs up original edited/Cinematic videos and auto-enables Live Photo motion backups by default.\n\nFixes \u0026 Performance:\n- Stopped Duplicate Uploads: Fixed bug where system metadata updates (favorites, iOS analysis) triggered re-uploads.\n- CPU \u0026 Disk Optimization: Parallel file hashing and throttled queue saves prevent system-forced app crashes.\n- Faster UI: Optimized Activity tab rendering for large backup queues.\n- Display Handling: Screen can now lock normally when background backup is active.\n\nImportant Tips:\n- Swiping away the app from the app switcher stops background backups.\n- Overnight charging is recommended for large backups due to battery usage.",
+    "thumbnail": "/thumbnails/com.g8row.photosbackup_1794377549.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.facebook.Facebook_1794377431",
     "app_name": "Facebook",
     "version": "587.0.0",
