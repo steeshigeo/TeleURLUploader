@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.google.ios.youtube_1794376112",
+    "app_name": "YouTube",
+    "version": "21.33.6",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Tweaked YTKACE 1.1.6",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Compatibility iOS 16+\n\nKey Features \u0026 Tweaks:\n• Liquid Glass UI support\n\nBundled Tweaks:\n• YTABConfig\n• YTweaks, YouPIP\n• VolumeBoostYT\n• DontEatMyContent\n• ReturnYouTubeDislike\n• LowContrastMode\n• VideoOverlay\n• YouGetCaption\n• YouQuality\n• YouChooseQuality\n• YTHoldForSpeed\n• YouGroupSettings\n\nCredits: YTKACE by @itzzace0",
+    "thumbnail": "/thumbnails/com.google.ios.youtube_1794376112.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.google.ios.youtube_1794375936",
     "app_name": "YouTube",
     "version": "21.45.4",
