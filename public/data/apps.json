@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.stromming.Plants_1794416749",
+    "app_name": "Planta: Plant \u0026 Garden Care",
+    "version": "3.126.0",
+    "min_ios": "18.0",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.stromming.Plants_1794416749.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "RVS-Riverside.fm_1794416715",
     "app_name": "Riverside: Record, Edit, Share",
     "version": "4.24.1",
