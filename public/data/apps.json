@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.seastar.turrit_1794376738",
+    "app_name": "Turrit - AI Plus Messenger",
+    "version": "1.5.9",
+    "min_ios": "15.0",
+    "category": "Social Networking",
+    "is_patched": true,
+    "modified": "iQTele 1.5 (by 7md)",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Turrit 1.5.9 Builds\n\nIncluded Tweaks:\n- iQTele 1.5 (by 7md)\n\nHow to Enable:\n- iQTele: Go to Turrit Settings -\u003e Tap the iQ logo at the top right-hand corner.\n- Lead: Go to Turrit Settings -\u003e Press and hold \"About Turrit\".",
+    "thumbnail": "/thumbnails/com.seastar.turrit_1794376738.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.henge.app_1794376554",
     "app_name": "Henge",
     "version": "0.3.0",
