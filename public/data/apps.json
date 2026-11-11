@@ -1,5 +1,19 @@
 [
   {
+    "id": "RVS-Riverside.fm_1794416715",
+    "app_name": "Riverside: Record, Edit, Share",
+    "version": "4.24.1",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/RVS-Riverside.fm_1794416715.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.identification.plant_1794416686",
     "app_name": "Plant Identifier: LeafSnap",
     "version": "2.84",
