@@ -1,5 +1,19 @@
 [
   {
+    "id": "cz.kolbi.wqfiles_1794375290",
+    "app_name": "WQ Files",
+    "version": "0.8",
+    "min_ios": "26.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom Apps",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "File browser, app data manager and cache cleaner for iOS 27 (worse_query, no jailbreak)\n\nChangelogs:\n• Instant Loading: App database indexing now takes seconds instead of up to an hour.\n• Optional Heavy Scans: Includes ETA, progress status, and background mode.\n• SQLite Viewer: Built-in read-only viewer with SQL querying and CSV export.\n• File Navigation \u0026 Actions: Added A–Z sidebar, sorting options (name/date/size), and swipe-to-delete with auto-backup.\n• Sideloading Diagnostic: Startup warning if App Group entitlements are missing.\n• iOS 26 \u0026 Bug Fixes: Fallback symbol icons for iOS 26 and automatic orphan folder cleanup.\n\nCredits: https://github.com/kolbicz/WQFiles",
+    "thumbnail": "/thumbnails/cz.kolbi.wqfiles_1794375290.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "app.local.iPadn_1794374701",
     "app_name": "iPadn",
     "version": "1.9.0",
