@@ -1,5 +1,19 @@
 [
   {
+    "id": "ideastudio.Weather-on-the-Way_1794416626",
+    "app_name": "Weather on the Way",
+    "version": "2.5.15",
+    "min_ios": "15.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Rifty",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/ideastudio.Weather-on-the-Way_1794416626.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.talgat.AIChat_1794416614",
     "app_name": "Bots - AI Chatbot \u0026 Assistant",
     "version": "3.56",
