@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.seastar.turrit_1794376807",
+    "app_name": "Turrit - AI Plus Messenger",
+    "version": "1.5.9",
+    "min_ios": "15.0",
+    "category": "Social Networking",
+    "is_patched": true,
+    "modified": "Lead 2.0.3 (by @aquaonly)",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Turrit 1.5.9 Builds\n\nIncluded Tweaks:\n- Lead 2.0.3 (by @aquaonly)\n\nHow to Enable:\n- iQTele: Go to Turrit Settings -\u003e Tap the iQ logo at the top right-hand corner.\n- Lead: Go to Turrit Settings -\u003e Press and hold \"About Turrit\".",
+    "thumbnail": "/thumbnails/com.seastar.turrit_1794376807.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.seastar.turrit_1794376738",
     "app_name": "Turrit - AI Plus Messenger",
     "version": "1.5.9",
