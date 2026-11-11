@@ -1,5 +1,19 @@
 [
   {
+    "id": "ph.telegra.Telegraph_1794377048",
+    "app_name": "Telegram Messenger",
+    "version": "13.2.1",
+    "min_ios": "15.0",
+    "category": "Social Networking",
+    "is_patched": true,
+    "modified": "Lead 2.0.3 (by aquaonly)",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Telegram 13.2.1 Builds\n\nIncluded Tweaks:\n- Lead 2.0.3 (by aquaonly)\n\nHow to Enable:\n- iQTele: Go to Telegram Settings -\u003e Tap the iQ logo at the top.\n- Lead: Go to Telegram Settings -\u003e Press and hold \"Ask a Question\".",
+    "thumbnail": "/thumbnails/ph.telegra.Telegraph_1794377048.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "ph.telegra.Telegraph_1794376923",
     "app_name": "Telegram Messenger",
     "version": "13.2.1",
