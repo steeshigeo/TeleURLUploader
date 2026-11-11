@@ -70,15 +70,13 @@
     .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
 
     /* ---------- Navigation bar ---------- */
-    .navbar { position: sticky; top: 0; z-index: 50; padding: 10px 16px 0; pointer-events: none; }
-    .navbar .wrap {
-      pointer-events: auto; max-width: 1000px; height: 56px; padding: 0 8px 0 14px;
-      display: flex; align-items: center; justify-content: space-between; gap: 10px;
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--surface) 60%, transparent);
-      backdrop-filter: blur(30px) saturate(190%); -webkit-backdrop-filter: blur(30px) saturate(190%);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, .14), 0 0 0 .5px var(--hi), inset 0 1px 0 var(--hi), inset 0 -1px 0 rgba(255, 255, 255, .06);
+    .navbar {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--bar);
+      backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px);
+      border-bottom: .5px solid var(--sep);
     }
+    .navbar .wrap { height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
     .app-icon, .brand img {
       border-radius: 22.37%; object-fit: cover; background: var(--fill);
@@ -150,19 +148,27 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 6px 18px color-mix(in srgb, var(--blue) 40%, transparent);
       transition: transform .15s ease;
     }
-    .btn-blue:active { transform: scale(.96); }
-    .today-foot {
-      margin: 0 12px 12px; padding: 12px 14px 12px 12px; border-radius: 999px;
-      background: rgba(255, 255, 255, .16);
-      backdrop-filter: blur(30px) saturate(190%); -webkit-backdrop-filter: blur(30px) saturate(190%);
-      box-shadow: 0 0 0 .5px rgba(255,255,255,.4), inset 0 1px 0 rgba(255,255,255,.45), 0 10px 28px rgba(0,0,0,.2);
-      display: none; align-items: center; gap: 14px;
+    .today-body { padding: 0 22px 22px; display: none; }
+    .today-body.show { display: block; }
+    .today-name { font-size: clamp(28px, 7vw, 40px); font-weight: 800; letter-spacing: -.035em; line-height: 1.08; text-shadow: 0 2px 14px rgba(0,0,0,.3); }
+    .today-mod { margin-top: 6px; font-size: 14px; line-height: 1.4; opacity: .92; max-width: 52ch; }
+    .btn-view {
+      margin-top: 16px; height: clamp(32px, 8vw, 38px); padding: 0 clamp(16px, 4.5vw, 20px); border: 0; border-radius: 999px; cursor: pointer;
+      background: #fff; color: #0A5BFF; font: 700 clamp(13px, 3.6vw, 15px) var(--font); transition: transform .15s ease;
     }
-    .today-foot.show { display: flex; }
-    .today-foot img { width: 60px; height: 60px; border-radius: 22.37%; object-fit: cover; box-shadow: 0 0 0 .5px rgba(255,255,255,.25); flex-shrink: 0; }
-    .today-foot .t { flex: 1; min-width: 0; }
-    .today-foot b { display: block; font-size: clamp(18px, 5vw, 22px); font-weight: 800; letter-spacing: -.025em; line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .today-foot small { display: block; font-size: 12.5px; margin-top: 2px; opacity: .85; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .btn-view:active { transform: scale(.96); }
+    .sheet-backdrop { position: fixed; inset: 0; z-index: 90; display: flex; align-items: flex-end; justify-content: center; background: rgba(0,0,0,.4); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); animation: fadeIn .2s ease-out; }
+    .sheet-backdrop[hidden] { display: none; }
+    .sheet { position: relative; width: min(560px, 100%); max-height: 88vh; overflow-y: auto; background: var(--surface); border-radius: 28px 28px 0 0; padding: 26px 20px calc(24px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 16px; animation: slideUp .3s cubic-bezier(.2,.9,.3,1); }
+    @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+    .sheet-close { position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; border: 0; border-radius: 50%; background: var(--fill); color: var(--label2); font-size: 18px; line-height: 1; cursor: pointer; }
+    .sheet .ios-icon { width: 88px; height: 88px; }
+    .sheet .app-name { white-space: normal; font-size: 22px; }
+    .sheet .app-by { white-space: normal; }
+    .sheet-top { display: flex; gap: 16px; align-items: center; padding-right: 30px; }
+    .sheet .get { align-self: flex-start; height: 34px; }
+    @media (min-width: 721px) { .sheet-backdrop { align-items: center; padding: 24px; } .sheet { border-radius: 28px; } }
+    .btn-blue:active { transform: scale(.96); }
 
     /* ---------- Search + filter ---------- */
     .controls { margin: 24px 0 8px; display: flex; flex-direction: column; gap: 12px; }
@@ -241,12 +247,11 @@
     /* ---------- Tab bar (mobile) ---------- */
     .tabbar { display: none; }
     @media (max-width: 720px) {
-      body { padding-bottom: calc(104px + env(safe-area-inset-bottom, 0px)); }
+      body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
       .wrap { padding: 0 16px; }
       .today { min-height: 230px; border-radius: 26px; }
       .today-copy { padding: 18px 18px 0; }
-      .today-foot { margin-top: 20px; }
-      .brand span { font-size: 16px; }
+        .brand span { font-size: 16px; }
       .t-desktop { display: none; }
       .t-mobile { display: block; }
       #settingsBtn .lbl { display: none; }
@@ -257,25 +262,17 @@
       .head-actions .nav-actions { flex-wrap: wrap; }
       .head-actions .menu { left: 0; right: auto; }
       .tabbar {
-        display: flex; position: fixed; left: 50%; transform: translateX(-50%); z-index: 60;
-        bottom: calc(12px + env(safe-area-inset-bottom, 0px)); width: min(calc(100% - 32px), 420px);
-        padding: 6px; gap: 2px; border-radius: 999px;
-        background: color-mix(in srgb, var(--surface) 62%, transparent);
-        backdrop-filter: blur(30px) saturate(190%); -webkit-backdrop-filter: blur(30px) saturate(190%);
-        box-shadow: 0 14px 36px rgba(0, 0, 0, .22), 0 0 0 .5px var(--hi), inset 0 1px 0 var(--hi);
+        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+        padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+        background: var(--bar); border-top: .5px solid var(--sep);
+        backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px);
       }
       .tab {
-        flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 8px 0 6px;
-        border: 0; border-radius: 999px; background: transparent; color: var(--label2);
-        font-size: 10px; font-weight: 600; cursor: pointer;
-        transition: background .25s ease, color .25s ease, transform .15s ease;
+        flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 0;
+        border: 0; background: transparent; color: var(--label2); font-size: 10px; font-weight: 500; cursor: pointer;
       }
-      .tab:active { transform: scale(.94); }
-      .tab svg { width: 24px; height: 24px; }
-      .tab.is-active {
-        color: var(--blue); background: color-mix(in srgb, var(--blue) 15%, transparent);
-        box-shadow: inset 0 1px 0 var(--hi), inset 0 0 0 .5px color-mix(in srgb, var(--blue) 28%, transparent);
-      }
+      .tab svg { width: 26px; height: 26px; }
+      .tab.is-active { color: var(--blue); }
     }
     /* iOS 26 "Liquid Glass" alert */
     .modal-backdrop {
@@ -372,7 +369,7 @@
       <div class="today-copy">
         <div class="today-label" data-i18n="heroLabel">★ Featured App of the Day</div>
       </div>
-      <div class="today-foot" id="todayFoot"></div>
+      <div class="today-body" id="todayBody"></div>
     </section>
 
     <section class="controls">
@@ -421,6 +418,10 @@
     </button>
   </nav>
 
+  <div class="sheet-backdrop" id="detailModal" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" id="detailSheet"></div>
+  </div>
+
   <div class="modal-backdrop" id="getModal" hidden>
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="getModalText">
       <img id="getModalIcon" alt="">
@@ -443,7 +444,7 @@
         emptyTitle: 'JingApps Library', emptyNone: 'No apps have been released yet.',
         emptyErr: 'The catalog is being updated or has no data yet.', emptyFilter: 'No matching apps found.',
         by: 'By', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Mod Features',
-        updated: 'Updated', get: 'GET', tabApps: 'Apps', tabGames: 'Games', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
+        updated: 'Updated', get: 'GET', tabApps: 'Apps', tabGames: 'Games', viewDetail: 'View App Details', tabSearch: 'Search', langTitle: 'Language', iosApp: 'iOS App' } },
       id: { name: 'Bahasa Indonesia', locale: 'id-ID', t: {
         themeTitle: 'Tampilan', themeAuto: 'Otomatis', themeLight: 'Terang', themeDark: 'Gelap',
         joinTelegram: 'Gabung Telegram', getPopup: 'Langganan dan nikmati semua layanan JingApps Premium!', ok: 'Oke', settings: 'Pengaturan', heroExtra: 'Request aplikasi mod, Pertumbuhan komunitas—dukungan, Dan masih banyak lagi.', titleToday: 'Hari Ini', instantCert: 'Sertifikat Instan', title: 'Aplikasi', heroLabel: '★ Aplikasi Unggulan Hari Ini',
@@ -455,7 +456,7 @@
         emptyTitle: 'Pustaka JingApps', emptyNone: 'Belum ada aplikasi yang dirilis.',
         emptyErr: 'Katalog sedang diperbarui atau belum ada data.', emptyFilter: 'Tidak ada aplikasi yang cocok.',
         by: 'Oleh', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'Fitur Mod',
-        updated: 'Diperbarui', get: 'DAPATKAN', tabApps: 'Aplikasi', tabGames: 'Game', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
+        updated: 'Diperbarui', get: 'DAPATKAN', tabApps: 'Aplikasi', tabGames: 'Game', viewDetail: 'Lihat Detail Aplikasi', tabSearch: 'Cari', langTitle: 'Bahasa', iosApp: 'Aplikasi iOS' } },
       zh: { name: '简体中文', locale: 'zh-CN', t: {
         themeTitle: '外观', themeAuto: '自动', themeLight: '浅色', themeDark: '深色',
         joinTelegram: '加入 Telegram', getPopup: '订阅即可享受 JingApps Premium 的全部服务！', ok: '好', settings: '设置', heroExtra: '可申请魔改应用，社区成长——支持，还有更多服务。', titleToday: '今天', instantCert: '即时证书', title: '应用', heroLabel: '★ 今日精选应用',
@@ -467,7 +468,7 @@
         emptyTitle: 'JingApps 资源库', emptyNone: '暂无已发布的应用。',
         emptyErr: '目录正在更新，或暂无数据。', emptyFilter: '未找到匹配的应用。',
         by: '作者', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: '魔改功能',
-        updated: '更新于', get: '获取', tabApps: '应用', tabGames: '游戏', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
+        updated: '更新于', get: '获取', tabApps: '应用', tabGames: '游戏', viewDetail: '查看应用详情', tabSearch: '搜索', langTitle: '语言', iosApp: 'iOS 应用' } },
       ja: { name: '日本語', locale: 'ja-JP', t: {
         themeTitle: '外観', themeAuto: '自動', themeLight: 'ライト', themeDark: 'ダーク',
         joinTelegram: 'Telegram に参加', getPopup: '購読して、JingApps Premium のすべてのサービスをお楽しみください！', ok: 'OK', settings: '設定', heroExtra: 'Mod アプリのリクエスト、コミュニティ成長のサポート、そのほか多数。', titleToday: 'Today', instantCert: '即時証明書', title: 'App', heroLabel: '★ 今日の注目App',
@@ -479,7 +480,7 @@
         emptyTitle: 'JingApps ライブラリ', emptyNone: '公開されているAppはまだありません。',
         emptyErr: 'カタログを更新中、またはデータがありません。', emptyFilter: '一致するAppが見つかりません。',
         by: '提供', iosMin: 'iOS {v}以降', patchedBadge: 'Patched', mod: 'Mod 機能',
-        updated: '更新', get: '入手', tabApps: 'App', tabGames: 'ゲーム', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
+        updated: '更新', get: '入手', tabApps: 'App', tabGames: 'ゲーム', viewDetail: 'Appの詳細を見る', tabSearch: '検索', langTitle: '言語', iosApp: 'iOS App' } },
       th: { name: 'ไทย', locale: 'th-TH', t: {
         themeTitle: 'การแสดงผล', themeAuto: 'อัตโนมัติ', themeLight: 'สว่าง', themeDark: 'มืด',
         joinTelegram: 'เข้าร่วม Telegram', getPopup: 'สมัครสมาชิกและเพลิดเพลินกับบริการทั้งหมดของ JingApps Premium!', ok: 'ตกลง', settings: 'การตั้งค่า', heroExtra: 'ขอแอปม็อด สนับสนุนการเติบโตของชุมชน และอื่น ๆ อีกมากมาย', titleToday: 'วันนี้', instantCert: 'ใบรับรองทันที', title: 'แอป', heroLabel: '★ แอปเด่นประจำวัน',
@@ -491,7 +492,7 @@
         emptyTitle: 'คลัง JingApps', emptyNone: 'ยังไม่มีแอปที่เผยแพร่',
         emptyErr: 'แคตตาล็อกกำลังอัปเดตหรือยังไม่มีข้อมูล', emptyFilter: 'ไม่พบแอปที่ตรงกัน',
         by: 'โดย', iosMin: 'iOS {v}+', patchedBadge: 'Patched', mod: 'ฟีเจอร์มอด',
-        updated: 'อัปเดต', get: 'รับ', tabApps: 'แอป', tabGames: 'เกม', tabSearch: 'ค้นหา', langTitle: 'ภาษา', iosApp: 'แอป iOS' } }
+        updated: 'อัปเดต', get: 'รับ', tabApps: 'แอป', tabGames: 'เกม', viewDetail: 'ดูรายละเอียดแอป', tabSearch: 'ค้นหา', langTitle: 'ภาษา', iosApp: 'แอป iOS' } }
     };
 
     let lang = 'en';
@@ -519,7 +520,7 @@
       lang = code;
       try { localStorage.setItem('jingapps_lang', code); } catch (e) {}
       applyStaticText();
-      if (allApps.length) { renderToday(allApps); filterApps(); }
+      if (allApps.length) { renderToday(allApps); filterApps(); if (!document.getElementById('detailModal').hidden) renderDetail(); }
       else if (lastEmptyKey) renderEmptyState(lastEmptyKey);
     }
 
@@ -704,18 +705,53 @@
       if (btn) filterCategory(btn.dataset.cat);
     });
 
+    let featuredApp = null;
     function renderToday(apps) {
-      const foot = document.getElementById('todayFoot');
+      const body = document.getElementById('todayBody');
       const bg = document.getElementById('todayBg');
       const a = apps[0];
-      if (!a) { foot.classList.remove('show'); return; }
+      featuredApp = a || null;
+      if (!a) { body.classList.remove('show'); return; }
       if (a.thumbnail) bg.style.backgroundImage = `url("${a.thumbnail}")`;
-      foot.innerHTML = `
-        <img src="${a.thumbnail || FALLBACK_ICON}" alt="">
-        <div class="t"><b>${a.app_name}</b><small>${a.modified || (a.modified_by ? t('by') + ' ' + a.modified_by : t('iosApp'))}</small></div>
-        <a href="${GET_URL}" target="_blank" rel="noopener" class="get">${t('get')}</a>`;
-      foot.classList.add('show');
+      body.innerHTML = `
+        <h2 class="today-name">${a.app_name}</h2>
+        <p class="today-mod">${a.modified || (a.modified_by ? t('by') + ' ' + a.modified_by : t('iosApp'))}</p>
+        <button type="button" class="btn-view" onclick="openDetail()">${t('viewDetail')}</button>`;
+      body.classList.add('show');
     }
+
+    /* app detail sheet for the featured app */
+    function renderDetail() {
+      const a = featuredApp;
+      if (!a) return;
+      document.getElementById('detailSheet').innerHTML = `
+        <button type="button" class="sheet-close" aria-label="Close" onclick="closeDetail()">×</button>
+        <div class="sheet-top">
+          <img src="${a.thumbnail || FALLBACK_ICON}" alt="" class="ios-icon">
+          <div class="app-id">
+            <h3 class="app-name">${a.app_name}</h3>
+            <p class="app-by">${a.modified_by ? t('by') + ' ' + a.modified_by : t('iosApp')}</p>
+            <div class="meta">
+              <span class="v">v${a.version}</span>
+              ${a.category ? `<span>${a.category}</span>` : ''}
+              <span>${t('iosMin', { v: a.min_ios })}</span>
+              ${a.is_patched ? `<span class="badge">${t('patchedBadge')}</span>` : ''}
+            </div>
+          </div>
+        </div>
+        <a href="${GET_URL}" target="_blank" rel="noopener" class="get">${t('get')}</a>
+        ${a.modified ? `<div class="mod"><h4>${t('mod')}</h4><p>${a.modified}</p></div>` : ''}
+        ${a.note ? `<div class="note">${a.note}</div>` : ''}
+        <div class="app-foot"><span>${t('updated')} ${a.updated_at}</span></div>`;
+    }
+    function openDetail() {
+      if (!featuredApp) return;
+      renderDetail();
+      document.getElementById('detailModal').hidden = false;
+    }
+    function closeDetail() { document.getElementById('detailModal').hidden = true; }
+    document.getElementById('detailModal').addEventListener('click', e => { if (e.target.id === 'detailModal') closeDetail(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
 
     function renderEmptyState(key) {
       lastEmptyKey = key;
