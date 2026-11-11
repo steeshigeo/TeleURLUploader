@@ -1,5 +1,19 @@
 [
   {
+    "id": "archery.storify_1794373507",
+    "app_name": "Mojo: AI Video \u0026 Reels Editor",
+    "version": "1.282.1",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/archery.storify_1794373507.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "com.frontrow.vlog_1794373421",
     "app_name": "VN: Photo \u0026 Video Editor",
     "version": "2.24.1",
