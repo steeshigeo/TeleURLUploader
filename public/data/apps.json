@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.facebook.Facebook_1794377298",
+    "app_name": "Facebook",
+    "version": "587.0.0",
+    "min_ios": "15.1",
+    "category": "Social Networking",
+    "is_patched": true,
+    "modified": "iQFace 1.2 (by 7md)",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Facebook 587.0.0 Builds\n\nIncluded Tweaks:\n- iQFace 1.2 (by 7md)\n- Nexus 2.1.1 (by @lucaspedrosa)\n\nKey Features:\n- OLED Mode, Facebook Plus icons, feed filters, \u0026 cache cleaner\n- OpenInFacebook Safari Extension\n\nHow to Access Settings:\n- iQFace: Tap the Facebook logo at the top-left or the iQ logo",
+    "thumbnail": "/thumbnails/com.facebook.Facebook_1794377298.jpg",
+    "updated_at": "2026-11-11"
+  },
+  {
     "id": "ph.telegra.Telegraph_1794377048",
     "app_name": "Telegram Messenger",
     "version": "13.2.1",
