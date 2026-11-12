@@ -1,5 +1,19 @@
 [
   {
+    "id": "gronda.gmbh_1794481392",
+    "app_name": "Gronda: Recipes for Chefs",
+    "version": "8.42.0",
+    "min_ios": "16.4",
+    "category": "Food \u0026 Drink",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/gronda.gmbh_1794481392.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.gunthermarktl.stepapp_1794481358",
     "app_name": "StepsApp Pedometer",
     "version": "8.15.8",
