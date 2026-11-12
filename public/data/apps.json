@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.nianticlabs.pokemongo_1794457604",
+    "app_name": "Pokémon GO",
+    "version": "0.435.2",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "SpooferPro\nFeatures:\nLocation \u0026 Movement:\n- Teleport anywhere, copy coordinates, and track cooldowns with built-in timers and warnings.\n- Joystick, tap-to-walk, custom speed control, and auto-walk.\n- GPX routing: 848+ premade routes, auto-generate, custom draw, loop routes, and popular hotspots.\n\nCatching \u0026 Battle Tweaks:\n- Virtual Go Plus: Automated catching and Pokéstop spinning.\n- Enhanced Throws: Guaranteed Nice/Great/Excellent curveballs + AR+ Expert Handler.\n- Encounter Filters: Freeze Pokémon movement and block non-Shiny or non-100IV encounters.\n- Team Rocket: Instant one-hit knockouts.\n\nScanners, Feeds \u0026 Map:\n- Overworld Shiny display \u0026 Pokémon Scanner with instant alerts (Shiny, Hundo, Nundo, etc.).\n- Live Global and Nearby feeds for Pokémon and Raids with custom filters.\n- Inbuilt interactive map showing Pokéstops, Raids, Team Rocket, and open Gym slots.\n\nInventory \u0026 Utilities:\n- IV List, live IV previews, and auto-rename stats in bag.\n- One-click Pokémon and Item bag cleanup plus daily activity counters.\n- Incognito mode, Dark/Light UI, and Import/Export for routes and settings.",
+    "thumbnail": "/thumbnails/com.nianticlabs.pokemongo_1794457604.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.alohabrowser.alohabrowser_1794456550",
     "app_name": "Aloha Browser – Private VPN",
     "version": "8.13.1",
