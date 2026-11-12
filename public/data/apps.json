@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.consumedbycode.slopes_1794455433",
+    "app_name": "Slopes: Ski \u0026 Snowboard",
+    "version": "2026.18",
+    "min_ios": "18.0",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.consumedbycode.slopes_1794455433.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.miniclip.8ballpoolmult_1794450032",
     "app_name": "8 Ball Pool™",
     "version": "56.29.2",
