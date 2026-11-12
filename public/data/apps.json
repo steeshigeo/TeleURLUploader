@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.gunthermarktl.stepapp_1794481358",
+    "app_name": "StepsApp Pedometer",
+    "version": "8.15.8",
+    "min_ios": "15.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.gunthermarktl.stepapp_1794481358.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.shinobiapp.shinobi_1794481176",
     "app_name": "Shinobi: Read \u0026 Learn Japanese",
     "version": "1.5.8",
