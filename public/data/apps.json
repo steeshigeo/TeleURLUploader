@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.lightricks.Facetune2_1794455650",
+    "app_name": "Facetune: Photo \u0026 Video Editor",
+    "version": "26.37",
+    "min_ios": "17.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.lightricks.Facetune2_1794455650.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.consumedbycode.slopes_1794455433",
     "app_name": "Slopes: Ski \u0026 Snowboard",
     "version": "2026.18",
