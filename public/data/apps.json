@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.stampapp.Stamp_1794449167",
+    "app_name": "FreeYourMusic: Move Playlists",
+    "version": "11.2.0",
+    "min_ios": "16.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.stampapp.Stamp_1794449167.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.frontpocketsoftware.happyscale_1794449149",
     "app_name": "Happy Scale",
     "version": "2026.9",
