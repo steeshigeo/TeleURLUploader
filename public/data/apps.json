@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.oribot.origami_1794476679",
+    "app_name": "Origami - Fold \u0026 Learn",
+    "version": "5.3",
+    "min_ios": "15.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.oribot.origami_1794476679.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "app.gentler.activity_1794471828",
     "app_name": "Gentler Streak Workout Tracker",
     "version": "6.0",
