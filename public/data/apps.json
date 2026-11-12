@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.readdle.CalendarsLite_1794449124",
+    "app_name": "Calendars: Schedule Planner",
+    "version": "5.41.3",
+    "min_ios": "18.2",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.readdle.CalendarsLite_1794449124.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "net.mkswap.Dropshare-iOS_1794448952",
     "app_name": "Dropshare - File Sharing Tool",
     "version": "3.68",
