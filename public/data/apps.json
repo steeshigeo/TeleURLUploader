@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.kinemaster.kios_1794456206",
+    "app_name": "KineMaster - AI Video Editor",
+    "version": "8.2.9",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.kinemaster.kios_1794456206.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.mwm.procolor_1794456072",
     "app_name": "Color Pop: AI Coloring Book",
     "version": "2.69.00",
