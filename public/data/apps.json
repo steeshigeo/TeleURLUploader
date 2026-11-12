@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.readdle.ReaddleDocsIPad_1794455919",
+    "app_name": "Documents - File Manager",
+    "version": "8.22.12",
+    "min_ios": "16.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.readdle.ReaddleDocsIPad_1794455919.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.ilovepdf.www_1794455741",
     "app_name": "iLovePDF - PDF Editor \u0026 Scan",
     "version": "4.2.3",
