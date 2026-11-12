@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.alohabrowser.alohabrowser_1794456550",
+    "app_name": "Aloha Browser – Private VPN",
+    "version": "8.13.1",
+    "min_ios": "16.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.alohabrowser.alohabrowser_1794456550.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.chromanoir.Zeit_1794456340",
     "app_name": "Halide Mark III - Pro Camera",
     "version": "3.3.3",
