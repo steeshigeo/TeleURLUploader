@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.genau.MoneyCircle_1794481132",
+    "app_name": "MoneyCircle: Expense \u0026 Budget",
+    "version": "3.6.6",
+    "min_ios": "16.6",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.genau.MoneyCircle_1794481132.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.adguard.AdguardExtension_1794481122",
     "app_name": "AdGuard Ad Blocker for Safari",
     "version": "4.5.25",
