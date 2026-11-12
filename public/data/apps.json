@@ -1,5 +1,19 @@
 [
   {
+    "id": "net.mkswap.Dropshare-iOS_1794448952",
+    "app_name": "Dropshare - File Sharing Tool",
+    "version": "3.68",
+    "min_ios": "16.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/net.mkswap.Dropshare-iOS_1794448952.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.duolingo.DuolingoMobile_1794418893",
     "app_name": "Duolingo: Learn Languages",
     "version": "7.148.1",
