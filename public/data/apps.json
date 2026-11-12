@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.consumedbycode.slopes_1794471658",
+    "app_name": "Slopes: Ski \u0026 Snowboard",
+    "version": "2026.18",
+    "min_ios": "18.0",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.consumedbycode.slopes_1794471658.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.nianticlabs.pokemongo_1794458011",
     "app_name": "Pokémon GO",
     "version": "0.435.2",
