@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.frontpocketsoftware.happyscale_1794449149",
+    "app_name": "Happy Scale",
+    "version": "2026.9",
+    "min_ios": "16.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.frontpocketsoftware.happyscale_1794449149.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.readdle.CalendarsLite_1794449124",
     "app_name": "Calendars: Schedule Planner",
     "version": "5.41.3",
