@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.miniclip.8ballpoolmult_1794450032",
+    "app_name": "8 Ball Pool™",
+    "version": "56.29.2",
+    "min_ios": "10.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "8 Ball Pool Mod\n\nKey Features:\n- ESP Prediction: Predicts exact ball trajectories.\n- Extended Aiming Line: Long guideline arrows for easier shot alignment.\n- Target Point Prediction: Highlights exact ball landing spots.\n- Improved Aiming Accuracy: Enhanced overall shot precision.\n- Extra In-Game Tools: Includes additional built-in mod menu options.\n\nCredits:\n- Modified by Al-Dhib (The Wolf)",
+    "thumbnail": "/thumbnails/com.miniclip.8ballpoolmult_1794450032.jpg",
+    "updated_at": "2026-11-12"
+  },
+  {
     "id": "com.nourayn.almosally.watchkitapp_1794449572",
     "app_name": "المصلي",
     "version": "60.13",
