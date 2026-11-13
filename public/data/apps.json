@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.nuvio.media_1794573859",
+    "app_name": "Nuvio",
+    "version": "0.6.12",
+    "min_ios": "16.1",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom App",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Nuvio Full\nA free, open-source media app for your phone, your desktop, and the TV you already own. \nBring your own sources. Nuvio turns them into a library with artwork, ratings, subtitles, and your place saved on every screen.\n\nCredits: https://github.com/tapframe",
+    "thumbnail": "/thumbnails/com.nuvio.media_1794573859.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.adobe.PSMobile_1794573271",
     "app_name": "Photoshop Express Photo Editor",
     "version": "26.44.0",
