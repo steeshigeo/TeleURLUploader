@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.picretouch.photoeditor_1794576989",
+    "app_name": "Remove Objects: AI Retouch",
+    "version": "1.3.1",
+    "min_ios": "15.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.picretouch.photoeditor_1794576989.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.lyftaios_1794576125",
     "app_name": "Lyfta: Gym \u0026 Workout Tracker",
     "version": "1.168",
