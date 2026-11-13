@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.music.bitchord_1794574831",
+    "app_name": "BitChord",
+    "version": "1.0.2",
+    "min_ios": "17.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom App BitChord iOS 1.0.2 (build 9)",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Starts on the first note, with lyrics that light up as they're sung, Lossless and Dolby Atmos where available, and music that keeps playing with no signal.\nBitChord for iOS: a YouTube Music client for iPhone and iPad, ported from BitChord for Android.\n\nNew Features:\n- Shareable Lyric Cards: Pick specific lines to export as image cards.\n- Direct Source Streaming: Optional high-priority audio streaming with YouTube fallback.\n- Customization \u0026 UI: Lockscreen animated covers, 5 app icons, and audio quality info on Discord cards.\n- Last.fm \u0026 Logs: Added Last.fm scrobbling/sign-in and local diagnostic log sharing.\n\nFixes \u0026 Performance:\n- Playback Stability: Fixed track cutouts, early skips, and crossfade lag on slow networks or background downloads.\n- Sync \u0026 Offline: Fixed lyric desync when scrubbing, instant cover updates, reliable local offline playback, and auto-restarting broken downloads.\n- Smoother UI: Optimized scrolling performance on long lists and prevented duplicate track counts.\n\nCredits: https://bitchord.hero154.com",
+    "thumbnail": "/thumbnails/com.music.bitchord_1794574831.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.music.bitchord_1794574681",
     "app_name": "BitChord",
     "version": "1.0.2",
