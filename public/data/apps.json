@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.agent.super.extension.safari_1794575691",
+    "app_name": "Super Agent for Safari",
+    "version": "4.7.5",
+    "min_ios": "17",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.agent.super.extension.safari_1794575691.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.lexwarelabs.goodmorning_1794575678",
     "app_name": "Sleep Cycle - Tracker \u0026 Sounds",
     "version": "6.26.440",
