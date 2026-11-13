@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.nuvio.media_1794574053",
+    "app_name": "Nuvio Enhanced",
+    "version": "0.6.12",
+    "min_ios": "16.1",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom App",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Nuvio Enhanced\nThis custom variant includes experimental features, quality-of-life improvements, and specific bug fixes not yet available in the upstream repository.\n\nNuvio Addons \u0026 Plugins: https://telegra.ph/Addons--Plugins-for-Nuvio-09-26\n\nCredits: https://github.com/luqmanfadlli",
+    "thumbnail": "/thumbnails/com.nuvio.media_1794574053.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.nuvio.media_1794573859",
     "app_name": "Nuvio",
     "version": "0.6.12",
