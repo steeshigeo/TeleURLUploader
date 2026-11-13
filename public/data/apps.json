@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.videobrowser.ios_1794576009",
+    "app_name": "Video Lite",
+    "version": "629000",
+    "min_ios": "15.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.videobrowser.ios_1794576009.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.sfun.snapedit_1794575990",
     "app_name": "SnapEdit: Photo Editor AI",
     "version": "6.28",
