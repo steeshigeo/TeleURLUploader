@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.music.bitchord_1794574681",
+    "app_name": "BitChord",
+    "version": "1.0.2",
+    "min_ios": "17.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Custom App",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Starts on the first note, with lyrics that light up as they're sung, Lossless and Dolby Atmos where available, and music that keeps playing with no signal.\n\nBitChord for iOS: a YouTube Music client for iPhone and iPad, ported from BitChord for Android\n\nChangelogs: BitChord iOS 1.0.2 (build 9)\n\nNew Features:\n- Lyric Cards: Select specific lyric lines to export and share as an image card.\n- Direct Source Streaming: Optional priority audio source mode (\"Queue only\" or \"Always\" with YouTube fallback).\n- UI \u0026 Customization: Added lockscreen animated covers, 5 selectable app icons, and audio quality tooltips on Discord cards.\n- Integrations \u0026 Logs: Added Last.fm sign-in/scrobbling and local diagnostic log sharing in Settings.\n\nPlayback \u0026 Bug Fixes:\n- Slow Connection Stability: Fixed songs cutting out, skipping early, or lagging during crossfades and background downloads.\n- Sync \u0026 Display: Fixed lyric desync when scrubbing and enabled instant cover updates when skipping tracks.\n- Offline \u0026 Downloads: Enforced local playback for Offline Backup, auto-restarted broken downloads, removed duplicate counts, and blocked mismatched track replacements (\u003e5s difference).\n- Performance: Smoother scrolling on long lists without row rebuilding.\n\nCredits: https://bitchord.hero154.com",
+    "thumbnail": "/thumbnails/com.music.bitchord_1794574681.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.nuvio.media_1794574053",
     "app_name": "Nuvio Enhanced",
     "version": "0.6.12",
