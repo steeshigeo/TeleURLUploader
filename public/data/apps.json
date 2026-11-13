@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.lyftaios_1794576125",
+    "app_name": "Lyfta: Gym \u0026 Workout Tracker",
+    "version": "1.168",
+    "min_ios": "16.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.lyftaios_1794576125.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.leomehlig.today_1794576101",
     "app_name": "Structured: Daily Planner Todo",
     "version": "4.6.9",
