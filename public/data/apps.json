@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.tokopedia.Tokopedia_1794565781",
+    "app_name": "Tokopedia",
+    "version": "45.0.8",
+    "min_ios": "14.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "-",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Only Decrypted .IPA",
+    "thumbnail": "/thumbnails/com.tokopedia.Tokopedia_1794565781.jpg",
+    "updated_at": "2026-11-13"
+  },
+  {
     "id": "com.roehl.habitkit_1794481470",
     "app_name": "Habit Tracker - HabitKit",
     "version": "1.19.2",
