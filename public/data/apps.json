@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.andyworks.camera_1794712300",
+    "app_name": "(Not Boring) Camera",
+    "version": "1.63",
+    "min_ios": "18.2",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.andyworks.camera_1794712300.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "in.muditbhargava.LookUp_1794712197",
     "app_name": "LookUp: English Dictionary App",
     "version": "13.1.1",
