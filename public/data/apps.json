@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.mbh.athkari_1794724552",
+    "app_name": "اذكاري - طمئن قلبك بذكر الله",
+    "version": "4.0.2",
+    "min_ios": "15.0",
+    "category": "Reference",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.mbh.athkari_1794724552.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.plusblog.smpro_1794724542",
     "app_name": "SMPRO: Mockup \u0026 Screenshot",
     "version": "5.9",
