@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.mobilefootie.fotmobpro_1794724161",
+    "app_name": "FotMob - Soccer Live Scores",
+    "version": "1247.0",
+    "min_ios": "17.6",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.mobilefootie.fotmobpro_1794724161.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "io.veed.appstore_1794724147",
     "app_name": "VEED Lite: Quick Video Edits",
     "version": "8.15.2",
