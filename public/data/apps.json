@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.saltycrackers.daygram_1794745820",
+    "app_name": "DayGram - One Line a Day Diary",
+    "version": "5.9.8",
+    "min_ios": "15.6",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.saltycrackers.daygram_1794745820.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.pixeldev.APEXRacers_1794745816",
     "app_name": "APEX Racer",
     "version": "0.9.85",
