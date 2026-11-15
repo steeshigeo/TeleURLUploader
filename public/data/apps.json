@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.chaninicholas.chaniapp_1794745794",
+    "app_name": "CHANI: Your Astrology Guide",
+    "version": "2.10.3",
+    "min_ios": "15.1",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.chaninicholas.chaniapp_1794745794.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.footballaddicts.livescoreaddicts_1794745788",
     "app_name": "Forza Football - Live Scores",
     "version": "7.2.3",
