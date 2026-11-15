@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.hasankassem.mockup_1794711170",
+    "app_name": "Mockup - UI/UX Design",
+    "version": "4.6.3",
+    "min_ios": "15",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.hasankassem.mockup_1794711170.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.markodevcic.js-code-pad_1794711152",
     "app_name": "JavaScript Coding Editor \u0026 IDE",
     "version": "1.11.0",
