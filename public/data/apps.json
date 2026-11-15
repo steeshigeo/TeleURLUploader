@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.xcstudio.LUT-Master_1794724264",
+    "app_name": "VideoLUT",
+    "version": "4.67",
+    "min_ios": "16.6",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.xcstudio.LUT-Master_1794724264.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.livintis.repostplusapp_1794724222",
     "app_name": "Repost+ for Instagram .",
     "version": "33.30",
