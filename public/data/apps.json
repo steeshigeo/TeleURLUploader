@@ -1,5 +1,19 @@
 [
   {
+    "id": "pinterest_1794724106",
+    "app_name": "Pinterest",
+    "version": "14.44",
+    "min_ios": "16.0",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/pinterest_1794724106.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.abishkking.maleworkout_1794712469",
     "app_name": "Home Workout - No Equipments",
     "version": "1.55.0",
