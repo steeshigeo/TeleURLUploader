@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.unofficialcalculators.payplan_1794745878",
+    "app_name": "Bill Tracker Pro: Budget Saver",
+    "version": "4.3.14",
+    "min_ios": "16.0",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.unofficialcalculators.payplan_1794745878.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.stippl.stippl_1794745831",
     "app_name": "Stippl: Trip \u0026 Travel Planner",
     "version": "3.1.14",
