@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.carlosribas.HoursTrackerLite_1794744855",
+    "app_name": "Hours Tracker: Time Tracking",
+    "version": "8.4.0",
+    "min_ios": "17.6",
+    "category": "Business",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.carlosribas.HoursTrackerLite_1794744855.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.soundscape.music_1794744850",
     "app_name": "Soundscape: Focus Sleep Sounds",
     "version": "11.1.9",
