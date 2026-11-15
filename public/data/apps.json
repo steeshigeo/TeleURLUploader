@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.linecorp.b612_1794724200",
+    "app_name": "B612 AI Photo\u0026Video Editor",
+    "version": "15.5.1",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.linecorp.b612_1794724200.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.mobilefootie.fotmobpro_1794724161",
     "app_name": "FotMob - Soccer Live Scores",
     "version": "1247.0",
