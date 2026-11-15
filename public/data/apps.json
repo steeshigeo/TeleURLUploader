@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.offlinemusic_1794711049",
+    "app_name": "Offline Music Player",
+    "version": "4.0.1",
+    "min_ios": "18.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.offlinemusic_1794711049.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.mwm.stems_1794711028",
     "app_name": "Stemz: remover vocal audio pro",
     "version": "6.00.05",
