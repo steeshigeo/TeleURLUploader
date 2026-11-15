@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.mwm.stems_1794711028",
+    "app_name": "Stemz: remover vocal audio pro",
+    "version": "6.00.05",
+    "min_ios": "17.6",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.mwm.stems_1794711028.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.most.stories_1794710843",
     "app_name": "Most: Aesthetic Photo Editor",
     "version": "3.5.9",
