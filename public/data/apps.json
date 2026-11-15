@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.frontrow.vlog_1794711959",
+    "app_name": "VN: Photo \u0026 Video Editor",
+    "version": "2.25.0",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.frontrow.vlog_1794711959.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.linecorp.b612_1794711810",
     "app_name": "B612 AI Photo\u0026Video Editor",
     "version": "15.5.1",
