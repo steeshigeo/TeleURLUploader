@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.abishkking.maleworkout_1794724427",
+    "app_name": "Home Workout - No Equipments",
+    "version": "1.55.0",
+    "min_ios": "15.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.abishkking.maleworkout_1794724427.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.footballaddicts.livescoreaddicts_1794724382",
     "app_name": "Forza Football - Live Scores",
     "version": "7.2.3",
