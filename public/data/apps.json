@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.veed.appstore_1794724147",
+    "app_name": "VEED Lite: Quick Video Edits",
+    "version": "8.15.2",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.veed.appstore_1794724147.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "pinterest_1794724106",
     "app_name": "Pinterest",
     "version": "14.44",
