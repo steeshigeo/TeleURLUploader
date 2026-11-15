@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.pixeldev.APEXRacers_1794745816",
+    "app_name": "APEX Racer",
+    "version": "0.9.85",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.pixeldev.APEXRacers_1794745816.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.chaninicholas.chaniapp_1794745794",
     "app_name": "CHANI: Your Astrology Guide",
     "version": "2.10.3",
