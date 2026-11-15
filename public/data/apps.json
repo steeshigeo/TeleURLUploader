@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.markodevcic.js-code-pad_1794711152",
+    "app_name": "JavaScript Coding Editor \u0026 IDE",
+    "version": "1.11.0",
+    "min_ios": "15.0",
+    "category": "Developer Tools",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.markodevcic.js-code-pad_1794711152.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "PHCXZHD53T.com.enki.insights_1794711063",
     "app_name": "Enki: Learn Coding, Python, AI",
     "version": "2.40.16",
