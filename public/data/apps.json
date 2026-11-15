@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.dajiu.stay.pro_1794711569",
+    "app_name": "Stay for Safari",
+    "version": "2.9.26",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.dajiu.stay.pro_1794711569.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "co.bergen.Darkroom_1794711556",
     "app_name": "Darkroom: Photo \u0026 Video Editor",
     "version": "7.6.5",
