@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.most.stories_1794710843",
+    "app_name": "Most: Aesthetic Photo Editor",
+    "version": "3.5.9",
+    "min_ios": "17.6",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.most.stories_1794710843.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.snowcorp.soda_1794710750",
     "app_name": "SODA - Natural Beauty Camera",
     "version": "10.5.0",
