@@ -1,5 +1,19 @@
 [
   {
+    "id": "in.muditbhargava.LookUp_1794712197",
+    "app_name": "LookUp: English Dictionary App",
+    "version": "13.1.1",
+    "min_ios": "26.0",
+    "category": "Reference",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "SteeShigeo \u0026 Blatantz",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/in.muditbhargava.LookUp_1794712197.jpg",
+    "updated_at": "2026-11-15"
+  },
+  {
     "id": "com.skylum.luminaripad_1794712135",
     "app_name": "Luminar: Photo Editor\u0026Enhancer",
     "version": "4.6.1",
