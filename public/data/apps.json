@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.o-p-e-n.open_1795198055",
+    "app_name": "Open: Breathwork + Meditation",
+    "version": "26.46.1",
+    "min_ios": "17.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.o-p-e-n.open_1795198055.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "me.imgbase.intolive_1795198017",
     "app_name": "intoLive - Live Wallpapers",
     "version": "4.4.3",
