@@ -1,5 +1,19 @@
 [
   {
+    "id": "co.bazaart.app_1795194112",
+    "app_name": "Bazaart AI Photo Editor Design",
+    "version": "27.0.9",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/co.bazaart.app_1795194112.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "co.airapps.scannerapp_1795194067",
     "app_name": "Scanner Air - Scan Documents",
     "version": "2026.11.3",
