@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.edjing.edjingdjturntable_1795189871",
+    "app_name": "Edjing Mix: DJ Music Mixer App",
+    "version": "9.4.7",
+    "min_ios": "18.6",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.edjing.edjingdjturntable_1795189871.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.aoklab.fewerphotos_1795189762",
     "app_name": "Swipewipe: Photo Cleaner",
     "version": "3.5.4",
