@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ulisesolave.Fitia_1795194418",
+    "app_name": "Fitia: Calorie Counter \u0026 Diet",
+    "version": "25.3.1",
+    "min_ios": "16",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ulisesolave.Fitia_1795194418.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "xyz.gingertech.fitnotes_1795194365",
     "app_name": "FitNotes 2 - Gym Workout Log",
     "version": "19",
