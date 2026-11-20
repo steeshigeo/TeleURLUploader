@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ilovepdf.www_1795195224",
+    "app_name": "iLovePDF - PDF Editor \u0026 Scan",
+    "version": "4.3.0",
+    "min_ios": "18.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ilovepdf.www_1795195224.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.maxty.gofitness_1795195178",
     "app_name": "ProFit: Workout Planner",
     "version": "8.7.0",
