@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.mwm.procolor_1795189423",
+    "app_name": "Color Pop: AI Coloring Book",
+    "version": "2.69.02",
+    "min_ios": "17.5",
+    "category": "Entertainment",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.mwm.procolor_1795189423.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.joytunes.Sing_1795189074",
     "app_name": "Simply Sing: My Singing App",
     "version": "3.2.4",
