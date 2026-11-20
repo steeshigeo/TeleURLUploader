@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.blockpuzzle.us.ios_1795198736",
+    "app_name": "Block Blast！",
+    "version": "7.6.3",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.blockpuzzle.us.ios_1795198736.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.nibbleapps.MealPrepPro_1795198684",
     "app_name": "MealPrepPro Planner \u0026 Recipes",
     "version": "4.4",
