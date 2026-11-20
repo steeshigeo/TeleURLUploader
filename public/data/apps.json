@@ -1,5 +1,19 @@
 [
   {
+    "id": "phone.location.tracker_1795198753",
+    "app_name": "Find Phone: Device Tracker",
+    "version": "2.7.0",
+    "min_ios": "17.0",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/phone.location.tracker_1795198753.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.genau.JournalCircle_1795198742",
     "app_name": "JournalCircle: Diary \u0026 Journal",
     "version": "3.6.9",
