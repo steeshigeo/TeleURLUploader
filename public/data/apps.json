@@ -1,5 +1,19 @@
 [
   {
+    "id": "me.imgbase.intolive_1795198017",
+    "app_name": "intoLive - Live Wallpapers",
+    "version": "4.4.3",
+    "min_ios": "15.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/me.imgbase.intolive_1795198017.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.asanarebel.visualgpt_1795197956",
     "app_name": "VisualMind: AI MindMap/Chatbot",
     "version": "1.11.0",
