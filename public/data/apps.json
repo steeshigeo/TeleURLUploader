@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.pixeldev.APEXRacers_1795197536",
+    "app_name": "APEX Racer",
+    "version": "0.9.87",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.pixeldev.APEXRacers_1795197536.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "llc.planeenglish.PlaneEnglish_1795197452",
     "app_name": "PlaneEnglish: ARSim",
     "version": "1.5.17",
