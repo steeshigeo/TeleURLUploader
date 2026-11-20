@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.vertventures.stella_1795197833",
+    "app_name": "Astra - Life Advice",
+    "version": "3.12.81",
+    "min_ios": "15.1",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.vertventures.stella_1795197833.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.br.12min.mobile_1795197816",
     "app_name": "12min: Book Summaries Daily",
     "version": "2.16.1",
