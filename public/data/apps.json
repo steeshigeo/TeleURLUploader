@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.365scores.365scroesapp_1795197270",
+    "app_name": "365Scores: Live Sports Scores",
+    "version": "6.7.4",
+    "min_ios": "16.4",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.365scores.365scroesapp_1795197270.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.bowery-digital.bend_1795197213",
     "app_name": "Bend: Stretching \u0026 Flexibility",
     "version": "8.0.1",
