@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.itwcalculator.calculatorforipadfree_1795191887",
+    "app_name": "Calculator₊",
+    "version": "9.28.2",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.itwcalculator.calculatorforipadfree_1795191887.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.castpeer.audioroom.ios_1795191803",
     "app_name": "SoundLab - Audio Editor",
     "version": "2.11.7",
