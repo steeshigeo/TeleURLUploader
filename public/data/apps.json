@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.labhouse.audioapp_1795196632",
+    "app_name": "Summary - AI Note Taker",
+    "version": "2.23.1",
+    "min_ios": "15.1",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.labhouse.audioapp_1795196632.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.easybrain.crossword.puzzles_1795196583",
     "app_name": "Crossword Master - Word Puzzle",
     "version": "2.5.0",
