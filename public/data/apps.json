@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.neybox.Pillow_1795195578",
+    "app_name": "Pillow: Sleep Tracker",
+    "version": "6.7.4",
+    "min_ios": "17.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.neybox.Pillow_1795195578.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.edjing.edjingdjturntable_1795195361",
     "app_name": "Edjing Mix: DJ Music Mixer App",
     "version": "9.4.8",
