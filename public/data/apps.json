@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.kavsoft.MockviewApp_1795191567",
+    "app_name": "Mockview - Mockup Generator",
+    "version": "5.0.5",
+    "min_ios": "17.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.kavsoft.MockviewApp_1795191567.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "net.quochuywdm.collanote496_1795191507",
     "app_name": "CollaNote: Notes \u0026 PDF Markup",
     "version": "5.1.2",
