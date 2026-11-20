@@ -1,5 +1,19 @@
 [
   {
+    "id": "tech.miidii.off-screen_1795196790",
+    "app_name": "OffScreen: Screen Time Control",
+    "version": "3.22.6",
+    "min_ios": "17.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/tech.miidii.off-screen_1795196790.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.elevateapp.elevate_1795196779",
     "app_name": "Elevate - Brain Training Games",
     "version": "5.266.0",
