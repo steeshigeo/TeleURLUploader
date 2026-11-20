@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.sillens.iShape_1795190012",
+    "app_name": "Lifesum: AI Calorie Counter",
+    "version": "24.1.1",
+    "min_ios": "17.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.sillens.iShape_1795190012.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.wiheads.paste_1795189943",
     "app_name": "Paste – Limitless Clipboard",
     "version": "7.1.0",
