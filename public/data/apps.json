@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.elevateapp.elevate_1795196779",
+    "app_name": "Elevate - Brain Training Games",
+    "version": "5.266.0",
+    "min_ios": "17.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.elevateapp.elevate_1795196779.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.fishbrain.app_1795196695",
     "app_name": "Fishbrain - Fishing App",
     "version": "9.67.0",
