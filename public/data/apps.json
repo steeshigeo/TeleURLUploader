@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.CalculatorForiPad.InternetRocks_1795191607",
+    "app_name": "Calculator Air: AI Math Solver",
+    "version": "2026.11.4",
+    "min_ios": "16.6",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.CalculatorForiPad.InternetRocks_1795191607.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.kavsoft.MockviewApp_1795191567",
     "app_name": "Mockview - Mockup Generator",
     "version": "5.0.5",
