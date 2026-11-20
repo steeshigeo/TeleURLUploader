@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.aoklab.fewerphotos_1795189687",
+    "app_name": "Swipewipe: Photo Cleaner",
+    "version": "3.5.5",
+    "min_ios": "18.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.aoklab.fewerphotos_1795189687.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.codeway.cleanerplus_1795189612",
     "app_name": "Cleanup: Phone Storage Cleaner",
     "version": "6.27.0",
