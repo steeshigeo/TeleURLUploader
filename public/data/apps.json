@@ -1,5 +1,19 @@
 [
   {
+    "id": "boomer.Smart-Video_1795194357",
+    "app_name": "Captions: AI Edits Your Video",
+    "version": "13.44.0",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/boomer.Smart-Video_1795194357.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.evolve.helm_1795194305",
     "app_name": "Rest: Fix Your Sleep For Good",
     "version": "3.211.0",
