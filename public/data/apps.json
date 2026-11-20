@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.sfun.snapedit_1795193171",
+    "app_name": "SnapEdit: Photo Editor AI",
+    "version": "6.29",
+    "min_ios": "15.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.sfun.snapedit_1795193171.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.icandiapps.nightsky_1795193096",
     "app_name": "Night Sky",
     "version": "27.3",
