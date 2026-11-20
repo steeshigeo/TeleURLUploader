@@ -1,5 +1,19 @@
 [
   {
+    "id": "PHCXZHD53T.com.enki.insights_1795193502",
+    "app_name": "Enki: Learn Coding, Python, AI",
+    "version": "2.40.17",
+    "min_ios": "15.1",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/PHCXZHD53T.com.enki.insights_1795193502.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.ideation.Stress_1795193492",
     "app_name": "StressWatch: AI Stress Monitor",
     "version": "3.4.6",
