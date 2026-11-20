@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.evolve.helm_1795194305",
+    "app_name": "Rest: Fix Your Sleep For Good",
+    "version": "3.211.0",
+    "min_ios": "15.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.evolve.helm_1795194305.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.lightricks.Enlight-Video_1795194255",
     "app_name": "Videoleap: AI Video Editor",
     "version": "2.89",
