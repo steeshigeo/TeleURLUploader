@@ -1,5 +1,19 @@
 [
   {
+    "id": "ai.parrotpal_1795197696",
+    "app_name": "ParrotPal: Calorie Tracker",
+    "version": "205",
+    "min_ios": "17.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/ai.parrotpal_1795197696.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.soundscape.music_1795197652",
     "app_name": "Soundscape: Focus Sleep Sounds",
     "version": "11.2.0",
