@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.aiby.wtcoin_1795196446",
+    "app_name": "Coin ID: Coin Value Identifier",
+    "version": "1.30",
+    "min_ios": "16.0",
+    "category": "Reference",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.aiby.wtcoin_1795196446.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "scannerapp.free_1795196427",
     "app_name": "Scanner – Scan PDF, ID \u0026 Docs",
     "version": "2.12.12",
