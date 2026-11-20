@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.easybrain.crossword.puzzles_1795196583",
+    "app_name": "Crossword Master - Word Puzzle",
+    "version": "2.5.0",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.easybrain.crossword.puzzles_1795196583.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.talgat.AIChat_1795196567",
     "app_name": "Bots - AI Chatbot \u0026 Assistant",
     "version": "3.57",
