@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.nibbleapps.MealPrepPro_1795198684",
+    "app_name": "MealPrepPro Planner \u0026 Recipes",
+    "version": "4.4",
+    "min_ios": "18.0",
+    "category": "Food \u0026 Drink",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.nibbleapps.MealPrepPro_1795198684.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.thegenau.NoteCircle_1795198626",
     "app_name": "NoteCircle: To-Do List",
     "version": "4.94",
