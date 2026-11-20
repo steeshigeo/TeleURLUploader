@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.solveit.lut-studio_1795188959",
+    "app_name": "LUT Studio: Color Grading App",
+    "version": "4.1.4",
+    "min_ios": "17.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.solveit.lut-studio_1795188959.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.lightricks.Facetune2_1795188910",
     "app_name": "Facetune: Photo \u0026 Video Editor",
     "version": "26.38",
