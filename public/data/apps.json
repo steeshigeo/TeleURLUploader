@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.apalonapps.radarfree_1795194854",
+    "app_name": "Clime: NOAA Weather Radar Live",
+    "version": "5.13.73",
+    "min_ios": "15.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.apalonapps.radarfree_1795194854.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.frameoneapps.Crsel_1795194782",
     "app_name": "Crsel: Carousel, Collage Maker",
     "version": "1.6.6",
