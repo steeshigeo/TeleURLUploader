@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.thehungrywasp.iamsober_1795197921",
+    "app_name": "I Am Sober",
+    "version": "8.8.8",
+    "min_ios": "15.1",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.thehungrywasp.iamsober_1795197921.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.365scores.365scroesapp_1795197913",
     "app_name": "365Scores: Live Sports Scores",
     "version": "6.7.5",
