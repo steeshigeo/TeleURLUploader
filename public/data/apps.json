@@ -1,5 +1,19 @@
 [
   {
+    "id": "tech.sketchar.ios_1795193552",
+    "app_name": "Sketchar: AR Drawing App",
+    "version": "11.0.1",
+    "min_ios": "16.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/tech.sketchar.ios_1795193552.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "PHCXZHD53T.com.enki.insights_1795193502",
     "app_name": "Enki: Learn Coding, Python, AI",
     "version": "2.40.17",
