@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.polywise.weekly_1795196823",
+    "app_name": "Imprint: Visual Micro Learning",
+    "version": "6.0.9",
+    "min_ios": "16.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.polywise.weekly_1795196823.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "tech.miidii.off-screen_1795196790",
     "app_name": "OffScreen: Screen Time Control",
     "version": "3.22.6",
