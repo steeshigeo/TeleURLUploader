@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.br.12min.mobile_1795197816",
+    "app_name": "12min: Book Summaries Daily",
+    "version": "2.16.1",
+    "min_ios": "16.4",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.br.12min.mobile_1795197816.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.gunthermarktl.stepapp_1795197795",
     "app_name": "StepsApp Pedometer",
     "version": "8.15.9",
