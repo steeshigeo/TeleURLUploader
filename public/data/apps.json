@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.aagame.aagame_1795198622",
+    "app_name": "aa",
+    "version": "7.1.9",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.aagame.aagame_1795198622.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.bbauman.Scripty_1795198609",
     "app_name": "Coconote - AI Note Taker",
     "version": "2.53",
