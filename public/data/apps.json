@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.risesci.nyx_1795196015",
+    "app_name": "RISE: Sleep Tracker",
+    "version": "0.1.652",
+    "min_ios": "15.1",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.risesci.nyx_1795196015.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.chromanoir.Zeit_1795195974",
     "app_name": "Halide Mark III - Pro Camera",
     "version": "3.4.0",
