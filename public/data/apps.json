@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.SofaScore.iOS_1795196949",
+    "app_name": "Sofascore: Live Sports Scores",
+    "version": "26.11.09",
+    "min_ios": "18.0",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.SofaScore.iOS_1795196949.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "app.monelyze.ToDo_1795196932",
     "app_name": "To Do List - Reminders \u0026 Tasks",
     "version": "8.0.1",
