@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.shinobiapp.shinobi_1795197940",
+    "app_name": "Shinobi: Read \u0026 Learn Japanese",
+    "version": "1.5.9",
+    "min_ios": "16.4",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.shinobiapp.shinobi_1795197940.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.thehungrywasp.iamsober_1795197921",
     "app_name": "I Am Sober",
     "version": "8.8.8",
