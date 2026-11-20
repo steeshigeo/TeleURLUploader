@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.adobe.PSMobile_1795196499",
+    "app_name": "Photoshop Express Photo Editor",
+    "version": "26.47.0",
+    "min_ios": "18.6",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.adobe.PSMobile_1795196499.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.aiby.wtcoin_1795196446",
     "app_name": "Coin ID: Coin Value Identifier",
     "version": "1.30",
