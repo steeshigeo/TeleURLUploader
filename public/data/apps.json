@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.book.summaries.reading_1795192652",
+    "app_name": "GrowMe: Lazy Reading",
+    "version": "1.4.7",
+    "min_ios": "17.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.book.summaries.reading_1795192652.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.lyftaios_1795192580",
     "app_name": "Lyfta: Gym \u0026 Workout Tracker",
     "version": "1.169",
