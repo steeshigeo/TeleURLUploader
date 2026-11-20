@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.wakdev.wdnfc_1795188473",
+    "app_name": "NFC Tools",
+    "version": "3.6",
+    "min_ios": "17.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.wakdev.wdnfc_1795188473.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.tranzmate.tranzmate1_1795188468",
     "app_name": "Moovit: Bus \u0026 Transit Tracker",
     "version": "5.205.0",
