@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.joytunes.Sing_1795189074",
+    "app_name": "Simply Sing: My Singing App",
+    "version": "3.2.4",
+    "min_ios": "16.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.joytunes.Sing_1795189074.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.iaftt.flightplusfree_1795189040",
     "app_name": "Flight Tracker +",
     "version": "8.8.5",
