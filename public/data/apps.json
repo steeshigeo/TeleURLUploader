@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.hiiker.hiiker_1795198246",
+    "app_name": "HiiKER: The Hiking Maps App",
+    "version": "26.113",
+    "min_ios": "16.0",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.hiiker.hiiker_1795198246.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.colorpresets.colourtone_1795198206",
     "app_name": "Colourtone: Photo Editor",
     "version": "5.9.2",
