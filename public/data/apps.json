@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.tr.paraphrasingtool.rewritertool.textrewriter_1795197026",
+    "app_name": "Paraphrasing Tool: Rewriter",
+    "version": "1.8.1",
+    "min_ios": "17.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.tr.paraphrasingtool.rewritertool.textrewriter_1795197026.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "me.imgbase.videoday_1795197024",
     "app_name": "VDIT: AI Captions \u0026 Subtitles",
     "version": "4.4.1",
