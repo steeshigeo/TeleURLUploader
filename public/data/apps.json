@@ -1,5 +1,19 @@
 [
   {
+    "id": "br.com.marcosatanaka.musicwhiz_1795198253",
+    "app_name": "MusicSmart - Liner Notes",
+    "version": "2.4.1",
+    "min_ios": "17",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/br.com.marcosatanaka.musicwhiz_1795198253.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.hiiker.hiiker_1795198246",
     "app_name": "HiiKER: The Hiking Maps App",
     "version": "26.113",
