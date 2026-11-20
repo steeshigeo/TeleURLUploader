@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.gingerlabs.Notability_1795190907",
+    "app_name": "Notability: AI Notes \u0026 Study",
+    "version": "16.14",
+    "min_ios": "18.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.gingerlabs.Notability_1795190907.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.duolingo.DuolingoMobile_1795190728",
     "app_name": "Duolingo: Learn Languages",
     "version": "7.149.0",
