@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.thegenau.NoteCircle_1795198626",
+    "app_name": "NoteCircle: To-Do List",
+    "version": "4.94",
+    "min_ios": "16.6",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.thegenau.NoteCircle_1795198626.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.aagame.aagame_1795198622",
     "app_name": "aa",
     "version": "7.1.9",
