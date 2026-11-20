@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.adobe.post_1795196370",
+    "app_name": "Adobe Express: Create Anything",
+    "version": "31.3.0",
+    "min_ios": "18.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.adobe.post_1795196370.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.hevyapp.hevy_1795196320",
     "app_name": "Hevy - Workout Tracker Gym Log",
     "version": "3.2.8",
