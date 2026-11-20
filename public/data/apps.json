@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.future.kapi_1795194991",
+    "app_name": "Kapi Cam - Y2K \u0026 CCD Camera",
+    "version": "4.46.0",
+    "min_ios": "15.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.future.kapi_1795194991.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.calm.calmapp_1795194936",
     "app_name": "Calm",
     "version": "7.6",
