@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.chromanoir.Zeit_1795195974",
+    "app_name": "Halide Mark III - Pro Camera",
+    "version": "3.4.0",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.chromanoir.Zeit_1795195974.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "ventures.slam.minutes_1795195942",
     "app_name": "Minutes: AI Meeting Note Taker",
     "version": "1.12.10",
