@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.bbauman.Scripty_1795196106",
+    "app_name": "Coconote - AI Note Taker",
+    "version": "2.53",
+    "min_ios": "26.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.bbauman.Scripty_1795196106.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.yengshine.proccd_1795196088",
     "app_name": "ProCCD - Digital Film Camera",
     "version": "7.2",
