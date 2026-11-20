@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ideation.Stress_1795195883",
+    "app_name": "StressWatch: AI Stress Monitor",
+    "version": "3.4.8",
+    "min_ios": "16.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ideation.Stress_1795195883.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.impalastudios.pianofree_1795195758",
     "app_name": "Piano ٞ",
     "version": "2.26.6",
