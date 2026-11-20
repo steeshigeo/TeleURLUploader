@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.fadel.Spiik_1795198600",
+    "app_name": "Voice Recorder AI Notes: Spiik",
+    "version": "1.0.157",
+    "min_ios": "16.4",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.fadel.Spiik_1795198600.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.app-livity_1795198555",
     "app_name": "Livity: Sleep \u0026 Health Tracker",
     "version": "5.3.0",
