@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.agiletortoise.Drafts5_1795194878",
+    "app_name": "Drafts",
+    "version": "55.0",
+    "min_ios": "15.8",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.agiletortoise.Drafts5_1795194878.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.apalonapps.radarfree_1795194854",
     "app_name": "Clime: NOAA Weather Radar Live",
     "version": "5.13.73",
