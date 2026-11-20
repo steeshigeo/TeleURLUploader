@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.fishbrain.app_1795196695",
+    "app_name": "Fishbrain - Fishing App",
+    "version": "9.67.0",
+    "min_ios": "18.0",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.fishbrain.app_1795196695.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "io.labhouse.audioapp_1795196632",
     "app_name": "Summary - AI Note Taker",
     "version": "2.23.1",
