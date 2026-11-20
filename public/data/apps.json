@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.iPwners.Plonkan_1795192046",
+    "app_name": "Buddy: Budget Planner App",
+    "version": "13.53",
+    "min_ios": "18.0",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.iPwners.Plonkan_1795192046.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.mwm.procolor_1795191988",
     "app_name": "Color Pop: AI Coloring Book",
     "version": "2.69.03",
