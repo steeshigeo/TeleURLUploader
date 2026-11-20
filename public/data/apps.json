@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.frameoneapps.Crsel_1795194782",
+    "app_name": "Crsel: Carousel, Collage Maker",
+    "version": "1.6.6",
+    "min_ios": "17.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.frameoneapps.Crsel_1795194782.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.tripleglazedstudios.Weather_1795194740",
     "app_name": "Mercury Weather",
     "version": "3.8.3",
