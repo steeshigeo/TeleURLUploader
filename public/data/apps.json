@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ulisesolave.Fitia_1795192388",
+    "app_name": "Fitia: Calorie Counter \u0026 Diet",
+    "version": "25.3",
+    "min_ios": "16",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ulisesolave.Fitia_1795192388.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.calm.calmapp_1795192325",
     "app_name": "Calm",
     "version": "7.5.1",
