@@ -1,5 +1,19 @@
 [
   {
+    "id": "dance.fitness.app_1795197351",
+    "app_name": "Dancebit: Home Dance Workouts",
+    "version": "2.91",
+    "min_ios": "16.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/dance.fitness.app_1795197351.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.fifteenjugglers.solarwatch_1795197284",
     "app_name": "Sun Tracker: SolarWatch",
     "version": "2026.29.3",
