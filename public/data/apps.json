@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.offlinemusic_1795190939",
+    "app_name": "Offline Music Player",
+    "version": "4.0.2",
+    "min_ios": "18.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.offlinemusic_1795190939.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.gingerlabs.Notability_1795190907",
     "app_name": "Notability: AI Notes \u0026 Study",
     "version": "16.14",
