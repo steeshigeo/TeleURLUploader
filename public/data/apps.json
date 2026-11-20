@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.itwcalculator.worldradarfree_1795189482",
+    "app_name": "Weather Radar - NOAA Channel",
+    "version": "6.4.3",
+    "min_ios": "18.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "@SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.itwcalculator.worldradarfree_1795189482.jpg",
+    "updated_at": "2026-11-20"
+  },
+  {
     "id": "com.mwm.procolor_1795189423",
     "app_name": "Color Pop: AI Coloring Book",
     "version": "2.69.02",
