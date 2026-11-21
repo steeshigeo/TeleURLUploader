@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.youssef.developer.Full-Browser_1795276755",
+    "app_name": "TOR Browser: Onion VPN \u0026 Orbot",
+    "version": "12.6",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.youssef.developer.Full-Browser_1795276755.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.sfun.snapedit_1795276668",
     "app_name": "SnapEdit: Photo Editor AI",
     "version": "6.30",
