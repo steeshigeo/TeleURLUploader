@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.jps.gpspeedhud_1795275880",
+    "app_name": "GPS Speedometer MPH Tracker",
+    "version": "9.1.3",
+    "min_ios": "17.0",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.jps.gpspeedhud_1795275880.jpg",
+    "updated_at": "2026-11-21"
+  },
+  {
     "id": "com.lasmit.World-Time_1795198766",
     "app_name": "World Clock Time Zone Widget",
     "version": "2026.17",
