@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ziikr.ios.notewise_1795373043",
+    "app_name": "Notewise - AI Notes, PDF, Docs",
+    "version": "4.2.3",
+    "min_ios": "26.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ziikr.ios.notewise_1795373043.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "app.vinylreleases.studio_1795372991",
     "app_name": "VinylStudio: Design and Play",
     "version": "1.13.5",
