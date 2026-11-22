@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.demind.lifestack-calendar_1795373704",
+    "app_name": "Lifestack: AI Planner for ADHD",
+    "version": "2.17.4",
+    "min_ios": "15.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.demind.lifestack-calendar_1795373704.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.bytenpixels.irispro_1795373692",
     "app_name": "Pro Camera : Iris",
     "version": "1.2",
