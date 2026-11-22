@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.bikinstudio.screenx_1795373737",
+    "app_name": "Retrx",
+    "version": "0.0.58",
+    "min_ios": "15.5",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.bikinstudio.screenx_1795373737.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.nonsense.app_1795373722",
     "app_name": "Nonsense: Language Learning",
     "version": "5.4.8",
