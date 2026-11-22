@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.lonepalm.Retro_1795373871",
+    "app_name": "Retro — Photos with Friends",
+    "version": "129.0",
+    "min_ios": "17.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.lonepalm.Retro_1795373871.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.HappyPlanTech.SnapWords_1795373852",
     "app_name": "CapWords: AI Language Tutor",
     "version": "2.0.20",
