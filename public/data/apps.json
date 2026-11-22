@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.vanilla.fivesecondbattle_1795372731",
+    "app_name": "5 Second Battle Rule Game",
+    "version": "2.0.2",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.vanilla.fivesecondbattle_1795372731.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.vocably.app_1795372718",
     "app_name": "Verbi: Speak a New Language",
     "version": "6.0.9",
