@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.futbin_1795372249",
+    "app_name": "FUTBIN FC 27 Evolutions \u0026 More",
+    "version": "9.0.6",
+    "min_ios": "15.6",
+    "category": "Sports",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.futbin_1795372249.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.myswimpro.apps.MySwimPro_1795372217",
     "app_name": "MySwimPro: #1 Swim Workout App",
     "version": "9.9.2",
