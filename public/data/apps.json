@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.finch.finch_1795373601",
+    "app_name": "Finch: Self-Care Pet",
+    "version": "3.73.240",
+    "min_ios": "15.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.finch.finch_1795373601.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.soccerFitYou.App_1795373565",
     "app_name": "B42 - Soccer Training",
     "version": "7.16.4",
