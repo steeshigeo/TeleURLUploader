@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.leapfitness.HeightIncrease_1795371861",
+    "app_name": "Teen Workout \u0026 Meal Plan",
+    "version": "1.0.9",
+    "min_ios": "13.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.leapfitness.HeightIncrease_1795371861.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.tickettothemoon.video.persona_1795371855",
     "app_name": "Persona: Beauty Camera",
     "version": "10.17.4",
