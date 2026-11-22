@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.swirski.photo-booth-a7m3_1795372569",
+    "app_name": "Shutter+ Sony Camera Remote",
+    "version": "6.1.2",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.swirski.photo-booth-a7m3_1795372569.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.duuro.moneyCoach_1795372554",
     "app_name": "MoneyCoach AI Budget Planner",
     "version": "14.0.3",
