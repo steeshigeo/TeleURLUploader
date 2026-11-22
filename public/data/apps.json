@@ -1,5 +1,19 @@
 [
   {
+    "id": "ventures.slam.minutes_1795372030",
+    "app_name": "Minutes: AI Meeting Note Taker",
+    "version": "1.12.10",
+    "min_ios": "17.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/ventures.slam.minutes_1795372030.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "me.imgbase.videoday_1795372023",
     "app_name": "VDIT: AI Captions \u0026 Subtitles",
     "version": "4.4.1",
