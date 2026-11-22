@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.retryapps.game.maps.irl_1795371810",
+    "app_name": "Game Maps IRL",
+    "version": "2.7",
+    "min_ios": "15.1",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.retryapps.game.maps.irl_1795371810.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.mycompany.acadai_1795371795",
     "app_name": "AcadAI",
     "version": "1.1.339",
