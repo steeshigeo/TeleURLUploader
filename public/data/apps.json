@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.burbn.barcelona_1795365730",
+    "app_name": "Threads",
+    "version": "456.0.0",
+    "min_ios": "16.3",
+    "category": "Social Networking",
+    "is_patched": false,
+    "modified": "ThreadsPulse",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "ThreadsPulse 1.31.1 — NoPlugins (For TrollStore)\n\n• An iOS tweak for Threads highlight menu:\n— Blocks Ads\n— Media DownloaderBuilds:\n— ThreadsPulse Patched\n— And many more\n\n• Steps to access ThreadsPulse settings:\n1. Click the Profile tab bar icon\n2. Click the Settings icon\n3. Click Pulse on the top right corner\n\nCredits:\n• https://github.com/mumuisdog/ThreadsPulse",
+    "thumbnail": "/thumbnails/com.burbn.barcelona_1795365730.jpg",
+    "updated_at": "2026-11-22"
+  },
+  {
     "id": "com.burbn.barcelona_1795365591",
     "app_name": "Threads",
     "version": "456.0.0",
