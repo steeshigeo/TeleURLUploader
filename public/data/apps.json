@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.vocably.app_1795372718",
+    "app_name": "Verbi: Speak a New Language",
+    "version": "6.0.9",
+    "min_ios": "16.4",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.vocably.app_1795372718.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.soundscape.music_1795372701",
     "app_name": "Soundscape: Focus Sleep Sounds",
     "version": "11.2.0",
