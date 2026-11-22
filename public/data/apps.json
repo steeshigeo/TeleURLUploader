@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.panicbyte.byephotos_1795372968",
+    "app_name": "ByePhotos - Free Up Storage",
+    "version": "2.12.2",
+    "min_ios": "17.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.panicbyte.byephotos_1795372968.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.ClassDojo_1795372959",
     "app_name": "ClassDojo",
     "version": "18.55.0",
