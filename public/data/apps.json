@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.CalculatorForiPad.InternetRocks_1795371022",
+    "app_name": "Calculator Air: AI Math Solver",
+    "version": "2026.11.8",
+    "min_ios": "16.6",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.CalculatorForiPad.InternetRocks_1795371022.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.videobrowser.ios_1795370984",
     "app_name": "Video Lite",
     "version": "629100",
