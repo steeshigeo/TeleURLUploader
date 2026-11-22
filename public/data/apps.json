@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.superfan.app_1795373878",
+    "app_name": "Superfan: social music",
+    "version": "1.28.28",
+    "min_ios": "16.4",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.superfan.app_1795373878.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "io.lonepalm.Retro_1795373871",
     "app_name": "Retro — Photos with Friends",
     "version": "129.0",
