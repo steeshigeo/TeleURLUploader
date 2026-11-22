@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.hammerandchisel.discord_1795332554",
+    "app_name": "Discord - Talk, Play, Hang Out",
+    "version": "354.0",
+    "min_ios": "16.0",
+    "category": "Social Networking",
+    "is_patched": false,
+    "modified": "Unbound",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Unbound 1.12.2\n\nSetup:\n1. Open Discord\n2. Tap your Profile Picture on the bottom\n3. Tap Settings on the tab bar\n4. Unbound settings are at the top of the Settings page\n\nCredits: https://unbound.rip",
+    "thumbnail": "/thumbnails/com.hammerandchisel.discord_1795332554.jpg",
+    "updated_at": "2026-11-22"
+  },
+  {
     "id": "com.roehl.habitkit_1795277015",
     "app_name": "Habit Tracker - HabitKit",
     "version": "1.19.3",
