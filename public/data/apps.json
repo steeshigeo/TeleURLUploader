@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.gonative.ios.xqdyad_1795374024",
+    "app_name": "Gizmo: AI Tutor",
+    "version": "3.2.158",
+    "min_ios": "16.4",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.gonative.ios.xqdyad_1795374024.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "io.linga_1795374010",
     "app_name": "Linga: Books with translations",
     "version": "4.0.0",
