@@ -1,5 +1,19 @@
 [
   {
+    "id": "me.imgbase.videoday_1795372023",
+    "app_name": "VDIT: AI Captions \u0026 Subtitles",
+    "version": "4.4.1",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/me.imgbase.videoday_1795372023.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.gingerlabs.Notability_1795371982",
     "app_name": "Notability: AI Notes \u0026 Study",
     "version": "16.14",
