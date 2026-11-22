@@ -1,5 +1,19 @@
 [
   {
+    "id": "cz.kolbi.wqfiles_1795333316",
+    "app_name": "WQ Files",
+    "version": "0.9.20",
+    "min_ios": "26.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Worse Query Files 0.9.20\n\n• Changelogs:\nNew:\n- Import Apps Manager Backups: Accepts .adbk files via Apps -\u003e tap app -\u003e Import as Backup... (imports core app data only; skips App Groups and encrypted keychain items).\n\nFixed:\n- Safer Active Database Handling: Prevents data loss by grouping databases with their -wal, -shm, and -journal files—none are modified or deleted if any part is currently in use.\n- Clearer In-Use Warnings: Replaced generic error codes with clear alerts when a running app, extension, or widget locks a file.\n- Batch Operation Priority: Processes main database files before companion files during multi-file imports/deletions and adds localized progress text.\n\n• Credits: https://github.com/kolbicz/WQFiles",
+    "thumbnail": "/thumbnails/cz.kolbi.wqfiles_1795333316.jpg",
+    "updated_at": "2026-11-22"
+  },
+  {
     "id": "com.facebook.Facebook_1795332979",
     "app_name": "Facebook",
     "version": "588.1.0",
