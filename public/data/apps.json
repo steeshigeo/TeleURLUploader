@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.her75.app_1795373987",
+    "app_name": "Her 75",
+    "version": "1.0.31",
+    "min_ios": "15.1",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.her75.app_1795373987.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "app.quanto.quanto_1795373942",
     "app_name": "Quanto: Budget Expense Tracker",
     "version": "1.10.9",
