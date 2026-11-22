@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.yanbuweather.rainRadar_1795372267",
+    "app_name": "Rain Maps",
+    "version": "2.0.14",
+    "min_ios": "10.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.yanbuweather.rainRadar_1795372267.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.futbin_1795372249",
     "app_name": "FUTBIN FC 27 Evolutions \u0026 More",
     "version": "9.0.6",
