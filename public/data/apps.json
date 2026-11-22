@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.gingerlabs.Notability_1795371982",
+    "app_name": "Notability: AI Notes \u0026 Study",
+    "version": "16.14",
+    "min_ios": "18.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.gingerlabs.Notability_1795371982.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.futbin_1795371930",
     "app_name": "FUTBIN FC 27 Evolutions \u0026 More",
     "version": "9.0.4",
