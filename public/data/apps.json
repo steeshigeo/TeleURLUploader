@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.degisner.fivecents_1795373686",
+    "app_name": "Five Cents: Monthly Budget",
+    "version": "8.8.3",
+    "min_ios": "17.0",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.degisner.fivecents_1795373686.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.convertify.codmobileloadout2_1795373684",
     "app_name": "CODMunity: Warzone \u0026 MW4 Meta",
     "version": "12.1003.0",
