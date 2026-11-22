@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ClassDojo_1795372959",
+    "app_name": "ClassDojo",
+    "version": "18.55.0",
+    "min_ios": "18.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ClassDojo_1795372959.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.widget-kid_1795372935",
     "app_name": "TapeKit・Lab of Top Widgets・GIF",
     "version": "3.8.4",
