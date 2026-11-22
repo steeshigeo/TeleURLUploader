@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.bytenpixels.irispro_1795373692",
+    "app_name": "Pro Camera : Iris",
+    "version": "1.2",
+    "min_ios": "17.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.bytenpixels.irispro_1795373692.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.degisner.fivecents_1795373686",
     "app_name": "Five Cents: Monthly Budget",
     "version": "8.8.3",
