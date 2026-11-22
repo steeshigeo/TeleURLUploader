@@ -1,5 +1,19 @@
 [
   {
+    "id": "co.airapps.finderbot_1795371063",
+    "app_name": "Find Air - My Device Tracker",
+    "version": "2026.11.9",
+    "min_ios": "16.6",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/co.airapps.finderbot_1795371063.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.CalculatorForiPad.InternetRocks_1795371022",
     "app_name": "Calculator Air: AI Math Solver",
     "version": "2026.11.8",
