@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.readdle.CalendarsLite_1795371744",
+    "app_name": "Calendars: Schedule Planner",
+    "version": "5.41.4",
+    "min_ios": "18.2",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.readdle.CalendarsLite_1795371744.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.lightricks.Facetune2_1795371659",
     "app_name": "Facetune: Photo \u0026 Video Editor",
     "version": "26.39",
