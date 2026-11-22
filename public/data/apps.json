@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.fadel.Spiik_1795372102",
+    "app_name": "Voice Recorder AI Notes: Spiik",
+    "version": "1.0.157",
+    "min_ios": "16.4",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.fadel.Spiik_1795372102.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.selabs.speak-v2_1795372094",
     "app_name": "Speak: Language Learning",
     "version": "4.75.0",
