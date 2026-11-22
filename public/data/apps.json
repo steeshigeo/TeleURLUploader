@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.robnorback.LiveTranscribe_1795373133",
+    "app_name": "Live Transcribe",
+    "version": "2.101",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.robnorback.LiveTranscribe_1795373133.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "onlabs.AppleFitnessWrap_1795373122",
     "app_name": "Fitness Wrapped: Workout Recap",
     "version": "4.2.0",
