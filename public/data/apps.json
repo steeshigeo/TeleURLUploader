@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.albertomoral.PokedexTradingCards_1795372690",
+    "app_name": "MyDex TCG Card Scanner",
+    "version": "2.6.0",
+    "min_ios": "18.0",
+    "category": "Reference",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.albertomoral.PokedexTradingCards_1795372690.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.HappyPlanTech.SnapWords_1795372672",
     "app_name": "CapWords: AI Language Tutor",
     "version": "2.0.19",
