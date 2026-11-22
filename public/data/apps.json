@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.HappyPlanTech.SnapWords_1795373852",
+    "app_name": "CapWords: AI Language Tutor",
+    "version": "2.0.20",
+    "min_ios": "17.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.HappyPlanTech.SnapWords_1795373852.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.zhuangmengting.player_1795373796",
     "app_name": "Vinyl Music Player - Orbit",
     "version": "2.0.3",
