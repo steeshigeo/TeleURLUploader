@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.kovalee.75hard_1795372792",
+    "app_name": "75 Day Challenge - Hard \u0026 Soft",
+    "version": "2.1.48",
+    "min_ios": "17.4",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.kovalee.75hard_1795372792.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.codersb.feelly_1795372743",
     "app_name": "Feelly - Mood Tracker Journal",
     "version": "2.9.2",
