@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.imxieyi.andarium_1795375757",
+    "app_name": "Andarium",
+    "version": "1.1",
+    "min_ios": "26.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Run real Linux kernel natively on iOS (Run Android on iOS)\n\n• Changelogs:\nAndarium 1.1 IPA + Prebuilts\nNew Features:\n- Root \u0026 Magisk: Built-in root toggle automatically installs official Magisk on next boot.\n- Performance \u0026 120 Hz: Added AOT system library compilation (on by default), 120 Hz ProMotion support, and thermal frame-rate overrides.\n- iOS Integration: Support for iOS 26+, Home Screen app shortcuts/Siri integration (iOS 27), VoiceOver/TalkBack support, simulated incoming SMS, and daily update alerts.\nFixes:\n- Network Stability: Fixed brief Wi-Fi drops on app resume, Wi-Fi-to-cellular hangs, and post-reconnect server delays.\n- Media \u0026 Camera: Enabled hardware VP9 video decoding and fixed front-camera face scan failures.\n\n• Credits: https://github.com/imxieyi/Kernarium",
+    "thumbnail": "",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.nianticlabs.pokemongo_1795374860",
     "app_name": "Pokémon GO",
     "version": "0.435.2",
