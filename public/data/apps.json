@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.selabs.speak-v2_1795372094",
+    "app_name": "Speak: Language Learning",
+    "version": "4.75.0",
+    "min_ios": "16.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.selabs.speak-v2_1795372094.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.widget-kid_1795372064",
     "app_name": "TapeKit・Lab of Top Widgets・GIF",
     "version": "3.8.4",
