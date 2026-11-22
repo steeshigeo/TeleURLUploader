@@ -50,6 +50,7 @@ type ITunesResponse struct {
 	Results []struct {
 		TrackName        string   `json:"trackName"`
 		TrackViewURL     string   `json:"trackViewUrl"`
+		ArtworkURL512    string   `json:"artworkUrl512"`
 		ArtworkURL       string   `json:"artworkUrl100"`
 		PrimaryGenreName string   `json:"primaryGenreName"`
 		Genres           []string `json:"genres"`
@@ -126,21 +127,30 @@ func FetchAppStoreData(bundleID string) (appStoreURL string, artworkURL string, 
 	}
 
 	client := http.Client{Timeout: 5 * time.Second}
-	lookupURL := fmt.Sprintf("https://itunes.apple.com/lookup?bundleId=%s", bundleID)
-	if resp, err := client.Get(lookupURL); err == nil {
-		var result ITunesResponse
-		if json.NewDecoder(resp.Body).Decode(&result) == nil && len(result.Results) > 0 {
-			resp.Body.Close()
-			res := result.Results[0]
+	countries := []string{"us", "id"}
 
-			cat := res.PrimaryGenreName
-			if cat == "" && len(res.Genres) > 0 {
-				cat = res.Genres[0]
+	for _, country := range countries {
+		lookupURL := fmt.Sprintf("https://itunes.apple.com/lookup?bundleId=%s&country=%s", bundleID, country)
+		if resp, err := client.Get(lookupURL); err == nil {
+			var result ITunesResponse
+			if json.NewDecoder(resp.Body).Decode(&result) == nil && len(result.Results) > 0 {
+				resp.Body.Close()
+				res := result.Results[0]
+
+				cat := res.PrimaryGenreName
+				if cat == "" && len(res.Genres) > 0 {
+					cat = res.Genres[0]
+				}
+
+				highResArt := res.ArtworkURL512
+				if highResArt == "" && res.ArtworkURL != "" {
+					highResArt = strings.Replace(res.ArtworkURL, "100x100bb", "512x512bb", 1)
+				}
+
+				return res.TrackViewURL, highResArt, res.TrackName, cat
 			}
-
-			return res.TrackViewURL, res.ArtworkURL, res.TrackName, cat
+			resp.Body.Close()
 		}
-		resp.Body.Close()
 	}
 
 	return "", "", "", ""
@@ -350,16 +360,25 @@ func ExtractIPAIcon(ipaPath, outputDir string) (string, error) {
 }
 
 func GetAppIconThumbnail(meta AppMetadata, ipaPath, outputDir string) string {
+	// Prioritas 1: Ambil ikon resolusi tinggi langsung dari App Store
+	if meta.ArtworkURL != "" {
+		rawStoreIcon := filepath.Join(outputDir, "raw_appstore_"+sanitizeFilename(meta.BundleID)+".png")
+		jpgStoreIcon := filepath.Join(outputDir, "thumb_appstore_"+sanitizeFilename(meta.BundleID)+".jpg")
+
+		if err := downloadFile(meta.ArtworkURL, rawStoreIcon); err == nil {
+			cmd := exec.Command("sips", "-s", "format", "jpeg", rawStoreIcon, "--out", jpgStoreIcon)
+			if err := cmd.Run(); err == nil {
+				os.Remove(rawStoreIcon)
+				return jpgStoreIcon
+			}
+			return rawStoreIcon
+		}
+	}
+
+	// Prioritas 2 (Fallback): Ekstrak dari file IPA jika aplikasi tidak tersedia di App Store
 	iconPath, err := ExtractIPAIcon(ipaPath, outputDir)
 	if err == nil && iconPath != "" {
 		return iconPath
-	}
-
-	if meta.ArtworkURL != "" {
-		appStoreIconPath := filepath.Join(outputDir, "thumb_appstore.jpg")
-		if err := downloadFile(meta.ArtworkURL, appStoreIconPath); err == nil {
-			return appStoreIconPath
-		}
 	}
 
 	return ""
