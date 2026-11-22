@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.niko.PocketWidgetsApp_1795373456",
+    "app_name": "Koco Widgets: App Launcher",
+    "version": "1.28.6",
+    "min_ios": "18.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.niko.PocketWidgetsApp_1795373456.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.Pattrn_1795373414",
     "app_name": "Pattrn - Discipline Tracker",
     "version": "3.1.9",
