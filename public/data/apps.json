@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.magicv.AirBrush_1795372316",
+    "app_name": "Airbrush: Face Photo Editor",
+    "version": "8.21.0",
+    "min_ios": "10.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.magicv.AirBrush_1795372316.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.yanbuweather.rainRadar_1795372267",
     "app_name": "Rain Maps",
     "version": "2.0.14",
