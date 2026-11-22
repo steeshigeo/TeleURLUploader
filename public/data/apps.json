@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.polarsteps.Polarsteps_1795372517",
+    "app_name": "Polarsteps",
+    "version": "10.21.0",
+    "min_ios": "17.0",
+    "category": "Travel",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.polarsteps.Polarsteps_1795372517.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.ironotes.Ironotes_1795372460",
     "app_name": "Workout Log - Ironotes",
     "version": "1.252",
