@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.dmytrocheverda.Charades_1795373237",
+    "app_name": "Charades - Family \u0026 Party Game",
+    "version": "2.14.0",
+    "min_ios": "18.6",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.dmytrocheverda.Charades_1795373237.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.ironotes.Ironotes_1795373211",
     "app_name": "Workout Log - Ironotes",
     "version": "1.253",
