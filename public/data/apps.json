@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.demind.lifestack-calendar_1795372888",
+    "app_name": "Lifestack: AI Planner for ADHD",
+    "version": "2.16.16",
+    "min_ios": "15.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.demind.lifestack-calendar_1795372888.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.finch.finch_1795372876",
     "app_name": "Finch: Self-Care Pet",
     "version": "3.73.239",
