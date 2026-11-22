@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.mindist.well_1795373150",
+    "app_name": "Numo: ADHD Brain Dump",
+    "version": "12.8.2",
+    "min_ios": "15.1",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.mindist.well_1795373150.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.robnorback.LiveTranscribe_1795373133",
     "app_name": "Live Transcribe",
     "version": "2.101",
