@@ -1,5 +1,19 @@
 [
   {
+    "id": "myndarc.newFitnessApp_1795371118",
+    "app_name": "Athlytic: Fitness \u0026 Recovery",
+    "version": "27.0.12",
+    "min_ios": "17.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/myndarc.newFitnessApp_1795371118.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.markodevcic.js-code-pad_1795371094",
     "app_name": "JavaScript Coding Editor \u0026 IDE",
     "version": "1.11.2",
