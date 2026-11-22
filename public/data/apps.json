@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.facebook.Facebook_1795332979",
+    "app_name": "Facebook",
+    "version": "588.1.0",
+    "min_ios": "15.1",
+    "category": "Social Networking",
+    "is_patched": false,
+    "modified": "Facebook Plus",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Facebook Plus v1.0.9\n\n• Setup:\n1. Press and hold the Home tab bar icon\nOR\n2. Press and hold facebook on the top\n\n• Credits: https://github.com/shajon-dev/Facebook-Plus",
+    "thumbnail": "/thumbnails/com.facebook.Facebook_1795332979.jpg",
+    "updated_at": "2026-11-22"
+  },
+  {
     "id": "com.hammerandchisel.discord_1795332554",
     "app_name": "Discord - Talk, Play, Hang Out",
     "version": "354.0",
