@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.widget-kid_1795372935",
+    "app_name": "TapeKit・Lab of Top Widgets・GIF",
+    "version": "3.8.4",
+    "min_ios": "17.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.widget-kid_1795372935.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "eu.moon.litt_1795372911",
     "app_name": "Moonlitt: Moon Phase Tracker",
     "version": "2.11.1",
