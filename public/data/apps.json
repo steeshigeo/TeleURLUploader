@@ -1,5 +1,19 @@
 [
   {
+    "id": "eu.sun.litt_1795373325",
+    "app_name": "Sunlitt: Sun Tracker \u0026 Seeker",
+    "version": "4.11.4",
+    "min_ios": "18.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/eu.sun.litt_1795373325.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "sa.com.istoria_1795373296",
     "app_name": "Learn English Easily - iStoria",
     "version": "5.6.12",
