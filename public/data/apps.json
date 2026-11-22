@@ -1,5 +1,19 @@
 [
   {
+    "id": "bbauman.app.PlayMaker_1795372430",
+    "app_name": "AI Playlist Maker: PlaylistAI",
+    "version": "2.39",
+    "min_ios": "26.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/bbauman.app.PlayMaker_1795372430.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "me.danielgauthier.Jazzed_1795372416",
     "app_name": "Up Ahead: Countdown Widgets",
     "version": "1.5.2",
