@@ -50,7 +50,6 @@ type ITunesResponse struct {
 	Results []struct {
 		TrackName        string   `json:"trackName"`
 		TrackViewURL     string   `json:"trackViewUrl"`
-		ArtworkURL512    string   `json:"artworkUrl512"`
 		ArtworkURL       string   `json:"artworkUrl100"`
 		PrimaryGenreName string   `json:"primaryGenreName"`
 		Genres           []string `json:"genres"`
@@ -142,12 +141,7 @@ func FetchAppStoreData(bundleID string) (appStoreURL string, artworkURL string, 
 					cat = res.Genres[0]
 				}
 
-				highResArt := res.ArtworkURL512
-				if highResArt == "" && res.ArtworkURL != "" {
-					highResArt = strings.Replace(res.ArtworkURL, "100x100bb", "512x512bb", 1)
-				}
-
-				return res.TrackViewURL, highResArt, res.TrackName, cat
+				return res.TrackViewURL, res.ArtworkURL, res.TrackName, cat
 			}
 			resp.Body.Close()
 		}
@@ -360,7 +354,7 @@ func ExtractIPAIcon(ipaPath, outputDir string) (string, error) {
 }
 
 func GetAppIconThumbnail(meta AppMetadata, ipaPath, outputDir string) string {
-	// Prioritas 1: Ambil ikon resolusi tinggi langsung dari App Store
+	// Prioritas 1: Ambil ikon 100x100px dari App Store
 	if meta.ArtworkURL != "" {
 		rawStoreIcon := filepath.Join(outputDir, "raw_appstore_"+sanitizeFilename(meta.BundleID)+".png")
 		jpgStoreIcon := filepath.Join(outputDir, "thumb_appstore_"+sanitizeFilename(meta.BundleID)+".jpg")
