@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.abishkking.sixpack_1795372169",
+    "app_name": "Six Pack in 30 Days: Core, Abs",
+    "version": "1.54.0",
+    "min_ios": "15.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.abishkking.sixpack_1795372169.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.lasmit.World-Time_1795372126",
     "app_name": "World Clock Time Zone Widget",
     "version": "2026.17",
