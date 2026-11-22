@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.aismartapps.retrofix_1795373900",
+    "app_name": "RetroFix - Old Picture Restore",
+    "version": "1.0.44",
+    "min_ios": "15.5.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.aismartapps.retrofix_1795373900.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.superfan.app_1795373878",
     "app_name": "Superfan: social music",
     "version": "1.28.28",
