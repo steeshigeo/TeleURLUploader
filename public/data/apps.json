@@ -1,5 +1,19 @@
 [
   {
+    "id": "br.com.marcosatanaka.musicbox_1795372037",
+    "app_name": "MusicBox: Catalog and Organize",
+    "version": "1.8.7",
+    "min_ios": "17.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/br.com.marcosatanaka.musicbox_1795372037.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "ventures.slam.minutes_1795372030",
     "app_name": "Minutes: AI Meeting Note Taker",
     "version": "1.12.10",
