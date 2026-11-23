@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.mwm.guitartuner_1795447031",
+    "app_name": "Tuner Pro: Guitar Tuner \u0026 Tab",
+    "version": "4.01.11",
+    "min_ios": "16.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.mwm.guitartuner_1795447031.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.idevtal.Wallpapers_1795446925",
     "app_name": "Unblink: AI Face Photo Editor",
     "version": "5.96",
