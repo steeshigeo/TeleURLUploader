@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.getmimo.mimo_1795444840",
+    "app_name": "Mimo: Learn Python Coding \u0026 AI",
+    "version": "12.37.0",
+    "min_ios": "18.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.getmimo.mimo_1795444840.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.iaftt.flightplusfree_1795444745",
     "app_name": "Flight Tracker +",
     "version": "8.8.6",
