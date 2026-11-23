@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.adobe.lrmobile_1795445231",
+    "app_name": "Adobe Lightroom for iPad",
+    "version": "12.0.10",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.adobe.lrmobile_1795445231.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.itwcalculator.weatherplusfree_1795445152",
     "app_name": "Weather⁺",
     "version": "4.18.23",
