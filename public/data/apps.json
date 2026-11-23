@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.iaftt.flightplusfree_1795444745",
+    "app_name": "Flight Tracker +",
+    "version": "8.8.6",
+    "min_ios": "16.0",
+    "category": "Travel",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.iaftt.flightplusfree_1795444745.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "com.TickTick.task_1795444683",
     "app_name": "TickTick:To-Do List \u0026 Calendar",
     "version": "8.3.10",
