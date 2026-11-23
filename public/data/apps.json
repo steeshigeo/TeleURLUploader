@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.tripsy.ios_1795447236",
+    "app_name": "Tripsy: Travel Planner",
+    "version": "3.10.10",
+    "min_ios": "18",
+    "category": "Travel",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.tripsy.ios_1795447236.jpg",
+    "updated_at": "2026-11-23"
+  },
+  {
     "id": "co.codeleap.bearable_1795447211",
     "app_name": "Bearable - Symptom Tracker",
     "version": "1.0.617",
