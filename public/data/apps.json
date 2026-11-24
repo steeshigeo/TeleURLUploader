@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.temporary.email.pro_1795548601",
+    "app_name": "Temporary Email Pro",
+    "version": "8.0.0",
+    "min_ios": "15.1",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.temporary.email.pro_1795548601.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.frameapp.photo_1795548580",
     "app_name": "Framed - Take Aesthetic Photos",
     "version": "2.0.0",
