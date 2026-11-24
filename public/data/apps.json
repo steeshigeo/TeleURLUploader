@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.actowise.browser_1795548554",
+    "app_name": "Desktop Browser • Zoomable",
+    "version": "3.7",
+    "min_ios": "15.0",
+    "category": "Developer Tools",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.actowise.browser_1795548554.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.nonsense.app_1795548544",
     "app_name": "Nonsense: Language Learning",
     "version": "5.4.9",
