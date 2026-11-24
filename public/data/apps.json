@@ -1,5 +1,19 @@
 [
   {
+    "id": "eu.moon.litt_1795548216",
+    "app_name": "Moonlitt: Moon Phase Tracker",
+    "version": "2.11.2",
+    "min_ios": "26.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/eu.moon.litt_1795548216.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.hushbook.hushbook.6U2CKDN54G_1795548160",
     "app_name": "HushBook: Audiobook Read Along",
     "version": "1.3.6",
