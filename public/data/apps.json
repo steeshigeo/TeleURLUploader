@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.readdle.Scanner_1795521452",
+    "app_name": "Scanner Pro - Scan to PDF",
+    "version": "9.0.6",
+    "min_ios": "18.0",
+    "category": "Business",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.readdle.Scanner_1795521452.jpg",
+    "updated_at": "2026-11-24"
+  },
+  {
     "id": "co.airapps.scannerapp_1795521402",
     "app_name": "Scanner Air - Scan Documents",
     "version": "2026.11.5",
