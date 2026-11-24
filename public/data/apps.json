@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.whiostudios.CommaTracker_1795547330",
+    "app_name": "Comma: Private Period Tracker",
+    "version": "1.21",
+    "min_ios": "18.2",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.whiostudios.CommaTracker_1795547330.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "bechir.Fuji.Reciepe_1795547298",
     "app_name": "Fuji Recipes - Film simulation",
     "version": "1.22",
