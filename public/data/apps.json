@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ADPTVLTD.push_1795527063",
+    "app_name": "PUSH Workout \u0026 Gym Tracker",
+    "version": "4.3.0",
+    "min_ios": "16.4",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ADPTVLTD.push_1795527063.jpg",
+    "updated_at": "2026-11-24"
+  },
+  {
     "id": "com.idevtal.Wallpapers_1795526535",
     "app_name": "Unblink: AI Face Photo Editor",
     "version": "5.97",
