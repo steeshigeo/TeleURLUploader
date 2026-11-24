@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.alohabrowser.alohabrowser_1795515879",
+    "app_name": "Aloha Browser – Private VPN",
+    "version": "8.14.0",
+    "min_ios": "16.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.alohabrowser.alohabrowser_1795515879.jpg",
+    "updated_at": "2026-11-24"
+  },
+  {
     "id": "com.lexwarelabs.goodmorning_1795447298",
     "app_name": "Sleep Cycle - Tracker \u0026 Sounds",
     "version": "6.26.460",
