@@ -1,5 +1,19 @@
 [
   {
+    "id": "co.montanafloss.Shareshot_1795548070",
+    "app_name": "Frame Screenshots: Shareshot",
+    "version": "2.0.9",
+    "min_ios": "18.0",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/co.montanafloss.Shareshot_1795548070.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.tamastudio.RadiantCamera_1795547966",
     "app_name": "Radiant: Film \u0026 Digital Camera",
     "version": "2.7",
