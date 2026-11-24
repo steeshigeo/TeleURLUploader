@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.nonsense.app_1795548544",
+    "app_name": "Nonsense: Language Learning",
+    "version": "5.4.9",
+    "min_ios": "16.4",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.nonsense.app_1795548544.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.untitledinbrackets.untitled-ios_1795548507",
     "app_name": "[untitled]",
     "version": "1.29.0",
