@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.uplens_1795521506",
+    "app_name": "Uplens: Photo \u0026 Video Editor",
+    "version": "4.5.0",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/app.uplens_1795521506.jpg",
+    "updated_at": "2026-11-24"
+  },
+  {
     "id": "com.readdle.Scanner_1795521452",
     "app_name": "Scanner Pro - Scan to PDF",
     "version": "9.0.6",
