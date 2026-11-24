@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.joytunes.SimplyGuitar_1795520596",
+    "app_name": "Simply Guitar - Learn Guitar",
+    "version": "10.32.2",
+    "min_ios": "15.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.joytunes.SimplyGuitar_1795520596.jpg",
+    "updated_at": "2026-11-24"
+  },
+  {
     "id": "ru.routes.peakvisor_1795520543",
     "app_name": "Hiking and Skiing - PeakVisor",
     "version": "5.124",
