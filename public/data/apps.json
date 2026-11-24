@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.tamastudio.RadiantCamera_1795547966",
+    "app_name": "Radiant: Film \u0026 Digital Camera",
+    "version": "2.7",
+    "min_ios": "18",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.tamastudio.RadiantCamera_1795547966.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.tripathysattvik.posepal_1795547939",
     "app_name": "PosePal: AI Photo Pose Guide",
     "version": "1.2.4",
