@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.untitledinbrackets.untitled-ios_1795548507",
+    "app_name": "[untitled]",
+    "version": "1.29.0",
+    "min_ios": "17.6",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.untitledinbrackets.untitled-ios_1795548507.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "f1.widgets.app_1795548429",
     "app_name": "Race Widgets: F1 Live Timing",
     "version": "2.1.4",
