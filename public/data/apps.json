@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.adguard.AdguardExtension_1795528809",
+    "app_name": "AdGuard Ad Blocker for Safari",
+    "version": "4.5.26",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.adguard.AdguardExtension_1795528809.jpg",
+    "updated_at": "2026-11-24"
+  },
+  {
     "id": "com.ADPTVLTD.push_1795527063",
     "app_name": "PUSH Workout \u0026 Gym Tracker",
     "version": "4.3.0",
