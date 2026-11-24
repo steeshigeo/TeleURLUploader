@@ -1,5 +1,19 @@
 [
   {
+    "id": "videoeditor.app_1795546592",
+    "app_name": "Video Editor ·",
+    "version": "3.22.0",
+    "min_ios": "16.4",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/videoeditor.app_1795546592.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "fitnessworkout.app_1795546537",
     "app_name": "Fitness Coach - Workout Plan",
     "version": "2.13.3",
