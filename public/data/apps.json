@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.petnoter_1795548239",
+    "app_name": "PetNoter: Pet Health Tracker",
+    "version": "2.3.5",
+    "min_ios": "13.4",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.petnoter_1795548239.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "eu.moon.litt_1795548216",
     "app_name": "Moonlitt: Moon Phase Tracker",
     "version": "2.11.2",
