@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.rodneyapps.LPN012-MultiCam_1795547250",
+    "app_name": "DuoShot - Dual Camera Recorder",
+    "version": "1.6.2",
+    "min_ios": "17",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.rodneyapps.LPN012-MultiCam_1795547250.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.polarsteps.Polarsteps_1795547241",
     "app_name": "Polarsteps",
     "version": "10.22.0",
