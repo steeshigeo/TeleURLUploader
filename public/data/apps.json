@@ -1,5 +1,19 @@
 [
   {
+    "id": "so.empty.bookology_1795546767",
+    "app_name": "Bookology: Book Tracker",
+    "version": "1.13.17",
+    "min_ios": "10.0",
+    "category": "Book",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/so.empty.bookology_1795546767.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "com.evolve.helm_1795546719",
     "app_name": "Rest: Fix Your Sleep For Good",
     "version": "3.212.0",
