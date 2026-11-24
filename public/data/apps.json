@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.nixwang.decision_1795521357",
+    "app_name": "Tiny Decisions: Spin Wheel",
+    "version": "26.15",
+    "min_ios": "17.0",
+    "category": "Entertainment",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo \u0026 Blatants",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn’t work, Enjoy!",
+    "thumbnail": "/thumbnails/com.nixwang.decision_1795521357.jpg",
+    "updated_at": "2026-11-24"
+  },
+  {
     "id": "com.mwm.stems_1795521320",
     "app_name": "Stemz: remover vocal audio pro",
     "version": "6.00.06",
