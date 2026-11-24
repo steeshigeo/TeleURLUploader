@@ -1,5 +1,19 @@
 [
   {
+    "id": "tech.miidii.MDVinyl_1795546815",
+    "app_name": "MD Vinyl Music App",
+    "version": "3.10",
+    "min_ios": "16.4",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/tech.miidii.MDVinyl_1795546815.jpg",
+    "updated_at": "2026-11-25"
+  },
+  {
     "id": "so.empty.bookology_1795546767",
     "app_name": "Bookology: Book Tracker",
     "version": "1.13.17",
