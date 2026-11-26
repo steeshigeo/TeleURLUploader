@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.vanilla.picoboom_1795699493",
+    "app_name": "Picoboom Color Hunt \u0026 Imposter",
+    "version": "1.0.58",
+    "min_ios": "16.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.vanilla.picoboom_1795699493.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "one4studio.wallpaper.one4wall_1795699483",
     "app_name": "One4Wall: Wallpapers \u0026 Themes",
     "version": "5.1.23",
