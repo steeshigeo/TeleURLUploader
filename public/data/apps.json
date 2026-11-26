@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.dehancer.film.ios-app_1795698786",
+    "app_name": "Dehancer Film Emulation",
+    "version": "7.2",
+    "min_ios": "26.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.dehancer.film.ios-app_1795698786.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "co.visualsupply.cam_1795698735",
     "app_name": "VSCO: Photo \u0026 Video Editor",
     "version": "463.0.3",
