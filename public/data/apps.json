@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ckbusiness.Wishlists_1795700439",
+    "app_name": "Wishlists - online wishlist",
+    "version": "3.8.22",
+    "min_ios": "16.0",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ckbusiness.Wishlists_1795700439.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.karteto.application_1795700421",
     "app_name": "Karteto: Vocabulary Flashcards",
     "version": "0.11.08",
