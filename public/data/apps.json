@@ -1,5 +1,19 @@
 [
   {
+    "id": "me.mumtaz.numan.televiseapp_1795699634",
+    "app_name": "Televise: TV \u0026 Movie Tracker",
+    "version": "1.9.4",
+    "min_ios": "17.0",
+    "category": "Entertainment",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/me.mumtaz.numan.televiseapp_1795699634.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.niko.PocketWidgetsApp_1795699625",
     "app_name": "Koco Widgets: App Launcher",
     "version": "1.28.8",
