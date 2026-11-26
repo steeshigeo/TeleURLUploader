@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ulisesolave.Fitia_1795697471",
+    "app_name": "Fitia: Calorie Counter \u0026 Diet",
+    "version": "25.4",
+    "min_ios": "16",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ulisesolave.Fitia_1795697471.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.mwm.procolor_1795697442",
     "app_name": "Color Pop: AI Coloring Book",
     "version": "2.70.00",
