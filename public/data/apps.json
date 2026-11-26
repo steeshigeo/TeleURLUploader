@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.Pattrn_1795699737",
+    "app_name": "Pattrn - Discipline Tracker",
+    "version": "3.2.0",
+    "min_ios": "17.0",
+    "category": "Productivity",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.Pattrn_1795699737.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.ckbusiness.Wishlists_1795699725",
     "app_name": "Wishlists - online wishlist",
     "version": "3.8.21",
