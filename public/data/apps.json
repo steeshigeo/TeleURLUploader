@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.duuro.moneyCoach_1795699851",
+    "app_name": "MoneyCoach AI Budget Planner",
+    "version": "14.1",
+    "min_ios": "18.6",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.duuro.moneyCoach_1795699851.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "camp.FitWoody_1795699819",
     "app_name": "FitWoody Readiness \u0026 Sleep",
     "version": "2.8.5",
