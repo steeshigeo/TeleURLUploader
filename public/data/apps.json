@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.ahmetserdarkaradeniz.Phocus_1795696734",
+    "app_name": "Phocus: DSLR Portrait Camera",
+    "version": "3.6.2",
+    "min_ios": "17.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.ahmetserdarkaradeniz.Phocus_1795696734.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.gingerlabs.Notability_1795696666",
     "app_name": "Notability: AI Notes \u0026 Study",
     "version": "16.14.1",
