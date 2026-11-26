@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.vinylreleases.studio_1795699895",
+    "app_name": "VinylStudio: Design and Play",
+    "version": "1.13.7",
+    "min_ios": "17.4",
+    "category": "Graphics \u0026 Design",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.vinylreleases.studio_1795699895.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.graz.upscaler_1795699870",
     "app_name": "Unblur Photo - UScale Enhancer",
     "version": "2.2.3",
