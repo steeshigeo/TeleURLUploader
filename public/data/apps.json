@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.rethinkingstudio.CoupleIsland_1795699513",
+    "app_name": "Couple Island: Love Widgets",
+    "version": "1.8.1",
+    "min_ios": "18.0",
+    "category": "Lifestyle",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.rethinkingstudio.CoupleIsland_1795699513.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.vanilla.picoboom_1795699493",
     "app_name": "Picoboom Color Hunt \u0026 Imposter",
     "version": "1.0.58",
