@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.wikiloc.wikiloc_1795699313",
+    "app_name": "Wikiloc - Trails of the World",
+    "version": "3.31.3",
+    "min_ios": "17.4",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.wikiloc.wikiloc_1795699313.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "fitnessworkout.app_1795699275",
     "app_name": "Fitness Coach - Workout Plan",
     "version": "2.13.4",
