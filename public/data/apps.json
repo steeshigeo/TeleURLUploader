@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.karteto.application_1795700421",
+    "app_name": "Karteto: Vocabulary Flashcards",
+    "version": "0.11.08",
+    "min_ios": "14.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.karteto.application_1795700421.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.simonpersson.repsapp_1795700410",
     "app_name": "RepCount - Gym Workout Tracker",
     "version": "10.15.0",
