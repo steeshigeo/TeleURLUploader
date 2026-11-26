@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.impalastudios.pianofree_1795699417",
+    "app_name": "Piano ٞ",
+    "version": "2.26.8",
+    "min_ios": "16.0",
+    "category": "Music",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.impalastudios.pianofree_1795699417.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "scannerapp.free_1795699387",
     "app_name": "Scanner – Scan PDF, ID \u0026 Docs",
     "version": "2.12.13",
