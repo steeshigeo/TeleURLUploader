@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.codeway.cleanerplus_1795712319",
+    "app_name": "Cleanup: Phone Storage Cleaner",
+    "version": "6.28.0",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.codeway.cleanerplus_1795712319.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "app.vinylreleases.studio_1795700651",
     "app_name": "VinylStudio: Design and Play",
     "version": "1.13.8",
