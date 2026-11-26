@@ -1,5 +1,19 @@
 [
   {
+    "id": "ru.routes.peakvisor_1795698990",
+    "app_name": "Hiking and Skiing - PeakVisor",
+    "version": "5.125",
+    "min_ios": "16.0",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/ru.routes.peakvisor_1795698990.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.busuu.english.app_1795698937",
     "app_name": "Busuu: Language Learning App",
     "version": "30.34.2",
