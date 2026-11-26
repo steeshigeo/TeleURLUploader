@@ -1,5 +1,19 @@
 [
   {
+    "id": "fitnessworkout.app_1795699275",
+    "app_name": "Fitness Coach - Workout Plan",
+    "version": "2.13.4",
+    "min_ios": "16.4",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/fitnessworkout.app_1795699275.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.maxty.gofitness_1795699235",
     "app_name": "ProFit: Workout Planner",
     "version": "8.8.3",
