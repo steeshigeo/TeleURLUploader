@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.o-p-e-n.open_1795700398",
+    "app_name": "Open: Breathwork + Meditation",
+    "version": "26.47",
+    "min_ios": "17.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.o-p-e-n.open_1795700398.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "app.stretchminder.ios_1795700323",
     "app_name": "Moova: Stand Up Reminder",
     "version": "4.21.0",
