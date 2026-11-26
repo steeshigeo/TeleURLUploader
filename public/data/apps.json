@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.stretchminder.ios_1795700323",
+    "app_name": "Moova: Stand Up Reminder",
+    "version": "4.21.0",
+    "min_ios": "15.1",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.stretchminder.ios_1795700323.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "io.mindist.well_1795700274",
     "app_name": "Numo: ADHD Planner \u0026 Community",
     "version": "12.9.3",
