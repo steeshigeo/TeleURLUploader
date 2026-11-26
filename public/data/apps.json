@@ -1,5 +1,19 @@
 [
   {
+    "id": "co.theplanty.plant.identification.care_1795700254",
+    "app_name": "Plant Identifier, Care: Planty",
+    "version": "1.24.3",
+    "min_ios": "16.0",
+    "category": "Education",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/co.theplanty.plant.identification.care_1795700254.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "sato.tokyo.pixel-me_1795700202",
     "app_name": "AI Pixel Art Camera - PixelMe",
     "version": "4.28.55",
