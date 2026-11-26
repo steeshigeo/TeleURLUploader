@@ -1,5 +1,19 @@
 [
   {
+    "id": "fontskeyboard.fonts_1795697704",
+    "app_name": "Fonts - AI Stickers",
+    "version": "8.4.56",
+    "min_ios": "15.0",
+    "category": "Utilities",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/fontskeyboard.fonts_1795697704.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.adobe.lrmobilephone_1795697685",
     "app_name": "Lightroom Photo Editor \u0026 Video",
     "version": "12.0.11",
