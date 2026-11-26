@@ -1,5 +1,19 @@
 [
   {
+    "id": "co.zestapp.mobile_1795699439",
+    "app_name": "Zest: Meal Planner \u0026 Recipes",
+    "version": "9.18.0",
+    "min_ios": "17.0",
+    "category": "Food \u0026 Drink",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/co.zestapp.mobile_1795699439.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.impalastudios.pianofree_1795699417",
     "app_name": "Piano ٞ",
     "version": "2.26.8",
