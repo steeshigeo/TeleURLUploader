@@ -1,5 +1,19 @@
 [
   {
+    "id": "co.bergen.Darkroom_1795698664",
+    "app_name": "Darkroom: Photo \u0026 Video Editor",
+    "version": "7.7",
+    "min_ios": "18.4",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/co.bergen.Darkroom_1795698664.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.shred.shredlabs_1795698601",
     "app_name": "SHRED: Fitness \u0026 Gym Workouts",
     "version": "6.0.1",
