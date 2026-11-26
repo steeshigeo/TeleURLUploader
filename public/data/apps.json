@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.mwm.procolor_1795697442",
+    "app_name": "Color Pop: AI Coloring Book",
+    "version": "2.70.00",
+    "min_ios": "17.5",
+    "category": "Entertainment",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.mwm.procolor_1795697442.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.intsig.CamScannerLite_1795697384",
     "app_name": "CamScanner - PDF Scanner App",
     "version": "7.30.5",
