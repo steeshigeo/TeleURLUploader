@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.lightricks.Enlight-Phoenix_1795699188",
+    "app_name": "Motionleap: 3D Photo Animator",
+    "version": "1.9.39",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.lightricks.Enlight-Phoenix_1795699188.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "app.chudo_1795699139",
     "app_name": "3D Modeling: Blender Shapeyard",
     "version": "5.34.4",
