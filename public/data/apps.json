@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.gigamow.Wheelz_1795700062",
+    "app_name": "Wheelz - Social Drive Tracker",
+    "version": "5.10",
+    "min_ios": "18.0",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.gigamow.Wheelz_1795700062.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.untitledinbrackets.untitled-ios_1795700033",
     "app_name": "[untitled]",
     "version": "1.30.0",
