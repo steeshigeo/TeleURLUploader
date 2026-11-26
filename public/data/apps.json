@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.adambinsz.Steps_1795700565",
+    "app_name": "Steps: Step Counter, Pedometer",
+    "version": "8.0.1",
+    "min_ios": "16.1",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.adambinsz.Steps_1795700565.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.ziikr.ios.notewise_1795700543",
     "app_name": "Notewise - AI Notes, PDF, Docs",
     "version": "4.2.5",
