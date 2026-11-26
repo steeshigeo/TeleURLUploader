@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.AurochDigital.WarhammerSurvivors_1795713165",
+    "app_name": "Warhammer Survivors",
+    "version": "2.1.7",
+    "min_ios": "10.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features\n\nCombat \u0026 Survival:\n- God Mode: Become completely invulnerable.\n- Damage Multiplier: Boost weapon damage output.\n- Defence Multiplier: Reduce incoming damage.\n- No Skill Cooldown: Cast abilities continuously without waiting.\n- Freeze Enemies: Halt all enemy movement.\n- Kill All Enemies: Instantly clear the screen.\n\nMovement \u0026 Progression:\n- Move Speed Multiplier: Traverse the battlefield faster.\n- XP Multiplier: Level up more quickly.\n- Unlimited Coins: Earn or spend coins once for infinite currency.",
+    "thumbnail": "/thumbnails/com.AurochDigital.WarhammerSurvivors_1795713165.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.bloomberg.Bloomberg_1795712341",
     "app_name": "Bloomberg: Business News Daily",
     "version": "6.72.0",
