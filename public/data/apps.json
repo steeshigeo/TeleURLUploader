@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.zuzu.peekapic_1795699962",
+    "app_name": "pico cam: Dynamic Island pics",
+    "version": "1.7.8",
+    "min_ios": "18.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.zuzu.peekapic_1795699962.jpg",
+    "updated_at": "2026-11-26"
+  },
+  {
     "id": "com.ClassDojo_1795699956",
     "app_name": "ClassDojo",
     "version": "18.58.0",
