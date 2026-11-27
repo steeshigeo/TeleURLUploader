@@ -1,5 +1,19 @@
 [
   {
+    "id": "jp.co.goodroid.fairy_1795764115",
+    "app_name": "FAIRY TAIL Wizard Chronicle",
+    "version": "2.5.0",
+    "min_ios": "13.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features\n- Damage Multiplier → boost your wizard's attack power\n- Defense Multiplier → reduce incoming damage in battles\n- Reward Multiplier → earn more loot from quests and battles\n- Instant Rage Skill → activate powerful abilities without waiting\n- No ADS → play uninterrupted without advertisements",
+    "thumbnail": "/thumbnails/jp.co.goodroid.fairy_1795764115.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.skyward.feelspike_1795763664",
     "app_name": "Skyward: Tower Climb \u0026 Jump",
     "version": "1.8.0",
