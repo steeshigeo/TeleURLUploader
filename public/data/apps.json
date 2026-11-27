@@ -1,5 +1,19 @@
 [
   {
+    "id": "ru.routes.peakvisor_1795783884",
+    "app_name": "Hiking and Skiing - PeakVisor",
+    "version": "5.126",
+    "min_ios": "16.0",
+    "category": "Navigation",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/ru.routes.peakvisor_1795783884.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.TownSoft.soulsofadventure_1795764846",
     "app_name": "Idle Game The Silent Archivist",
     "version": "8.2",
