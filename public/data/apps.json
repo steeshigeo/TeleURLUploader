@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.apalonapps.wlf_1795784088",
+    "app_name": "Weather Live° - Local Forecast",
+    "version": "7.24.45",
+    "min_ios": "15.0",
+    "category": "Weather",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.apalonapps.wlf_1795784088.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.appicfun.translatorfree_1795783914",
     "app_name": "Speak \u0026 Translate - Translator",
     "version": "6.0.63",
