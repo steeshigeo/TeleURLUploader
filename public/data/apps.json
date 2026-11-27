@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.skyward.feelspike_1795763664",
+    "app_name": "Skyward: Tower Climb \u0026 Jump",
+    "version": "1.8.0",
+    "min_ios": "16.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features\n- Unlimited Gems → spend freely without depletion\n- Unlimited Coins → no currency limits\n- Unlimited XP → level up without caps\n- Unlimited Lives → climb without fail penalties",
+    "thumbnail": "/thumbnails/com.skyward.feelspike_1795763664.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.snapbreak.fishinginc_1795763400",
     "app_name": "Fishing Inc: Legendary Catch",
     "version": "1.0.7",
