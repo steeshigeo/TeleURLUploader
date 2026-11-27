@@ -1,5 +1,19 @@
 [
   {
+    "id": "nutrition.coach_1795784139",
+    "app_name": "Nutrition Coach: AI Food Diary",
+    "version": "2.8.2",
+    "min_ios": "17.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/nutrition.coach_1795784139.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.apalonapps.wlf_1795784088",
     "app_name": "Weather Live° - Local Forecast",
     "version": "7.24.45",
