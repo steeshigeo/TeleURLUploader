@@ -1,5 +1,19 @@
 [
   {
+    "id": "io.lonepalm.Retro_1795760095",
+    "app_name": "Retro — Photos with Friends",
+    "version": "130.0",
+    "min_ios": "17.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/io.lonepalm.Retro_1795760095.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.manev.mikhail.NoPressure_1795760035",
     "app_name": "Migraine Tracker: Pressure Pal",
     "version": "3.9.2",
