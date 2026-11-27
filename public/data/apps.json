@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.derwebdesigner.locationscout.net_1795760210",
+    "app_name": "Locationscout - Photo Spots",
+    "version": "4.0.0",
+    "min_ios": "15.0",
+    "category": "Travel",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.derwebdesigner.locationscout.net_1795760210.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.bikinstudio.screenx_1795760194",
     "app_name": "Retrx",
     "version": "0.0.59",
