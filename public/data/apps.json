@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.TownSoft.soulsofadventure_1795764846",
+    "app_name": "Idle Game The Silent Archivist",
+    "version": "8.2",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features\n- Infinite Currencies → spend freely on upgrades and expansions\n- PREMIUM → unlock all premium features",
+    "thumbnail": "/thumbnails/com.TownSoft.soulsofadventure_1795764846.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.superpixel.undyinghero_1795764476",
     "app_name": "Undying Hero: Idle RPG",
     "version": "1.2.1",
