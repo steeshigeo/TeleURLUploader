@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.snapbreak.fishinginc_1795763400",
+    "app_name": "Fishing Inc: Legendary Catch",
+    "version": "1.0.7",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features\n- Freeze Gold → preserve your currency balance\n- Unlimited Gold → increases instead of decreases with each transaction\n- Freeze Casts → lock your cast count in place\n- One-Click Catch → land fish instantly with a single tap\n- Always Perfect Catch → every cast succeeds without fail\n- Unlock All Fish → access every species from the start\n- Complete All Achievements → instantly earn all achievement rewards\n- Trigger Kraken Event → summon the legendary encounter on demand\n-- Additional Perks\n- No Ads → uninterrupted gameplay\n- Deluxe Bundle Purchased → premium content unlocked",
+    "thumbnail": "/thumbnails/com.snapbreak.fishinginc_1795763400.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.campmobile.snow_1795762458",
     "app_name": "SNOW - AI Profile",
     "version": "15.5.6",
