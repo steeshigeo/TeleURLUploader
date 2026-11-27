@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.keinois.nea.app_1795760390",
+    "app_name": "Apnea Trainer: Nea",
+    "version": "1.5.0",
+    "min_ios": "26.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.keinois.nea.app_1795760390.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.frameapp.photo_1795760349",
     "app_name": "Framed - Take Aesthetic Photos",
     "version": "2.0.1",
