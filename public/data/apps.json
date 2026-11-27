@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.manev.mikhail.NoPressure_1795760035",
+    "app_name": "Migraine Tracker: Pressure Pal",
+    "version": "3.9.2",
+    "min_ios": "18.0",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.manev.mikhail.NoPressure_1795760035.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "com.tracked.mobile_1795760002",
     "app_name": "Tracked: Workout \u0026 Nutrition",
     "version": "8.4.3",
