@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.nami.hydrationtracker_1795760320",
+    "app_name": "Water Tracker \u0026 Reminder: Nami",
+    "version": "1.5",
+    "min_ios": "17.6",
+    "category": "Health \u0026 Fitness",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.nami.hydrationtracker_1795760320.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "app.derwebdesigner.locationscout.net_1795760210",
     "app_name": "Locationscout - Photo Spots",
     "version": "4.0.0",
