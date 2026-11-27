@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.campmobile.snow_1795762458",
+    "app_name": "SNOW - AI Profile",
+    "version": "15.5.6",
+    "min_ios": "16.0",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/com.campmobile.snow_1795762458.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "app.runcut_1795760522",
     "app_name": "RunCut: Run \u0026 Ride Video Maker",
     "version": "2.5.4",
