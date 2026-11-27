@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.budgetbestie.budgetbestie_1795760140",
+    "app_name": "Budget Bestie",
+    "version": "1.8.0",
+    "min_ios": "16.0",
+    "category": "Finance",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.budgetbestie.budgetbestie_1795760140.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "io.lonepalm.Retro_1795760095",
     "app_name": "Retro — Photos with Friends",
     "version": "130.0",
