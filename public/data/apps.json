@@ -1,5 +1,19 @@
 [
   {
+    "id": "app.runcut_1795760522",
+    "app_name": "RunCut: Run \u0026 Ride Video Maker",
+    "version": "2.5.4",
+    "min_ios": "15.6",
+    "category": "Photo \u0026 Video",
+    "is_patched": true,
+    "modified": "Subscription unlocked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Log in and force close the app if the tweak doesn't work, Enjoy!",
+    "thumbnail": "/thumbnails/app.runcut_1795760522.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "hltek.YaoYao_1795760498",
     "app_name": "YaoYao - Jump Rope",
     "version": "26.11.27",
