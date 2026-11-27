@@ -1,5 +1,19 @@
 [
   {
+    "id": "com.superpixel.undyinghero_1795764476",
+    "app_name": "Undying Hero: Idle RPG",
+    "version": "1.2.1",
+    "min_ios": "15.0",
+    "category": "Games",
+    "is_patched": true,
+    "modified": "Tweaked",
+    "modified_by": "SteeShigeo",
+    "tweaker": "",
+    "note": "Hack Features\n- Damage Multiplier → amplify your attack output\n- One-Hit Kill → defeat enemies instantly\n- Freeze Currencies → spend without depletion",
+    "thumbnail": "/thumbnails/com.superpixel.undyinghero_1795764476.jpg",
+    "updated_at": "2026-11-27"
+  },
+  {
     "id": "jp.co.goodroid.fairy_1795764115",
     "app_name": "FAIRY TAIL Wizard Chronicle",
     "version": "2.5.0",
